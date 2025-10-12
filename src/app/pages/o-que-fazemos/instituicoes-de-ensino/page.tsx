@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 //Components and archives
 import styles from "./styles.module.scss";
@@ -60,9 +63,17 @@ const cardData = [
     icon: bookOpenText,
     backgroundImage: receber,
   },
+  {
+    title: "Receber materiais da<br/>Rede Autoestima-se",
+    icon: bookOpenText,
+    backgroundImage: receber,
+  },
 ];
 
-const instituicoes = () => {
+const Instituicoes = () => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
+
   return (
     <div className={styles.instituicoes}>
       <Banner
@@ -169,14 +180,26 @@ const instituicoes = () => {
             />
           </div>
           <div className={styles.secGrid}>
-            <CardService
-              title={cardData[6].title}
-              icon={cardData[6].icon}
-              backgroundImage={cardData[6].backgroundImage}
-              heightClassName={styles.cardHeight}
-              widthClassName={styles.cardWidth}
-              // hoverText={cardData[6].hoverText}
-            />
+            {isMobile && (
+              <CardService
+                title={cardData[7].title}
+                icon={cardData[7].icon}
+                backgroundImage={cardData[6].backgroundImage}
+                heightClassName={styles.cardHeight}
+                widthClassName={styles.cardWidth}
+                // hoverText={cardData[6].hoverText}
+              />
+            )}
+            {isDesktop && (
+              <CardService
+                title={cardData[6].title}
+                icon={cardData[6].icon}
+                backgroundImage={cardData[6].backgroundImage}
+                heightClassName={styles.cardHeight}
+                widthClassName={styles.cardWidth}
+                // hoverText={cardData[6].hoverText}
+              />
+            )}
           </div>
         </div>
         <h2 className={styles.pServices}>
@@ -189,4 +212,4 @@ const instituicoes = () => {
   );
 };
 
-export default instituicoes;
+export default Instituicoes;
