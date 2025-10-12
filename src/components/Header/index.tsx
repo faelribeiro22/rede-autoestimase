@@ -25,6 +25,8 @@ const Header = () => {
           alt="Logo da Rede Autoestima-se"
           width={198}
           height={56}
+          priority
+          quality={100}
         />
       </Link>
       <MediaQuery maxWidth={1366}>
@@ -33,8 +35,11 @@ const Header = () => {
             <Image
               src="/assets/logo/logo-mobile.svg"
               alt="Logo da Rede Autoestima-se"
-              width={45}
-              height={56}
+              width={90}
+              height={112}
+              priority
+              quality={100}
+              style={{ width: 'auto', height: '56px' }}
             />
           </Link>
           <Button label={"Doe"} href={"/pages/doe"} className="donate" />
@@ -60,6 +65,7 @@ const Header = () => {
                 alt="Imagem de uma lupa indicando um botão de pesquisar no site"
                 width={25}
                 height={24}
+                quality={100}
               />
             </button>
             <Button label={"Doe"} href={"/pages/doe"} className="donate" />

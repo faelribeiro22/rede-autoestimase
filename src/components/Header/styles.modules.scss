@@ -19,17 +19,26 @@ header {
 
   .logo-desktop {
     display: block;
+    
+    img {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
   }
 
   .logo-mobile {
     display: none;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
-    image-rendering: pixelated;
-    max-width: 100%;
+    
+    img {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   .navigation {

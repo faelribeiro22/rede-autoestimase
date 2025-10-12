@@ -40,7 +40,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const content = (
     <>
-      {icon && <Image src={icon} alt={alt} width={24} height={24} />}
+      {icon && <Image src={icon} alt={alt} width={24} height={24} quality={100} />}
       <span>{label}</span>
     </>
   );

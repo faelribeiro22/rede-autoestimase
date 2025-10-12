@@ -11,7 +11,7 @@ import styles from "./styles.module.scss";
 import Button from "../Button/Button";
 import Input from "../Input";
 import CustomToast, { showSuccessToast, showErrorToast } from "../CustomToast";
-import hapiness from "../../../public/assets/images/felicidade.jpg";
+import hapiness from "../../../public/assets/images/empresas/38301.png";
 import hapinessMobile from "../../../public/assets/images/felicidade-mobile.jpg";
 import envelope from "../../../public/assets/icons/Envelope.png";
 import smileyDivider from "../../../public/assets/icons/smileyDivider.svg";
@@ -114,7 +114,11 @@ const Forms = () => {
       </section>
 
       <section className={styles.divider}>
-        <Image src={smileyDivider} alt="Ícone de divisão de secção" />
+        <Image 
+          src={smileyDivider} 
+          alt="Ícone de divisão de secção"
+          quality={100}
+        />
       </section>
 
       <section className={styles.hapinessWrapper}>
@@ -124,16 +128,18 @@ const Forms = () => {
               src={hapiness}
               alt="Imagem relativa ao Programa Felicidade Corporativa"
               className={styles.hapinessImage}
+              quality={100}
+              priority
             />
             <Image
               src={hapinessMobile}
               alt="Imagem relativa ao Programa Felicidade Corporativa"
               className={styles.hapinessImageMobile}
+              quality={100}
+              priority
             />
             <div className={styles.hapinessImageTitle}>
-              <h1>Programa</h1>
-              <h1>Felicidade</h1>
-              <h1>Corporativa</h1>
+              <h1>Programa Felicidade Corporativa</h1>
             </div>
           </div>
 
@@ -143,18 +149,14 @@ const Forms = () => {
               colaboradores, desenvolvemos o Programa Felicidade Corporativa com
               modelo aliado à inovação e responsabilidade social, o ESG.
             </p>
-            <ul className={styles.topic}>
-              <li>
+            <p>
                 Traçamos com à instituição os objetivos com o programa e as
-                demandas dos funcionários;
-              </li>
-              <li>
+                demandas dos funcionários;<br/>
                 Traçamos o perfil dos profissionais que participarão do
-                programa;
-              </li>
-              <li>Montamos o cronograma de ação das atividades;</li>{" "}
-              <li>Acompanhamos a empresa na coleta das métricas de impacto.</li>
-            </ul>
+                programa;<br/>
+                Montamos o cronograma de ação das atividades;<br/>
+                Acompanhamos a empresa na coleta das métricas de impacto.
+            </p>
 
             <p>O programa pode ser realizado online e/ou presencial! </p>
 
@@ -172,7 +174,13 @@ const Forms = () => {
               href={`mailto:"organizacao@redeautoestimase.com"`}
               className={styles.mailTo}
             >
-              <Image src={envelope} alt="Ícone de e-mail" />
+              <Image 
+                src={envelope} 
+                alt="Ícone de e-mail"
+                quality={100}
+                width={24}
+                height={24}
+              />
               <p className={styles.email}>organizacao@redeautoestimase.com</p>
             </a>
           </div>
