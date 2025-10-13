@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import api from "../configs/api";
+//import api from "../configs/api";
+import mock from "./mock";
 
 export interface User {
   _id: string;
@@ -40,13 +41,13 @@ export const useNews = (): UseNewsReturn => {
       setLoading(true);
       setError(null);
 
-      const response = await api.get("/news", {
-        params: {
-          ativas: true,
-        },
-      });
+      // const response = await api.get("/news", {
+      //   params: {
+      //     ativas: true,
+      //   },
+      // });
 
-      setNews(response.data);
+      setNews(mock);
     } catch (err) {
       console.error("Erro ao buscar notícias:", err);
       setError("Erro ao carregar notícias. Tente novamente.");

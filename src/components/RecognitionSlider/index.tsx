@@ -1,5 +1,5 @@
 
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { SlArrowRight , SlArrowLeft } from 'react-icons/sl';
 import styles from './styles.module.scss';
@@ -34,6 +34,16 @@ const RecognitionSlider: React.FC<RecognitionSliderProps> = ({ reconContent }) =
       }, 500);
     }
   }, [current]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (current < reconContent.length - 1) {
+        handleSlide("right", reconContent.length);
+      } else {
+        setCurrent(0);
+      }
+    }, 5000);
+  }, [handleSlide, reconContent.length, current]);
 
 
   return (

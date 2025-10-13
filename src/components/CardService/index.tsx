@@ -50,7 +50,7 @@ const CardService: React.FC<CardProps> = ({
         }}
       >
         <Image src={icon} alt={title} className={styles.icon} />
-        <h1 className={styles.title}>{title}</h1>
+        <h3 className={styles.title} dangerouslySetInnerHTML={{ __html: title }}/>
       </motion.div>
 
       <motion.div

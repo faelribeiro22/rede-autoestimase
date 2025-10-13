@@ -44,6 +44,20 @@ body {
   box-sizing: border-box;
 }
 
+// Image optimization for Retina displays
+img,
+picture,
+svg {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+// Specific optimization for Next.js Image component
+img[loading] {
+  image-rendering: auto;
+}
+
 h1,
 h2,
 h3,
