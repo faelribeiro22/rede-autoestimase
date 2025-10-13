@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import styles from "../Newsletter/styles.module.scss";
+import Image from "next/image";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -34,7 +35,7 @@ const Newsletter = () => {
           className={styles.newsletterInput}
         />
         <button type="submit" className={styles.newsletterButton}>
-          <img src="/assets/icons/send.svg" alt="/" />
+          <Image src="/assets/icons/send.svg" alt="/" />
         </button>
       </form>
       {message && <p className={styles.newsletterMessage}>{message}</p>}

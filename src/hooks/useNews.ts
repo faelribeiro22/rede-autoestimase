@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import api from "../configs/api";
+//import api from "../configs/api";
 import mock from "./mock";
 
 export interface User {
