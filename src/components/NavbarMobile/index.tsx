@@ -75,12 +75,15 @@ const NavbarMobile = ({ handleCloseMenus }: NavbarProps) => {
   const pathname = usePathname();
   const [menuActive, setMenuActive] = useState('');
   const router = useRouter();
+  // Extract locale from pathname
+  const locale = pathname?.split('/')[1] || 'pt';
 
   const clickLink = (e: React.MouseEvent<HTMLAnchorElement>, page: Page) => {
     if (handleCloseMenus && !page.children) {
       setMenuActive('');
       handleCloseMenus();
-      router.push(page.path);
+      const fullPath = page.path === "/" ? `/${locale}` : `/${locale}${page.path}`;
+      router.push(fullPath);
     } 
     if (menuActive === page.name && !!page.children) {
       setMenuActive('');
@@ -92,16 +95,19 @@ const NavbarMobile = ({ handleCloseMenus }: NavbarProps) => {
   };
 
   const isActive = (path: string, pageName: string) => {
-    return (pathname === path || pageName === menuActive);
+    const fullPath = path === "/" ? `/${locale}` : `/${locale}${path}`;
+    return (pathname === fullPath || pageName === menuActive);
   };
 
   return (
     <nav className="navbar-mobile">
       {pages.map((page, index) => {
+        const fullPath = page.path === "/" ? `/${locale}` : `/${locale}${page.path}`;
+        
         return (
           <div key={index} className="menu-item">
             <Link
-              href={page.path}
+              href={fullPath}
               className={`link ${isActive(page.path, page.name) ? "active" : ""}`}
               onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => clickLink(e, page)}
             >
@@ -111,11 +117,12 @@ const NavbarMobile = ({ handleCloseMenus }: NavbarProps) => {
             {page.children && (
               <div className={`submenu ${menuActive === page.name ? "submenu--active" : ""}`}>
                 {page.children.map((child, childIndex) => {
-                  const isChildActive = pathname.startsWith(child.path) && menuActive !== '';
+                  const childFullPath = `/${locale}${child.path}`;
+                  const isChildActive = pathname.startsWith(childFullPath) && menuActive !== '';
 
                   return (
                     <Link
-                      href={child.path}
+                      href={childFullPath}
                       key={childIndex}
                       onClick={handleCloseMenus}
                       className={`submenu-link ${

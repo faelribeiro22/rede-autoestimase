@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import "./styles.modules.scss";
-import MediaQuery from "react-responsive";
 
 type Language = {
   code: string;
@@ -53,7 +52,8 @@ const LanguageFlag = () => {
   
   return (
     <div className="languages">
-      <MediaQuery minWidth={1224}>
+      {/* Desktop version */}
+      <div className="language-desktop">
         <button
           aria-label={`Selecionar idioma: ${selectedLanguage.name}`}
           className="flag-toggle"
@@ -88,9 +88,10 @@ const LanguageFlag = () => {
               ))}
           </div>
         )}
-      </MediaQuery>
+      </div>
 
-      <MediaQuery maxWidth={1224}>
+      {/* Mobile version */}
+      <div className="language-mobile">
         {languages.map((lang) => (
           <button
             aria-label={`Selecionar idioma: ${lang.name}`}
@@ -106,7 +107,7 @@ const LanguageFlag = () => {
             />
           </button>
         ))}
-      </MediaQuery>
+      </div>
   </div>
   )
 }

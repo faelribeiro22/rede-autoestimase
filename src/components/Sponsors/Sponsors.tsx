@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
 import styles from "./styles.module.scss";
-import MediaQuery from 'react-responsive';
 
 type SponsorLogo = {
   logo: StaticImageData;
@@ -32,30 +31,27 @@ const Sponsors = ({doadoresLogos1, doadoresLogos2, org, orgMobile, Button}: Spon
             <Image key={index} src={item.logo} alt="Logo" />
           ))}
         </div>
-        <MediaQuery maxWidth={1366}>
-          <div className={styles.org}>
-            <Image
-              src={orgMobile}
-              alt="Logo indicando que fazemos parte do Mapa das Organizações da Sociedade Civil"
-            />
-          </div>
-        </MediaQuery>
-
-        <MediaQuery minWidth={1366}>
-          <div className={styles.org}>
-            <Image
-              src={org}
-              alt="Logo indicando que fazemos parte do Mapa das Organizações da Sociedade Civil"
-            />
-          </div>
-        </MediaQuery>
+        <div className={styles.org}>
+          <Image
+            className={styles.orgMobile}
+            src={orgMobile}
+            alt="Logo indicando que fazemos parte do Mapa das Organizações da Sociedade Civil"
+          />
+          <Image
+            className={styles.orgDesktop}
+            src={org}
+            alt="Logo indicando que fazemos parte do Mapa das Organizações da Sociedade Civil"
+          />
+        </div>
       </div>
-      <MediaQuery maxWidth={768}>
-        <Button label="Seja Nosso parceiro" />
-      </MediaQuery>
-      <MediaQuery minWidth={769}>
-        <Button label="Conheça nossa lista de apoiadores" />
-      </MediaQuery>
+      <div className={styles.buttonContainer}>
+        <div className={styles.buttonMobile}>
+          <Button label="Seja Nosso parceiro" />
+        </div>
+        <div className={styles.buttonDesktop}>
+          <Button label="Conheça nossa lista de apoiadores" />
+        </div>
+      </div>
     </div>
   )
 }

@@ -76,6 +76,8 @@ const pages: Page[] = [
 
 const Navbar = ({ handleCloseMenus }: NavbarProps) => {
   const pathname = usePathname();
+  // Extract locale from pathname
+  const locale = pathname?.split('/')[1] || 'pt';
 
   const closeMenuMenu = (children: boolean) => {
     console.log("children", children);
@@ -87,13 +89,14 @@ const Navbar = ({ handleCloseMenus }: NavbarProps) => {
   return (
     <nav className="navbar">
       {pages.map((page, index) => {
+        const fullPath = page.path === "/" ? `/${locale}` : `/${locale}${page.path}`;
         const isActive =
-          page.path === "/" ? pathname === "/" : pathname.startsWith(page.path);
+          page.path === "/" ? pathname === `/${locale}` : pathname.startsWith(`/${locale}${page.path}`);
 
         return (
           <div key={index} className="menu-item">
             <Link
-              href={page.path}
+              href={fullPath}
               className={`link ${isActive ? "active" : ""}`}
               onClick={() => closeMenuMenu(!page.children)}
             >
@@ -103,11 +106,12 @@ const Navbar = ({ handleCloseMenus }: NavbarProps) => {
             {page.children && (
               <div className="submenu">
                 {page.children.map((child, childIndex) => {
-                  const isChildActive = pathname.startsWith(child.path);
+                  const childFullPath = `/${locale}${child.path}`;
+                  const isChildActive = pathname.startsWith(childFullPath);
 
                   return (
                     <Link
-                      href={child.path}
+                      href={childFullPath}
                       key={childIndex}
                       onClick={handleCloseMenus}
                       className={`submenu-link ${
