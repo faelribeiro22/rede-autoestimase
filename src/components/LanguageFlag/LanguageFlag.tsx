@@ -14,7 +14,7 @@ const LanguageFlag = () => {
   // TODO: Implementar a lógica de troca de idioma e exibir imagem da bandeira correspondente no mobile
   const [showLanguages, setShowLanguages] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<Language>({
-    code: "pt",
+    code: "pt-BR",
     name: "Português",
     image: "/assets/flags/brasil-flag.svg",
     alt: "Bandeira do Brasil indicando que o site está na língua portuguesa",
@@ -22,7 +22,7 @@ const LanguageFlag = () => {
 
   const languages: Language[] = [
     {
-      code: "pt",
+      code: "pt-BR",
       name: "Português",
       image: "/assets/flags/brasil-flag.svg",
       alt: "Bandeira do Brasil indicando que o site está na língua portuguesa",

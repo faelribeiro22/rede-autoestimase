@@ -77,7 +77,7 @@ const pages: Page[] = [
 const Navbar = ({ handleCloseMenus }: NavbarProps) => {
   const pathname = usePathname();
   // Extract locale from pathname
-  const locale = pathname?.split('/')[1] || 'pt';
+  const locale = pathname?.split('/')[1] || 'pt-BR';
 
   const closeMenuMenu = (children: boolean) => {
     console.log("children", children);

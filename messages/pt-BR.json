@@ -1,0 +1,135 @@
+{
+  "navigation": {
+    "home": "Início",
+    "aboutUs": "Sobre nós",
+    "whatWeDo": "O que fazemos",
+    "howWeDo": "Como fazemos",
+    "companies": "Empresas",
+    "educationalInstitutions": "Instituições de Ensino",
+    "volunteering": "Voluntariado",
+    "psychotherapy": "Psicoterapia",
+    "initiatives": "Iniciativas",
+    "activistSupport": "Atendimento para ativistas",
+    "autoViverFund": "Fundo AutoViver",
+    "mentalHealthAmazonia": "Saúde mental na Amazônia",
+    "voicesOfWellBeing": "Vozes do Bem-Estar",
+    "transparency": "Transparência",
+    "donate": "Doe",
+    "donateNow": "Doe Agora"
+  },
+  "home": {
+    "about": {
+      "label": "SOBRE AUTOESTIMA-SE",
+      "title": "O que nos traz aqui?",
+      "description": "A Rede Autoestima-se é uma organização da sociedade civil sem fins lucrativos que desde 2020, democratiza o acesso a atendimentos psicológicos e práticas terapêuticas para mulheres e jovens ativistas em situação de vulnerabilidade social. Atuamos de forma online, beneficiando pessoas de diversas regiões do Brasil, oferecendo suporte psicossocial essencial para quem enfrenta desafios emocionais como:ansiedade, depressão e estresse, com foco especial nos jovens e mulheres negras.",
+      "button": "Acesse nossa ONE PAGE"
+    },
+    "whatWeDo": {
+      "label": "O QUE FAZEMOS",
+      "title": "Acesso ao acolhimento emocional",
+      "cards": {
+        "psychosocial": {
+          "title": "Atendimento psicossocial",
+          "description": "Fortalecemos a saúde emocional de mulheres e jovens ativistas, oferecendo acesso a 12 sessões gratuitas de psicoterapia e 10 encontros em grupo, promovendo bem-estar e desenvolvimento pessoal."
+        },
+        "communication": {
+          "title": "Comunicação",
+          "description": "Nossos canais promovem conteúdos sobre saúde mental, bem-estar e transformação pessoal para ajudar você a entender suas emoções e cuidar de si."
+        },
+        "advocacy": {
+          "title": "Advocacy",
+          "description": "Atuamos em espaços públicos para fortalecer a saúde mental como direito humano, garantindo que todos tenham acesso ao cuidado emocional."
+        }
+      },
+      "readMore": "SAIBA MAIS"
+    },
+    "results": {
+      "label": "RESULTADOS",
+      "title": "Nossas ações",
+      "description": "Promovem o fortalecimento da saúde mental aliada à tecnologia para todo o Brasil através de uma comunidade digital.",
+      "stats": {
+        "sessions": "sessões de psicoterapia realizadas",
+        "cities": "cidades atendidas",
+        "states": "estados brasileiros",
+        "partners": "parceiros voluntários"
+      }
+    },
+    "recognition": {
+      "label": "CONQUISTAS",
+      "title": "Reconhecimentos"
+    },
+    "media": {
+      "label": "MÍDIA",
+      "title": "A Rede na Mídia"
+    },
+    "sponsors": {
+      "label": "FAZEM A DIFERENÇA",
+      "title": "Doadores",
+      "buttonMobile": "Seja Nosso parceiro",
+      "buttonDesktop": "Conheça nossa lista de apoiadores"
+    },
+    "partners": {
+      "titleMobile": "Parceiros estratégicos",
+      "titleDesktop": "Parceiros"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Tire suas dúvidas",
+      "description": "Reunimos respostas para as principais dúvidas sobre a Rede Autoestima-se e os atendimentos de psicoterapia. *A terapia online foi regulamentada no Brasil no dia 12 de novembro de 2018 por meio da Resolução do CFP 011/2018.",
+      "questions": [
+        {
+          "question": "A Rede Autoestima-se disponibiliza apoio psicológico para o público?",
+          "answer": "Sim, oferecemos apoio psicológico gratuito, com foco em mulheres com até 65 anos e jovens de 13 a 29 anos, por meio de atendimentos online realizados por psicólogos (as) voluntários."
+        },
+        {
+          "question": "Como funcionam os acolhimentos psicológicos?",
+          "answer": "Os acolhimentos são realizados em sessões online, onde os participantes recebem suporte emocional em psicoterapia breve focal, com a triagem e orientação de profissionais qualificados e devidamente inscritos no Conselho Regional de Psicologia."
+        },
+        {
+          "question": "Como funcionam os atendimentos para jovens com menos de 18 anos?",
+          "answer": "Para jovens de 13 a 17 anos, os atendimentos são realizados com autorização dos responsáveis e seguem a mesma estrutura de acolhimento psicossocial oferecida aos demais beneficiários. Após solicitar o atendimento, encaminharemos via e-mail o documento."
+        },
+        {
+          "question": "Quanto tempo dura a terapia?",
+          "answer": "Ao todo são realizadas 12 sessões de psicoterapia com duração média de 45 minutos, 1 vezpor semana. Para solicitar o atendimento acesse: https://bit.ly/solicitarAtendimentoPsicologicoAutoestimase"
+        },
+        {
+          "question": "Como posso ser voluntário (a)?",
+          "answer": "Para ser voluntário(a), você pode se inscrever em nossos processos seletivos ou caso você seja psicólogo (a), pode encaminhar o seu currículo para o e-mail: trabalheconosco@redeautoestimase.com com o Título: Candidatura Voluntária."
+        }
+      ]
+    }
+  },
+  "common": {
+    "readMore": "Saiba mais",
+    "seeMore": "Ver mais",
+    "seeLess": "Ver menos",
+    "backToTop": "Voltar ao topo",
+    "loading": "Carregando...",
+    "error": "Erro ao carregar",
+    "close": "Fechar",
+    "open": "Abrir",
+    "menu": "Menu",
+    "search": "Buscar",
+    "language": "Idioma",
+    "portuguese": "Português",
+    "english": "Inglês",
+    "spanish": "Espanhol"
+  },
+  "footer": {
+    "description": "A Rede Autoestima-se é uma organização da sociedade civil sem fins lucrativos que democratiza o acesso a atendimentos psicológicos para mulheres e jovens ativistas.",
+    "quickLinks": "Links Rápidos",
+    "aboutUs": "Sobre Nós",
+    "whatWeDo": "O que Fazemos",
+    "psychotherapy": "Psicoterapia",
+    "transparency": "Transparência",
+    "support": "Apoio",
+    "memberAssociate": "Adesão Sócio Doador",
+    "privacyPolicy": "Política de Privacidade",
+    "donate": "Doar",
+    "contact": "Contato",
+    "followUs": "Siga-nos",
+    "rightsReserved": "Todos os direitos reservados",
+    "developedBy": "Desenvolvido por"
+  }
+}

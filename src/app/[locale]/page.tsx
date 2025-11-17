@@ -4,6 +4,7 @@ import Image from "next/image";
 import { StaticImageData } from "next/image";
 import { useState } from "react";
 import CountUp from "react-countup";
+import { useTranslations } from "next-intl";
 
 //Components and files
 import Slider from "@/components/Slider";
@@ -44,34 +45,31 @@ import Link from "next/link";
 import RecognitionSlider from "@/components/RecognitionSlider";
 
 type Card = {
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   image: StaticImageData;
   alt: string;
   link: string;
 };
 
-const cardContent: Card[] = [
+const cardContentData: Card[] = [
   {
-    title: "Assistência psicossocial",
-    description:
-      "Oferecemos atendimento psicológico de psicoterapia focal breve e grupos de acolhimento com profissionais da psicologia.",
+    titleKey: "home.whatWeDo.cards.psychosocial.title",
+    descriptionKey: "home.whatWeDo.cards.psychosocial.description",
     image: psicossocial,
     alt: "Assistência psicossocial",
     link: "pages/acolhimento",
   },
   {
-    title: "Comunicação",
-    description:
-      "Propagamos o tema da saúde mental para profissionais da saúde, mídia e sociedade.",
+    titleKey: "home.whatWeDo.cards.communication.title",
+    descriptionKey: "home.whatWeDo.cards.communication.description",
     image: comunicacao,
     alt: "",
     link: "pages/iniciativas/vozes-do-bem-estar",
   },
   {
-    title: "Advocacy",
-    description:
-      "Trabalhamos para influenciar e defender as políticas de saúde mental e bem-estar.",
+    titleKey: "home.whatWeDo.cards.advocacy.title",
+    descriptionKey: "home.whatWeDo.cards.advocacy.description",
     image: advocacy,
     alt: "",
     link: "pages/iniciativas/atendimento-para-ativistas",
@@ -165,29 +163,7 @@ const parceiros: Doadores[] = [
   },
 ];
 
-const seeMoreData = [
-  {
-    title:
-      "A Rede Autoestima-se disponibiliza apoio psicológico para o público?",
-    text: "Sim, oferecemos apoio psicológico gratuito, com foco em mulheres com até 65 anos e jovens de 13 a 29 anos, por meio de atendimentos online realizados por psicólogos (as) voluntários.",
-  },
-  {
-    title: "Como funcionam os acolhimentos psicológicos?",
-    text: "Os acolhimentos são realizados em sessões online, onde os participantes recebem suporte emocional em psicoterapia breve focal, com a triagem e orientação de profissionais qualificados e devidamente inscritos no Conselho Regional de Psicologia.",
-  },
-  {
-    title: "Como funcionam os atendimentos para jovens com menos de 18 anos?",
-    text: "Para jovens de 13 a 17 anos, os atendimentos são realizados com autorização dos responsáveis e seguem a mesma estrutura de acolhimento psicossocial oferecida aos demais beneficiários. Após solicitar o atendimento, encaminharemos via e-mail o documento.",
-  },
-  {
-    title: "Quanto tempo dura a terapia?",
-    text: "Ao todo são realizadas 12 sessões de psicoterapia com duração média de 45 minutos, 1 vezpor semana. Para solicitar o atendimento acesse: https://bit.ly/solicitarAtendimentoPsicologicoAutoestimase",
-  },
-  {
-    title: "Como posso ser voluntário (a)?",
-    text: "Para ser voluntário(a), você pode se inscrever em nossos processos seletivos ou caso você seja psicólogo (a), pode encaminhar o seu currículo para o e-mail: trabalheconosco@redeautoestimase.com com o Título: Candidatura Voluntária.",
-  },
-];
+
 
 const SeeMore = ({
   id,
@@ -228,6 +204,7 @@ const SeeMore = ({
 
 export default function Home() {
   const [activeId, setActiveId] = useState<number | null>(null);
+  const t = useTranslations();
 
   return (
     <div>
@@ -235,8 +212,8 @@ export default function Home() {
       <section className={styles.homeAbout}>
         <div className={styles.aboutContent}>
           <div className={styles.aboutHeader}>
-            <div>SOBRE AUTOESTIMA-SE</div>
-            <h1>O que nos traz aqui?</h1>
+            <div>{t('home.about.label')}</div>
+            <h1>{t('home.about.title')}</h1>
           </div>
           <div className={styles.aboutVideoMobile}>
             <iframe
@@ -250,18 +227,11 @@ export default function Home() {
             ></iframe>
           </div>
           <p className={styles.aboutDesc}>
-            A Rede Autoestima-se é uma organização da sociedade civil sem fins
-            lucrativos que desde 2020, democratiza o acesso a atendimentos
-            psicológicos e práticas terapêuticas para mulheres e jovens
-            ativistas em situação de vulnerabilidade social. Atuamos de forma
-            online, beneficiando pessoas de diversas regiões do Brasil,
-            oferecendo suporte psicossocial essencial para quem enfrenta
-            desafios emocionais como:ansiedade, depressão e estresse, com foco
-            especial nos jovens e mulheres negras.
+            {t('home.about.description')}
           </p>
 
           <Button
-            label="Acesse nossa ONE PAGE"
+            label={t('home.about.button')}
             className={styles.aboutButton}
             href="https://bit.ly/onepageAutoestima-se"
           />
@@ -286,12 +256,12 @@ export default function Home() {
 
       <section className={styles.acolhimento}>
         <div className={styles.acolhimentoHeader}>
-          <div>O QUE FAZEMOS</div>
-          <h1>Acesso ao acolhimento emocional</h1>
+          <div>{t('home.whatWeDo.label')}</div>
+          <h1>{t('home.whatWeDo.title')}</h1>
         </div>
         <div className={styles.acolhimentoContent}>
           <div className={styles.cardContainer}>
-            {cardContent.map((item, index) => (
+            {cardContentData.map((item, index) => (
               <div key={index} className={styles.cardElement}>
                 <Link href={item.link}>
                   <Image
@@ -301,15 +271,15 @@ export default function Home() {
                   />
                   <div className={styles.cardElementContent}>
                     <div className={styles.cardDesc}>
-                      <h2>{item.title}</h2>
-                      <p>{item.description}</p>
+                      <h2>{t(item.titleKey)}</h2>
+                      <p>{t(item.descriptionKey)}</p>
                     </div>
                     <button>
                       <Image
                         src={saibaArrow}
                         alt='Seta indicando o botão "SAIBA MAIS"'
                       />{" "}
-                      <div>SAIBA MAIS</div>
+                      <div>{t('home.whatWeDo.readMore')}</div>
                     </button>
                   </div>
                 </Link>
@@ -319,11 +289,10 @@ export default function Home() {
         </div>
         <div className={styles.acolhimentoResultados}>
           <div className={styles.resultadosHeader}>
-            <div>RESULTADOS</div>
-            <h1>Nossas ações</h1>
+            <div>{t('home.results.label')}</div>
+            <h1>{t('home.results.title')}</h1>
             <p>
-              Promovem o fortalecimento da saúde mental aliada à tecnologia para
-              todo o Brasil através de uma comunidade digital.
+              {t('home.results.description')}
             </p>
           </div>
           <div className={styles.acolhimentoCount}>
@@ -334,7 +303,7 @@ export default function Home() {
                   <CountUp end={1000} duration={3} separator="" />
                 </h1>
               </div>
-              <h2>sessões de psicoterapia realizadas</h2>
+              <h2>{t('home.results.stats.sessions')}</h2>
             </div>
             <div className={styles.countElement}>
               <div className={styles.countTop}>
@@ -343,7 +312,7 @@ export default function Home() {
                   <CountUp end={100} duration={3} separator="" />
                 </h1>
               </div>
-              <h2>cidades atendidas</h2>
+              <h2>{t('home.results.stats.cities')}</h2>
             </div>
             <div className={styles.countElement}>
               <div className={styles.countTop}>
@@ -353,7 +322,7 @@ export default function Home() {
                   <CountUp end={18} duration={3} separator="" />
                 </h1>
               </div>
-              <h2>estados brasileiros atendidos</h2>
+              <h2>{t('home.results.stats.states')}</h2>
             </div>
           </div>
         </div>
@@ -365,8 +334,8 @@ export default function Home() {
 
       <section className={styles.conquistas}>
         <div className={styles.conquistasHeader}>
-          <div>CONQUISTAS</div>
-          <h1>Reconhecimentos</h1>
+          <div>{t('home.recognition.label')}</div>
+          <h1>{t('home.recognition.title')}</h1>
         </div>
         <div className={styles.conquistasCardContainer}>
           <div className={styles.conquistasDesktop}>
@@ -385,8 +354,8 @@ export default function Home() {
 
       <section className={styles.midia}>
         <div className={styles.midiaHeader}>
-          <div>MÍDIA</div>
-          <h1>A Rede na Mídia</h1>
+          <div>{t('home.media.label')}</div>
+          <h1>{t('home.media.title')}</h1>
         </div>
         <MediaSection />
       </section>
@@ -408,24 +377,21 @@ export default function Home() {
 
       <section className={styles.faq}>
         <div className={styles.faqHeader}>
-          <div>FAQ</div>
-          <h1>Tire suas dúvidas</h1>
+          <div>{t('home.faq.label')}</div>
+          <h1>{t('home.faq.title')}</h1>
           <p>
-            Reunimos respostas para as principais dúvidas sobre a Rede
-            Autoestima-se e os atendimentos de psicoterapia. *A terapia online
-            foi regulamentada no Brasil no dia 12 de novembro de 2018 por meio
-            da Resolução do CFP 011/2018.
+            {t('home.faq.description')}
           </p>
         </div>
         <div className={styles.seeMoreWrapper}>
-          {seeMoreData.map((item, index) => (
+          {[0, 1, 2, 3, 4].map((index) => (
             <SeeMore
               key={index}
               id={index}
               activeId={activeId}
               setActiveId={setActiveId}
-              title={item.title}
-              text={item.text}
+              title={t(`home.faq.questions.${index}.question`)}
+              text={t(`home.faq.questions.${index}.answer`)}
             />
           ))}
         </div>

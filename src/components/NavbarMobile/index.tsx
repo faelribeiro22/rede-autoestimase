@@ -76,7 +76,7 @@ const NavbarMobile = ({ handleCloseMenus }: NavbarProps) => {
   const [menuActive, setMenuActive] = useState('');
   const router = useRouter();
   // Extract locale from pathname
-  const locale = pathname?.split('/')[1] || 'pt';
+  const locale = pathname?.split('/')[1] || 'pt-BR';
 
   const clickLink = (e: React.MouseEvent<HTMLAnchorElement>, page: Page) => {
     if (handleCloseMenus && !page.children) {

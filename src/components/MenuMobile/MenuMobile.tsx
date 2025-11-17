@@ -14,7 +14,7 @@ interface MenuMobileProps {
 
 const MenuMobile = ({ toggleMenu }: MenuMobileProps) => {
   const pathname = usePathname();
-  const locale = pathname?.split('/')[1] || 'pt';
+  const locale = pathname?.split('/')[1] || 'pt-BR';
 
   return (
     <div className="menu-mobile">

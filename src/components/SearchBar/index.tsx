@@ -21,7 +21,7 @@ export default function SearchBar({ isMobile = false }: SearchBarProps) {
   const pathname = usePathname();
   
   // Extract locale from pathname
-  const locale = pathname?.split('/')[1] || 'pt';
+  const locale = pathname?.split('/')[1] || 'pt-BR';
 
   // Fechar modal ao clicar fora
   useEffect(() => {

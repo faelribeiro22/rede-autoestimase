@@ -1,0 +1,135 @@
+{
+  "navigation": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "whatWeDo": "What We Do",
+    "howWeDo": "How We Do It",
+    "companies": "Companies",
+    "educationalInstitutions": "Educational Institutions",
+    "volunteering": "Volunteering",
+    "psychotherapy": "Psychotherapy",
+    "initiatives": "Initiatives",
+    "activistSupport": "Support for Activists",
+    "autoViverFund": "AutoViver Fund",
+    "mentalHealthAmazonia": "Mental Health in the Amazon",
+    "voicesOfWellBeing": "Voices of Well-Being",
+    "transparency": "Transparency",
+    "donate": "Donate",
+    "donateNow": "Donate Now"
+  },
+  "home": {
+    "about": {
+      "label": "ABOUT AUTOESTIMA-SE",
+      "title": "What brings us here?",
+      "description": "Rede Autoestima-se is a non-profit civil society organization that since 2020, democratizes access to psychological care and therapeutic practices for women and young activists in situations of social vulnerability. We work online, benefiting people from different regions of Brazil, offering essential psychosocial support for those facing emotional challenges such as: anxiety, depression and stress, with a special focus on young people and black women.",
+      "button": "Access our ONE PAGE"
+    },
+    "whatWeDo": {
+      "label": "WHAT WE DO",
+      "title": "Access to emotional support",
+      "cards": {
+        "psychosocial": {
+          "title": "Psychosocial Care",
+          "description": "We strengthen the emotional health of women and young activists, offering access to 12 free psychotherapy sessions and 10 group meetings, promoting well-being and personal development."
+        },
+        "communication": {
+          "title": "Communication",
+          "description": "Our channels promote content about mental health, well-being and personal transformation to help you understand your emotions and take care of yourself."
+        },
+        "advocacy": {
+          "title": "Advocacy",
+          "description": "We work in public spaces to strengthen mental health as a human right, ensuring that everyone has access to emotional care."
+        }
+      },
+      "readMore": "LEARN MORE"
+    },
+    "results": {
+      "label": "RESULTS",
+      "title": "Our actions",
+      "description": "Promote the strengthening of mental health combined with technology for all of Brazil through a digital community.",
+      "stats": {
+        "sessions": "psychotherapy sessions held",
+        "cities": "cities served",
+        "states": "Brazilian states",
+        "partners": "volunteer partners"
+      }
+    },
+    "recognition": {
+      "label": "ACHIEVEMENTS",
+      "title": "Recognition"
+    },
+    "media": {
+      "label": "MEDIA",
+      "title": "The Network in the Media"
+    },
+    "sponsors": {
+      "label": "MAKE A DIFFERENCE",
+      "title": "Donors",
+      "buttonMobile": "Be Our Partner",
+      "buttonDesktop": "Meet our list of supporters"
+    },
+    "partners": {
+      "titleMobile": "Strategic Partners",
+      "titleDesktop": "Partners"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Clear your doubts",
+      "description": "We have gathered answers to the main questions about Rede Autoestima-se and psychotherapy services. *Online therapy was regulated in Brazil on November 12, 2018 through CFP Resolution 011/2018.",
+      "questions": [
+        {
+          "question": "Does Rede Autoestima-se provide psychological support to the public?",
+          "answer": "Yes, we offer free psychological support, focusing on women up to 65 years old and young people aged 13 to 29, through online sessions conducted by volunteer psychologists."
+        },
+        {
+          "question": "How do psychological support sessions work?",
+          "answer": "Sessions are conducted online, where participants receive emotional support in brief focal psychotherapy, with screening and guidance from qualified professionals duly registered with the Regional Psychology Council."
+        },
+        {
+          "question": "How do sessions work for young people under 18?",
+          "answer": "For young people aged 13 to 17, sessions are conducted with the authorization of guardians and follow the same psychosocial support structure offered to other beneficiaries. After requesting the service, we will send the document via email."
+        },
+        {
+          "question": "How long does therapy last?",
+          "answer": "A total of 12 psychotherapy sessions are held with an average duration of 45 minutes, once a week. To request service, visit: https://bit.ly/solicitarAtendimentoPsicologicoAutoestimase"
+        },
+        {
+          "question": "How can I become a volunteer?",
+          "answer": "To become a volunteer, you can apply in our selection processes or, if you are a psychologist, you can send your resume to the email: trabalheconosco@redeautoestimase.com with the Subject: Voluntary Application."
+        }
+      ]
+    }
+  },
+  "common": {
+    "readMore": "Learn more",
+    "seeMore": "See more",
+    "seeLess": "See less",
+    "backToTop": "Back to top",
+    "loading": "Loading...",
+    "error": "Error loading",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu",
+    "search": "Search",
+    "language": "Language",
+    "portuguese": "Portuguese",
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "footer": {
+    "description": "Rede Autoestima-se is a non-profit civil society organization that democratizes access to psychological care for women and young activists.",
+    "quickLinks": "Quick Links",
+    "aboutUs": "About Us",
+    "whatWeDo": "What We Do",
+    "psychotherapy": "Psychotherapy",
+    "transparency": "Transparency",
+    "support": "Support",
+    "memberAssociate": "Donor Membership",
+    "privacyPolicy": "Privacy Policy",
+    "donate": "Donate",
+    "contact": "Contact",
+    "followUs": "Follow us",
+    "rightsReserved": "All rights reserved",
+    "developedBy": "Developed by"
+  }
+}

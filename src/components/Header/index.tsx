@@ -18,7 +18,7 @@ import SearchBar from "../SearchBar";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const locale = pathname?.split('/')[1] || 'pt';
+  const locale = pathname?.split('/')[1] || 'pt-BR';
 
   // Previne scroll quando o menu está aberto
   useEffect(() => {
