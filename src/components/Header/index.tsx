@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 
 //Components and archives
 import "./styles.modules.scss";
@@ -16,9 +17,11 @@ import LanguageFlag from "../LanguageFlag/LanguageFlag";
 import SearchBar from "../SearchBar";
 
 const Header = () => {
+  const t = useTranslations("navigation");
+  const tc = useTranslations("common");
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const locale = pathname?.split('/')[1] || 'pt-BR';
+  const locale = useLocale();
 
   // Previne scroll quando o menu está aberto
   useEffect(() => {
@@ -43,7 +46,7 @@ const Header = () => {
         <Link href={`/${locale}`} className="logo-desktop">
           <Image
             src="/assets/logo/logo-desktop.svg"
-            alt="Logo da Rede Autoestima-se"
+            alt={tc("logoAlt")}
             width={198}
             height={56}
             priority
@@ -56,7 +59,7 @@ const Header = () => {
           <Link href={`/${locale}`} className="logo-mobile">
             <Image
               src="/assets/logo/logo-mobile.svg"
-              alt="Logo da Rede Autoestima-se"
+              alt={tc("logoAlt")}
               width={90}
               height={112}
               priority
@@ -64,7 +67,7 @@ const Header = () => {
               style={{ width: 'auto', height: '56px' }}
             />
           </Link>
-          <Button label={"Doe"} href={`/${locale}/pages/doe`} className="donate" />
+          <Button label={t("donate")} href={`/${locale}/pages/doe`} className="donate" />
           <div className="menu-button" onClick={toggleMenu}>
             {isOpen ? <Close /> : <Menu />}
           </div>
@@ -77,7 +80,7 @@ const Header = () => {
           </div>
           <div className="main-buttons">
             <SearchBar />
-            <Button label={"Doe"} href={`/${locale}/pages/doe`} className="donate" />
+            <Button label={t("donate")} href={`/${locale}/pages/doe`} className="donate" />
           </div>
           <LanguageFlag />
         </div>

@@ -3,11 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations, useLocale } from "next-intl";
 import { IoIosArrowDown } from "react-icons/io";
 import "./styles.modules.scss";
 
 interface Page {
-  name: string;
+  nameKey: string;
   path: string;
   children?: Page[];
 }
@@ -18,69 +19,64 @@ type NavbarProps = {
 
 const pages: Page[] = [
   {
-    name: "Início",
+    nameKey: "home",
     path: "/",
   },
   {
-    name: "Sobre nós",
+    nameKey: "aboutUs",
     path: "/pages/sobre-nos",
   },
   {
-    name: "O que fazemos",
+    nameKey: "whatWeDo",
     path: "/pages/o-que-fazemos",
     children: [
-      { name: "Como fazemos", path: "/pages/o-que-fazemos/como-fazemos" },
-      { name: "Empresas", path: "/pages/o-que-fazemos/empresas" },
+      { nameKey: "howWeDo", path: "/pages/o-que-fazemos/como-fazemos" },
+      { nameKey: "companies", path: "/pages/o-que-fazemos/empresas" },
       {
-        name: "Instituições de Ensino",
+        nameKey: "educationalInstitutions",
         path: "/pages/o-que-fazemos/instituicoes-de-ensino",
       },
-      { name: "Voluntariado", path: "/pages/o-que-fazemos/voluntariado" },
+      { nameKey: "volunteering", path: "/pages/o-que-fazemos/voluntariado" },
     ],
   },
   {
-    name: "Psicoterapia",
+    nameKey: "psychotherapy",
     path: "/pages/acolhimento",
   },
   {
-    name: "Iniciativas",
+    nameKey: "initiatives",
     path: "/pages/iniciativas",
     children: [
       {
-        name: "Atendimento para ativistas",
+        nameKey: "activistSupport",
         path: "/pages/iniciativas/atendimento-para-ativistas",
       },
       {
-        name: "Fundo AutoViver",
+        nameKey: "autoViverFund",
         path: "/pages/iniciativas/fundo-autoviver",
       },
       {
-        name: "Saúde mental na Amazônia",
+        nameKey: "mentalHealthAmazonia",
         path: "/pages/iniciativas/saude-mental-na-amazonia",
       },
       {
-        name: "Vozes do Bem-Estar",
+        nameKey: "voicesOfWellBeing",
         path: "/pages/iniciativas/vozes-do-bem-estar",
       },
     ],
   },
   {
-    name: "Transparência",
+    nameKey: "transparency",
     path: "/pages/transparencia",
-  },
-  {
-    name: "",
-    path: "/pages/doe",
   },
 ];
 
 const Navbar = ({ handleCloseMenus }: NavbarProps) => {
+  const t = useTranslations("navigation");
   const pathname = usePathname();
-  // Extract locale from pathname
-  const locale = pathname?.split('/')[1] || 'pt-BR';
+  const locale = useLocale();
 
   const closeMenuMenu = (children: boolean) => {
-    console.log("children", children);
     if (handleCloseMenus && children) {
       handleCloseMenus();
     }
@@ -100,7 +96,7 @@ const Navbar = ({ handleCloseMenus }: NavbarProps) => {
               className={`link ${isActive ? "active" : ""}`}
               onClick={() => closeMenuMenu(!page.children)}
             >
-              {page.name}
+              {t(page.nameKey)}
               {page.children && <IoIosArrowDown className="arrowDown" />}
             </Link>
             {page.children && (
@@ -118,7 +114,7 @@ const Navbar = ({ handleCloseMenus }: NavbarProps) => {
                         isChildActive ? "active" : ""
                       }`}
                     >
-                      {child.name}
+                      {t(child.nameKey)}
                     </Link>
                   );
                 })}

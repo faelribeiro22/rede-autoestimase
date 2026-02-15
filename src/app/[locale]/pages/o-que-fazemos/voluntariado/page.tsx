@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Banner from "@/components/Banner/Banner";
 import CardStep from "@/components/CardStep/CardStep";
 import CardService from "@/components/CardService";
@@ -18,76 +19,72 @@ import groupOfPeople6 from "@/../public/assets/images/groupOfPeople6.jpeg";
 
 const servicesData = [
   {
-    title:
-      "Atuação em rede colaborativa com a oportunidade de conhecer pessoas de diversas regiões do Brasil",
+    titleKey: "volunteering.advantages.items.0.title",
     backgroundImage: groupOfPeople1,
   },
   {
-    title:
-      "Certificado de participação, reconhecendo seu trabalho e dedicação.",
+    titleKey: "volunteering.advantages.items.1.title",
     backgroundImage: groupOfPeople2,
   },
   {
-    title: "Apoio e acolhimento emocional ao longo de toda a experiência",
+    titleKey: "volunteering.advantages.items.2.title",
     backgroundImage: groupOfPeople3,
   },
   {
-    title: "Cartas de recomendação para fortalecer seu perfil profissional",
+    titleKey: "volunteering.advantages.items.3.title",
     backgroundImage: groupOfPeople4,
   },
   {
-    title: "Acesso a ofertas exclusivas e oportunidades de networking",
+    titleKey: "volunteering.advantages.items.4.title",
     backgroundImage: groupOfPeople5,
   },
   {
-    title:
-      "Ambiente inclusivo e voltado ao desenvolvimento pessoal e profissional",
+    titleKey: "volunteering.advantages.items.5.title",
     backgroundImage: groupOfPeople6,
   },
 ];
 
-const stepsData = [
-  {
-    number: "01",
-    title: "Candidatura",
-    text: (
-      <>
-        Caso você seja psicólogo (a) preencha o Formulário. Para outras funções
-        envie o seu currículo e carta de motivação para o e-mail:{" "}
-        <a
-          href="mailto:trabalheconosco@redeautoestimase.com"
-          style={{ color: "unset", textDecoration: "underline" }}
-        >
-          trabalheconosco@redeautoestimase.com
-        </a>{" "}
-        com o título: CANDIDATURA VOLUNTÁRIA. O tempo mínimo para atuar como
-        voluntário (a) é de 6 meses.
-      </>
-    ),
-  },
-  {
-    number: "02",
-    title: "Participação em Entrevistas",
-    text: "Participação em Entrevistas: Após sua inscrição, entraremos em contato para uma conversa, onde você poderá compartilhar suas motivações e experiências. A entrevista tem duração média de 40 minutos e poderá ser de 1 a 3 entrevistas com diferentes integrantes do time.",
-  },
-  {
-    number: "03",
-    title: "Treinamento",
-    text: "Todos os voluntários passam por um treinamento que os prepara para atuar de maneira efetiva e acolhedora.",
-  },
-  {
-    number: "04",
-    title: "Integração à Equipe",
-    text: "Após o treinamento, você será integrado(a) à nossa equipe, participando de atividades, encontros em rede e projetos conforme suas habilidades e interesses.",
-  },
-];
-
 export default function Voluntariado() {
+  const t = useTranslations("volunteering");
+  const tc = useTranslations("common");
+
+  const stepsData = [
+    {
+      numberKey: "volunteering.howToJoin.steps.0.number",
+      titleKey: "volunteering.howToJoin.steps.0.title",
+      text: t.rich("howToJoin.steps.0.description", {
+        link: (chunks) => (
+          <a
+            href="mailto:trabalheconosco@redeautoestimase.com"
+            style={{ color: "unset", textDecoration: "underline" }}
+          >
+            {chunks}
+          </a>
+        )
+      }),
+    },
+    {
+      numberKey: "volunteering.howToJoin.steps.1.number",
+      titleKey: "volunteering.howToJoin.steps.1.title",
+      text: t("howToJoin.steps.1.description"),
+    },
+    {
+      numberKey: "volunteering.howToJoin.steps.2.number",
+      titleKey: "volunteering.howToJoin.steps.2.title",
+      text: t("howToJoin.steps.2.description"),
+    },
+    {
+      numberKey: "volunteering.howToJoin.steps.3.number",
+      titleKey: "volunteering.howToJoin.steps.3.title",
+      text: t("howToJoin.steps.3.description"),
+    },
+  ];
+
   return (
     <div className={styles.pageContainer}>
       <Banner
         className={styles.banner}
-        title="Voluntariado"
+        title={t("bannerTitle")}
         image={voluntariado}
       />
       <section className={styles.volunteering}>
@@ -95,27 +92,20 @@ export default function Voluntariado() {
           <span className="material-symbols-outlined">sentiment_satisfied</span>
         </div>
 
-        <p className={styles.textBox}>
-          Nosso voluntariado é uma oportunidade incrível para quem deseja fazer
-          a diferença na vida de jovens e mulheres que enfrentam desafios
-          emocionais e sociais.
+        <div className={styles.textBox}>
+          <p>{t("intro.0")}</p>
           <br />
-          <br />
-          Como voluntário(a), você se tornará parte de uma comunidade dedicada a
-          promover o bem-estar e a autoestima. Oferecemos diversas formas de
-          atuação, desde atendimentos psicológicos até atividades de mobilização
-          e sensibilização. Aqui, sua empatia e habilidades serão valiosas para
-          criar um impacto positivo.
-        </p>
+          <p>{t("intro.1")}</p>
+        </div>
       </section>
 
       <section className={styles.advantages}>
-        <h1>Vantagens de ser voluntário</h1>
+        <h1>{t("advantages.title")}</h1>
         <div className={styles.cardAdvantagesWrapper}>
           {servicesData.map((service, index) => (
             <div className={styles.cardService} key={index}>
               <CardService
-                title={service.title}
+                title={t(service.titleKey)}
                 icon={verified}
                 backgroundImage={service.backgroundImage}
               />
@@ -127,7 +117,7 @@ export default function Voluntariado() {
       <section className={styles.howToJoin}>
         <Banner
           className={styles.banner}
-          title="Como fazer parte"
+          title={t("howToJoin.title")}
           image={groupConversation}
         />
 
@@ -135,17 +125,15 @@ export default function Voluntariado() {
           {stepsData.map((step, index) => (
             <CardStep
               key={index}
-              number={step.number}
-              title={step.title}
+              number={t(step.numberKey)}
+              title={t(step.titleKey)}
               text={step.text}
             />
           ))}
         </div>
 
         <h2 className={styles.subtitleBox}>
-          Junte-se a nós e ajude a construir um espaço onde todas as vozes são
-          ouvidas e valorizadas. Na Rede Autoestima-se, sua contribuição pode
-          ser a chave para a transformação de vidas!
+          {t("howToJoin.footer")}
         </h2>
       </section>
     </div>

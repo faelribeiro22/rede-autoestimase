@@ -112,6 +112,18 @@
     align-items: center;
     justify-content: space-between;
     padding: 80px 10%;
+    
+    @include breakpoints.media("<desktop") {
+      padding: 60px 40px;
+    }
+    
+    @include breakpoints.media("<tablet") {
+      padding: 50px 24px;
+    }
+    
+    @include breakpoints.media("<mobile") {
+      padding: 40px 16px;
+    }
     min-height: 250px;
     width: 100%;
     max-width: 100%;

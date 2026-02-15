@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 import Image from "next/image";
 
@@ -22,60 +23,52 @@ import zap from "@/../public/assets/icons/WhatsappLogo.png";
 
 const cardData = [
   {
-    title: "Atendimentos de psicoterapia",
+    titleKey: "companies.services.items.0.title",
     icon: brain,
     backgroundImage: psicoterapiaIndividual,
   },
   {
-    title: "Apoio Contínuo",
+    titleKey: "companies.services.items.1.title",
     icon: handHeart,
     backgroundImage: apoioContinuo,
   },
   {
-    title: "Treinamentos e palestras",
+    titleKey: "companies.services.items.2.title",
     icon: chalkboardTeacher,
     backgroundImage: treinamentos,
   },
   {
-    title: "Consultoria empresarial para demandas específicas da instituição",
+    titleKey: "companies.services.items.3.title",
     icon: lightbulb,
     backgroundImage: consultoria,
   },
 ];
 
-const empresas = () => {
+const Empresas = () => {
+  const t = useTranslations("companies");
+  const tc = useTranslations("common");
+
   return (
     <div className={styles.empresas}>
-      <Banner title="Empresas" image={empresasPic} className={styles.banner} />
+      <Banner title={t("bannerTitle")} image={empresasPic} className={styles.banner} />
       <section className={styles.splitViewSection}>
         <div className={`${styles.split} ${styles.split1}`}>
           <h1 className={styles.mobileTitle}>
-            Leve a Autoestima-se para sua empresa
+            {t("split1.title")}
           </h1>
           <Image
             src={empresasSplit1}
-            alt="Imagem relativa ao título: Leve a Autoestima-se para sua empresa"
+            alt={tc("imageAlt")}
             className={styles.splitImage}
           />
           <div className={styles.splitContentContainer}>
             <div className={styles.splitContent}>
               <h1 className={styles.title}>
-                Leve a Autoestima-se para sua empresa
+                {t("split1.title")}
               </h1>
               <div className={styles.text}>
                 <p>
-                  Aqui na Rede Autoestima-se, oferecemos uma gama de serviços
-                  personalizados para empresas que desejam promover o bem-estar
-                  emocional e social de seus colaboradores. Nossos serviços
-                  incluem: palestras, workshops, e programas de desenvolvimento
-                  focados em saúde mental, diversidade, e inclusão no ambiente
-                  de trabalho.
-                </p>
-                <p>
-                  Além disso, realizamos consultorias para a criação de
-                  ambientes de trabalho mais saudáveis e inclusivos, ajudando
-                  sua empresa a implementar práticas que valorizam a saúde
-                  mental e o bem-estar de toda a equipe.
+                  {t("split1.description")}
                 </p>
               </div>
             </div>
@@ -83,38 +76,35 @@ const empresas = () => {
         </div>
         <div className={`${styles.split} ${styles.split2}`}>
           <h1 className={styles.mobileTitle}>
-            Todas as vendas são revertidas para o trabalho social
+            {t("split2.title")}
           </h1>
           <Image
             src={empresasSplit2}
-            alt="Imagem relativa ao título: Leve a Autoestima-se para sua empresa"
+            alt={tc("imageAlt")}
             className={styles.splitImage}
           />
           <div className={styles.splitContentContainer}>
             <div className={styles.splitContent}>
               <h1 className={styles.title}>
-                Todas as vendas são revertidas para o trabalho social{" "}
+                {t("split2.title")}
               </h1>
               <div className={styles.text}>
                 <p>
-                  Com uma abordagem humanizada e baseada em evidências, estamos
-                  comprometidos em apoiar o crescimento sustentável das
-                  organizações, promovendo uma cultura organizacional mais
-                  empática e acolhedora.
+                  {t("split2.description")}
                 </p>
                 <div className={styles.socials}>
                   <a
-                    href={`mailto:"organizacao@redeautoestimase.com"`}
+                    href={`mailto:organizacao@redeautoestimase.com`}
                     className={styles.mail}
                   >
-                    <Image src={envelope} alt="Mail icon" />
+                    <Image src={envelope} alt={tc("mailAlt")} />
                     <p>organizacao@redeautoestimase.com</p>
                   </a>
                   <a
                     href="https://wa.me/5575982133430"
                     className={styles.whatsApp}
                   >
-                    <Image src={zap} alt="WhatsApp icon" />
+                    <Image src={zap} alt={tc("whatsappAlt")} />
                     <p>+55 (75) 98213-3430</p>
                   </a>
                 </div>
@@ -124,32 +114,16 @@ const empresas = () => {
         </div>
       </section>
       <section className={styles.servicesWrapper}>
-        <h1 className={styles.h1Services}>Serviços</h1>
+        <h1 className={styles.h1Services}>{t("services.title")}</h1>
         <div className={styles.cardGrid}>
-          <CardService
-            title={cardData[0].title}
-            icon={cardData[0].icon}
-            backgroundImage={cardData[0].backgroundImage}
-            // hoverText={cardData[0].hoverText}
-          />
-          <CardService
-            title={cardData[1].title}
-            icon={cardData[1].icon}
-            backgroundImage={cardData[1].backgroundImage}
-            // hoverText={cardData[1].hoverText}
-          />
-          <CardService
-            title={cardData[2].title}
-            icon={cardData[2].icon}
-            backgroundImage={cardData[2].backgroundImage}
-            // hoverText={cardData[2].hoverText}
-          />
-          <CardService
-            title={cardData[3].title}
-            icon={cardData[3].icon}
-            backgroundImage={cardData[3].backgroundImage}
-            // hoverText={cardData[3].hoverText}
-          />
+          {cardData.map((card, index) => (
+            <CardService
+              key={index}
+              title={t(card.titleKey)}
+              icon={card.icon}
+              backgroundImage={card.backgroundImage}
+            />
+          ))}
         </div>
       </section>
       <Forms />
@@ -157,4 +131,4 @@ const empresas = () => {
   );
 };
 
-export default empresas;
+export default Empresas;

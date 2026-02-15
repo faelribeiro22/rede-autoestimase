@@ -4,7 +4,7 @@ import Image from "next/image";
 import { StaticImageData } from "next/image";
 import { useState } from "react";
 import CountUp from "react-countup";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 //Components and files
 import Slider from "@/components/Slider";
@@ -58,50 +58,49 @@ const cardContentData: Card[] = [
     descriptionKey: "home.whatWeDo.cards.psychosocial.description",
     image: psicossocial,
     alt: "Assistência psicossocial",
-    link: "pages/acolhimento",
+    link: "/pages/acolhimento",
   },
   {
     titleKey: "home.whatWeDo.cards.communication.title",
     descriptionKey: "home.whatWeDo.cards.communication.description",
     image: comunicacao,
     alt: "",
-    link: "pages/iniciativas/vozes-do-bem-estar",
+    link: "/pages/iniciativas/vozes-do-bem-estar",
   },
   {
     titleKey: "home.whatWeDo.cards.advocacy.title",
     descriptionKey: "home.whatWeDo.cards.advocacy.description",
     image: advocacy,
     alt: "",
-    link: "pages/iniciativas/atendimento-para-ativistas",
+    link: "/pages/iniciativas/atendimento-para-ativistas",
   },
 ];
 
 type Reconhecimento = {
   icon: StaticImageData;
-  subject: string;
+  nameKey: string;
 };
 
 const reconContent: Reconhecimento[] = [
   {
     icon: folha,
-    subject: "Prêmio Empreendedor Social pela Folha de São Paulo",
+    nameKey: "home.recognition.items.0",
   },
   {
     icon: ashoka,
-    subject: "Reconhecimento da Rede Global Ashoka",
+    nameKey: "home.recognition.items.1",
   },
   {
     icon: onu,
-    subject: "Representante do Brasil na Delegação Jovem da ONU - YA",
+    nameKey: "home.recognition.items.2",
   },
   {
     icon: youth,
-    subject:
-      "Representante do Brasil na Delegação Jovem do Banco Mundial- Youth Summit",
+    nameKey: "home.recognition.items.3",
   },
   {
     icon: ce,
-    subject: "Palestrante na Conferência Ethos 360°",
+    nameKey: "home.recognition.items.4",
   },
 ];
 
@@ -178,6 +177,7 @@ const SeeMore = ({
   title: string;
   text: string;
 }) => {
+  const tc = useTranslations("common");
   const isActive = id === activeId;
 
   return (
@@ -190,11 +190,11 @@ const SeeMore = ({
         {isActive ? (
           <Image
             src={minus}
-            alt="Menos conteúdo"
+            alt={tc("minusAlt")}
             className={styles.rotateIcon}
           />
         ) : (
-          <Image src={plus} alt="Mais conteudo" className={styles.rotateIcon} />
+          <Image src={plus} alt={tc("plusAlt")} className={styles.rotateIcon} />
         )}
       </div>
       {isActive && <p className={styles.seeMoreText}>{text}</p>}
@@ -205,6 +205,8 @@ const SeeMore = ({
 export default function Home() {
   const [activeId, setActiveId] = useState<number | null>(null);
   const t = useTranslations();
+  const tc = useTranslations("common");
+  const locale = useLocale();
 
   return (
     <div>
@@ -249,7 +251,7 @@ export default function Home() {
       <section className={styles.divider}>
         <Image
           src={smileyDivider}
-          alt="Ícone de divisão de secção"
+          alt={tc("dividerAlt")}
           className={styles.dividerIcon}
         />
       </section>
@@ -263,10 +265,10 @@ export default function Home() {
           <div className={styles.cardContainer}>
             {cardContentData.map((item, index) => (
               <div key={index} className={styles.cardElement}>
-                <Link href={item.link}>
+                <Link href={`/${locale}${item.link}`}>
                   <Image
                     src={item.image}
-                    alt={item.alt}
+                    alt={item.alt || tc("logoAlt")}
                     className={styles.cardImage}
                   />
                   <div className={styles.cardElementContent}>
@@ -277,7 +279,7 @@ export default function Home() {
                     <button>
                       <Image
                         src={saibaArrow}
-                        alt='Seta indicando o botão "SAIBA MAIS"'
+                        alt={tc("saibaMoreAlt")}
                       />{" "}
                       <div>{t('home.whatWeDo.readMore')}</div>
                     </button>
@@ -317,7 +319,6 @@ export default function Home() {
             <div className={styles.countElement}>
               <div className={styles.countTop}>
                 <div className={styles.countIcon}>+</div>
-
                 <h1>
                   <CountUp end={18} duration={3} separator="" />
                 </h1>
@@ -329,7 +330,7 @@ export default function Home() {
       </section>
 
       <section className={styles.divider}>
-        <Image src={smileyDivider} alt="Ícone de divisão de secção" />
+        <Image src={smileyDivider} alt={tc("dividerAlt")} />
       </section>
 
       <section className={styles.conquistas}>
@@ -341,8 +342,8 @@ export default function Home() {
           <div className={styles.conquistasDesktop}>
             {reconContent.map((item, index) => (
               <div key={index} className={styles.conquistasCardElement}>
-                <Image src={item.icon} alt="Logo da matéria" />
-                <p>{item.subject}</p>
+                <Image src={item.icon} alt={t(item.nameKey)} />
+                <p>{t(item.nameKey)}</p>
               </div>
             ))}
           </div>
@@ -372,7 +373,7 @@ export default function Home() {
       </section>
 
       <section className={styles.divider}>
-        <Image src={smileyDivider} alt="Ícone de divisão de secção" />
+        <Image src={smileyDivider} alt={tc("dividerAlt")} />
       </section>
 
       <section className={styles.faq}>

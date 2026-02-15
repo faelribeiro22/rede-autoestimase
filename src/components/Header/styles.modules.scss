@@ -13,6 +13,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 138px;
+  
+  @include breakpoints.media("<desktop") {
+    padding: 0 40px;
+  }
+
+  @include breakpoints.media("<tablet") {
+    padding: 0 24px;
+  }
+
+  @include breakpoints.media("<mobile") {
+    padding: 0 16px;
+  }
   height: 88px;
   background-color: var(--primary-neutral-color);
   border-bottom: 1px solid var(--header-border-color);
@@ -110,7 +122,6 @@ header {
 
 @include breakpoints.media("<desktop") {
   header {
-    padding: 0 24px;
     height: 72px;
 
     .logo-desktop {

@@ -1,4 +1,4 @@
-import React from "react";
+import { useLocale, useTranslations } from "next-intl";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,35 +9,41 @@ import SocialMediaList from "../SocialMediaList/SocialMedia";
 import Newsletter from "../Newsletter/Newsletter";
 
 const Footer = () => {
+  const t = useTranslations("footer");
+  const tn = useTranslations("navigation");
+  const tc = useTranslations("common");
+  const th = useTranslations("home");
+  const locale = useLocale();
+
   return (
     <footer className={styles.footerContainer}>
       <SocialMediaList />
       <div className={styles.footerContent}>
         <div className={styles.footerSection}>
-          <h3>Índice</h3>
+          <h3>{t("index")}</h3>
           <p>
-            <Link href="/" className={styles.footerLink}>
-              Início
+            <Link href={`/${locale}`} className={styles.footerLink}>
+              {tn("home")}
             </Link>
           </p>
           <p>
-            <Link href="/pages/sobre-nos#" className={styles.footerLink}>
-              Sobre nós
+            <Link href={`/${locale}/pages/sobre-nos`} className={styles.footerLink}>
+              {tn("aboutUs")}
             </Link>
           </p>
           <p>
-            <Link href="/pages/acolhimento" className={styles.footerLink}>
-              Psicoterapia
+            <Link href={`/${locale}/pages/acolhimento`} className={styles.footerLink}>
+              {tn("psychotherapy")}
             </Link>
           </p>
           <p>
-            <Link href="#" className={styles.footerLink}>
-              Reconhecimentos
+            <Link href={`/${locale}#recognition`} className={styles.footerLink}>
+              {th("recognition.label")}
             </Link>
           </p>
           <p>
-            <Link href="/pages/transparencia" className={styles.footerLink}>
-              Transparência
+            <Link href={`/${locale}/pages/transparencia`} className={styles.footerLink}>
+              {tn("transparency")}
             </Link>
           </p>
           <p>
@@ -45,7 +51,7 @@ const Footer = () => {
               href="https://bit.ly/adesaos%C3%B3ciodoador"
               className={styles.footerLink}
             >
-              Termos de uso
+              {t("termsOfUse")}
             </Link>
           </p>
           <p>
@@ -53,7 +59,7 @@ const Footer = () => {
               href="https://bit.ly/LGPDRedeautoestimase"
               className={styles.footerLink}
             >
-              Política de Privacidade
+              {t("privacyPolicy")}
             </Link>
           </p>
           <p>
@@ -61,28 +67,28 @@ const Footer = () => {
               href="https://bit.ly/adesaos%C3%B3ciodoador"
               className={styles.footerLink}
             >
-              Termo de Adesão de sócio doador
+              {t("membershipTerm")}
             </Link>
           </p>
         </div>
 
         <div className={styles.footerSection}>
-          <h3>Contato</h3>
+          <h3>{t("contact")}</h3>
           <EmailDisplay
             email="organizacao@redeautoestimase.com"
-            label="E-mail principal:"
+            label={t("mainEmail")}
           />
           <EmailDisplay
             email="assessoriapsicologica@redeautoestimase.com"
-            label="Assessoria Psicológica (Departamento Clínico):"
+            label={t("psychologicalAssessment")}
           />
           <EmailDisplay
             email="comercialsocial@redeautoestimase.com"
-            label="Departamento do Comercial Social:"
+            label={t("commercialSocial")}
           />
           <EmailDisplay
             email="mobilizacao@redeautoestimase.com"
-            label="Parcerias para mobilização e doação de recursos:"
+            label={t("mobilizationPartners")}
           />
         </div>
 
@@ -91,9 +97,9 @@ const Footer = () => {
             <Newsletter />
           </div>
           <div className={styles.footerTimetable}>
-            <h3>Nossos Horários</h3>
-            <p>Segunda a Sexta: 09:00 até 18:00 (BRT)</p>
-            <p>Sábados: 09:00 até 14:00 (BRT)</p>
+            <h3>{t("schedules")}</h3>
+            <p>{t("weekdaySchedule")}</p>
+            <p>{t("saturdaySchedule")}</p>
           </div>
         </div>
       </div>
@@ -101,7 +107,7 @@ const Footer = () => {
       <div className={styles.footerLogo}>
         <Image
           src="/assets/logo/logo-white.svg"
-          alt="Logo Autoestima-se"
+          alt={tc("logoAlt")}
           width={150}
           height={50}
         />
@@ -109,21 +115,19 @@ const Footer = () => {
 
       <div className={styles.footer_warning}>
         <p>
-          A Rede Autoestima-se não oferece aconselhamento psicológico em
-          situações de urgência e emergência. Caso precise de apoio imediato,
-          procure atendimento em um hospital ou posto médico próximo.
+          {t("warning")}
         </p>
       </div>
 
       <div className={styles.footer_info}>
         <div className={styles.footer_content_wrapper}>
           <div className={styles.footer_legal}>
-            <span>© Todos os direitos reservados à Rede Autoestima-se</span>
-            <span>Razão Social: Rede Autoestima-se</span>
-            <span>CNPJ: 44.925.343/0001-32</span>
+            <span>© {t("rightsReserved")}</span>
+            <span>{t("socialReason")}</span>
+            <span>{t("cnpj")}</span>
           </div>
           <div className={styles.footer_credits}>
-            <span>Design por</span>
+            <span>{t("designBy")}</span>
             <a href="mailto:gustavo.bastos@gmail.com">Gustavo Bastos</a>
           </div>
         </div>

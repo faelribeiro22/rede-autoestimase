@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import SplitView from "@/components/SplitView/SplitView";
 import Banner from "@/components/Banner/Banner";
@@ -13,12 +14,11 @@ import visitaComunidade3 from "@/../public/assets/images/visita-comunidade-3.png
 
 const bannerData = [
   {
-    title: "Saúde Mental na Amazônia",
+    titleKey: "initiatives.amazon.bannerTitle",
     image: visitaComunidade1,
   },
   {
-    title:
-      "Junte-se a nós nessa missão de cuidar e promover o bem-estar nas comunidades amazônicas!",
+    titleKey: "initiatives.amazon.bottomBannerTitle",
     image: indigena,
   },
 ];
@@ -40,16 +40,16 @@ const sectionData = [
 const splitViewData = [
   {
     icon: "sentiment_satisfied",
-    title: "Acessibilidade nos Atendimentos",
-    text: "Oferecemos psicoterapia e orientação psicológica adaptadas às necessidades locais, com um foco especial em jovens e mulheres, garantindo que todos tenham acesso ao suporte necessário e respeitando as questões socioantropológicas.",
+    titleKey: "initiatives.amazon.segments.items.0.title",
+    textKey: "initiatives.amazon.segments.items.0.description",
     image: visitaComunidade2,
     alt: "",
     reverse: false,
   },
   {
     icon: "book_2",
-    title: "Educação e Conscientização",
-    text: "Desenvolvemos materiais educativos e realizamos oficinas sobre saúde mental, promovendo o autoconhecimento e estratégias de enfrentamento.",
+    titleKey: "initiatives.amazon.segments.items.1.title",
+    textKey: "initiatives.amazon.segments.items.1.description",
     image: visitaComunidade3,
     alt: "",
     reverse: true,
@@ -57,30 +57,33 @@ const splitViewData = [
 ];
 
 export default function SaudeMentalNaAmazonia() {
+  const t = useTranslations("initiatives.amazon");
+  const tc = useTranslations("common");
+
   return (
     <div className={styles.pageContainer}>
-      <Banner title={bannerData[0].title} image={bannerData[0].image} />
+      <Banner title={t(bannerData[0].titleKey)} image={bannerData[0].image} />
 
       <div className={styles.contentContainer}>
         <div className={styles.card}>
-          <Image src={jovemAtivista} alt="" className={styles.resizeImages} />
+          <Image src={jovemAtivista} alt={tc("imageAlt")} className={styles.resizeImages} />
         </div>
         <div className={styles.textBox}>
-          <p>{sectionData[0].text}</p>
+          <p>{t("description")}</p>
         </div>
       </div>
 
       <div className={styles.splitViewContainer}>
-        <h2 className={styles.sectionTitle}>{sectionData[1].title}</h2>
+        <h2 className={styles.sectionTitle}>{t("segments.title")}</h2>
         <div className={styles.splitViewWrapper}>
           {splitViewData.map((splitView, index) => (
             <SplitView
               key={index}
               icon={splitView.icon}
-              title={splitView.title}
-              text={splitView.text}
+              title={t(splitView.titleKey)}
+              text={t(splitView.textKey)}
               image={splitView.image}
-              alt={splitView.alt}
+              alt={t(splitView.titleKey)}
               reverse={splitView.reverse}
             />
           ))}
@@ -88,23 +91,17 @@ export default function SaudeMentalNaAmazonia() {
       </div>
       <div className={`${styles.contentContainer} ${styles.section2}`}>
         <div className={styles.ornament}>
-          <Image src={arara} alt="" className={styles.resizeImages} />
+          <Image src={arara} alt={tc("imageAlt")} className={styles.resizeImages} />
         </div>
         <div className={styles.textBox}>
-          <h2 className={styles.sectionTitle}>{sectionData[2].title}</h2>
-          {sectionData[2].text?.split("\n").map((line, index) => (
-            <p key={index}>
-              {line}
-              <br />
-              <br />
-            </p>
-          ))}
+          <h2 className={styles.sectionTitle}>{t("howItWorks.title")}</h2>
+          <p>{t("howItWorks.description")}</p>
         </div>
       </div>
 
       <Banner
         className={styles.banner}
-        title={bannerData[1].title}
+        title={t(bannerData[1].titleKey)}
         image={bannerData[1].image}
       />
     </div>

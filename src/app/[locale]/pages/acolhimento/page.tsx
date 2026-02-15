@@ -1,3 +1,4 @@
+import { useTranslations, useLocale } from "next-intl";
 import React from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
@@ -22,7 +23,7 @@ import lais from "@/../public/assets/images/acolhimento/lais.jpeg";
 
 const bannerData = [
   {
-    text: "Atendimento Psicológico",
+    titleKey: "bannerTitle",
     image: bannerAcolhimento,
   },
 ];
@@ -33,37 +34,12 @@ type Step = {
   description: string;
 };
 
-const stepData: Step[] = [
-  {
-    number: "01",
-    title: "Solicitação da Orientação",
-    description:
-      "A pessoa interessada em receber o acolhimento deve preencher o formulário disponível no site da Rede Autoestima-se. “Orientação” é o nome dado ao primeiro atendimento de 45 minutos.",
-  },
-  {
-    number: "02",
-    title: "Deliberação do Atendimento",
-    description:
-      "Após a triagem inicial realizada pelo nosso Departamento da Assessoria Psicológica, a pessoa que solicitou o atendimento receberá um e-mail com os procedimentos e orientações necessários para iniciar o acompanhamento. O nosso prazo para retorno é de 7 dias!",
-  },
-  {
-    number: "03",
-    title: "Preenchimento das Informações Requeridas",
-    description:
-      "Após enviar as informações solicitadas, o(a) interessado(a) receberá o link via e-mail para acessar a agenda da(o) psicóloga(o) responsável.",
-  },
-  {
-    number: "04",
-    title: "Agendamento do Atendimento",
-    description:
-      "O solicitante escolherá o dia e horário para a sessão, e ambos (solicitante e psicóloga/o) receberão o link da chamada via Google Meet por e-mail logo após a marcação.",
-  },
-  {
-    number: "05",
-    title: "Feedback Após o Atendimento",
-    description:
-      "Após a última sessão, a psicóloga(o) responsável enviará um formulário de feedback que deverá ser preenchido para finalizar o processo de acolhimento.",
-  },
+const stepData = [
+  { number: "01", index: 0 },
+  { number: "02", index: 1 },
+  { number: "03", index: 2 },
+  { number: "04", index: 3 },
+  { number: "05", index: 4 },
 ];
 
 type Professionals = {
@@ -74,108 +50,53 @@ type Professionals = {
   description2: string | null;
 };
 
-const professionalsData: Professionals[] = [
-  {
-    pic: joyce,
-    name: "Joyce Jordy Penido Burnier",
-    crp: "CRP 06/147759",
-    description1:
-      "Me formei na graduação de Psicologia. Possuo pós-graduação em andamento em Educação Especial Inclusiva e Libras, capacitação em Psicologia Forense e Jurídica em processo de finalização e formação como Terapeuta por Contingências de Reforçamento. Minha orientação teórica é a Análise do Comportamento.",
-    description2:
-      "Tenho experiência de atuação profissional em atendimento psicológico clínico e educacional. Atendo ao público geralmente na faixa etária a partir de 18 anos. Detenho experiência e/ou preferência em acolher as seguintes demandas: público LGBTQIAP+; forense e jurídica; ansiedade e depressão. Porém estou aberta ao atendimento de diversas demandas.",
-  },
-  {
-    pic: juliani,
-    name: "Juliani Nascimento Candido",
-    crp: "CRP 02/26810",
-    description1:
-      "Sou psicóloga, graduada pelo Centro Universitário Brasileiro (UNIBRA). Atuo como psicóloga clínica e Acompanhante Terapêutica. E sou auxiliar de projeto. Escolhi uma clínica mais racializada, como caminho de trabalho, pois busco como exercício ético de minha profissão. Com o auxílio da ACP (Abordagem Centrada na Pessoa) como uma abordagem teórica ofereço uma escuta empática, livre de julgamentos e focada no sujeito.",
-    description2:
-      "Principais demandas: relacionamento, adaptações, autoconhecimento, início da vida adulta, conflitos familiares e amorosos e ansiedade. Atendimento a mulheres: Adolescentes, jovens e adultos.",
-  },
-  {
-    pic: lais,
-    name: "Lais Bianche Leite",
-    crp: "CRP 06/161127",
-    description1:
-      "Bacharel em Psicologia pela USF, pós-graduação em Terapia Cognitivo Comportamental. Tenho como abordagem a TCC. ",
-    description2:
-      "Atualmente minha principal demanda está em atendimento às pessoas com Transtornos Ansiosos e Estresse. Com isso, venho me especializando com cursos de formação na área. Também tenho atendimentos presenciais de Home Care, mas muito específicos em um caso de demanda especial. Também tenho experiências em Treinamento e Desenvolvimentos de jovens, ministrando palestras na área educacional (crianças do ensino básico) abordando assuntos socioemocionais e também com acolhimentos psicológicos de professores, responsáveis e alunos.",
-  },
-  {
-    pic: regina,
-    name: "Regina Leal Teixeira de Melo",
-    crp: "CRP 05/69872",
-    description1:
-      "Possui graduação em Psicologia pela Universidade Veiga de Almeida (2022). Atualmente é psicóloga clínica - Consultório Particular em Botafogo e psicóloga clínica - Aldeias Infantis SOS Brasil. Tem experiência na área de Psicologia, com ênfase em Psicanálise e atendimento a casos de vulnerabilidade extrema.",
-    description2: "",
-  },
-  {
-    pic: adalgisa,
-    name: "Adalgisa Maria Silva",
-    crp: "CRP 04/69138",
-    description1:
-      "Sou psicóloga, pós-graduada em Psicologia Clínica, Avaliação Psicológica e Psicodiagnóstico, e atualmente me especializando em Neuropsicologia e Terapia Cognitivo-Comportamental (TCC). Além disso, tenho formações em Transtornos Psicóticos, Transtornos de Personalidade, Urgências Psiquiátricas, TEA, Psicomotricidade para Crianças com Síndrome de Down e sou Socorrista em Saúde Mental.",
-    description2:
-      "Acolhimento, escuta ativa e compromisso com o bem-estar emocional. Meu propósito é ajudar pessoas a se reconectarem consigo mesmas, encontrando equilíbrio e qualidade de vida.",
-  },
-  {
-    pic: nathalia,
-    name: "Nathália de Figueiredo Ferreira",
-    crp: "CRP 13/11066",
-    description1:
-      "Sou psicóloga clínica, formada pela Universidade Federal de Campina Grande- PB. Pós-graduanda em Saúde Mental e Atenção Psicossocial pela Faveni. Atualmente estou membro do comitê de ética - COE, do Conselho Regional de Psicologia - CRP 13.",
-    description2:
-      "Na minha trajetória acadêmica e profissional, caminho atravessada pela ética teórico-prática da psicanálise, das psicologias sociais e comunitárias. E nesse percurso, debrucei-me sobre as questões de gênero, saúde e sexualidade. Atualmente tenho investido na clínica social com crianças típicas e  atípicas.",
-  },
+const professionalsData = [
+  { pic: joyce, name: "Joyce Jordy Penido Burnier", crp: "CRP 06/147759", key: "0" },
+  { pic: juliani, name: "Juliani Nascimento Candido", crp: "CRP 02/26810", key: "1" },
+  { pic: lais, name: "Lais Bianche Leite", crp: "CRP 06/161127", key: "2" },
+  { pic: regina, name: "Regina Leal Teixeira de Melo", crp: "CRP 05/69872", key: "3" },
+  { pic: adalgisa, name: "Adalgisa Maria Silva", crp: "CRP 04/69138", key: "4" },
+  { pic: nathalia, name: "Nathália de Figueiredo Ferreira", crp: "CRP 13/11066", key: "5" },
 ];
 
 const Acolhimento = () => {
+  const t = useTranslations("psychotherapy");
+  const tc = useTranslations("common");
+  const locale = useLocale();
+
   return (
     <div className={styles.pageWrapper}>
       <Banner
-        title={bannerData[0].text}
+        title={t(bannerData[0].titleKey)}
         image={bannerData[0].image}
         className={styles.banner}
       />
 
       <section className={styles.divider}>
-        <Image src={smileyDivider} alt="Ícone de divisão de secção" />
+        <Image src={smileyDivider} alt={tc("dividerAlt")} />
       </section>
 
       <section className={styles.pageDescription}>
         <div className={styles.paragraphs}>
+          <p>{t('description.0')}</p>
+          <p>{t('description.1')}</p>
           <p>
-            Nossos atendimentos são realizados de forma online, proporcionando
-            acolhimento e suporte psicológico para jovens e mulheres de todo o
-            Brasil. Os atendimentos seguem o modelo de psicoterapia breve focal,
-            com duração de <strong>12 sessões de 45 minutos</strong>, conduzidas
-            por profissionais qualificados.
-          </p>
-          <p>
-            Além das sessões individuais, oferecemos grupos de acolhimento
-            mediado por psicólogos, criando um espaço seguro para diálogo e
-            cuidado emocional.
-          </p>
-          <p>
-            As sessões acontecem semanalmente e são realizadas individualmente.
-            Todos os nossos atendimentos são direcionados pelas orientações do{" "}
-            {""}
-            <Link href="https://site.cfp.org.br/wp-content/uploads/2012/07/codigo-de-etica-psicologia.pdf#:~:text=XIII%20Plen%C3%A1rio%20do%20Conselho%20Federal%20de%20%EE%80%80Psicologia%EE%80%81">
-              Código de Ética da Profissão da Psicologia
-            </Link>{" "}
-            e pelo nosso {""}
-            <strong>Protocolo de Atendimento psicológico.</strong>
+            {t.rich('description.2', {
+              link: (chunks) => (
+                <Link href="/pages/acolhimento/codigo-de-etica" className={styles.pLink}>
+                  {chunks}
+                </Link>
+              ),
+              strong: (chunks) => <strong>{chunks}</strong>
+            })}
           </p>
         </div>
         <Button
           href="https://bit.ly/ProtocolodeAtendimentoPsicologicoRedeAutoestimase"
-          label="Acesse o nosso protocolo"
+          label={t('protocolButton')}
         />
         <p>
-          Nosso objetivo é garantir que cada pessoa atendida receba suporte
-          personalizado, respeitando suas necessidades e vivências, sempre com
-          um olhar sensível para questões sociais, raciais e emocionais.
+          {t('objective')}
         </p>
       </section>
 
@@ -183,58 +104,50 @@ const Acolhimento = () => {
         <div className={styles.acolhimentoImageContainer}>
           <Image
             src={acolhimento}
-            alt="Imagem referente ao título 'Acolhimento na Rede Autoestima-se'"
+            alt={t('acolhimentoTitle')}
             className={styles.acolhimentoImage}
           />
         </div>
         <div className={styles.acolhimentoContent}>
-          <h1>Acolhimento na Rede Autoestima-se</h1>
+          <h1>{t('acolhimentoTitle')}</h1>
           <div className={styles.steps}>
-            {stepData.map((step, index) => (
-              <div key={index} className={styles.stepElement}>
+            {stepData.map((step) => (
+              <div key={step.index} className={styles.stepElement}>
                 <h2 className={styles.elementNumber}>{step.number}</h2>
-                <h3 className={styles.elementTitle}>{step.title}</h3>
-                <p className={styles.elementDesc}>{step.description}</p>
+                <h3 className={styles.elementTitle}>{t(`steps.${step.index}.title`)}</h3>
+                <p className={styles.elementDesc}>{t(`steps.${step.index}.description`)}</p>
               </div>
             ))}
 
             <div className={styles.stepsFooter}>
               <p>
-                Jovens com menos de 18 anos, encaminharemos um termo de ciência
-                aos responsáveis através do e-mail informado no formulário de
-                solicitação.
+                {t('footerStep')}
               </p>
             </div>
           </div>
           <div className={styles.acolhimentoRequest}>
-            <h1>Para solicitar o acolhimento emocional</h1>
+            <h1>{t('requestTitle')}</h1>
             <Button
-              label={"Clique aqui"}
+              label={t('requestButton')}
               icon={carretDown}
               className={styles.requestButton}
               dropdownOptions={[
                 {
-                  label: "Ativistas",
+                  label: t('requestOptions.activists'),
                   href: "https://bit.ly/AtendimentoPsicológicoJovensAtivistas-RedeAutoestima-se",
                 },
                 {
-                  label: "Público geral",
+                  label: t('requestOptions.generalPublic'),
                   href: "https://bit.ly/solicitarAtendimentoPsicologicoAutoestimase",
                 },
               ]}
             />
             <div className={styles.requestContent}>
               <p>
-                Em casos que requerem atendimento presencial, contamos com
-                parcerias estratégicas com CAPS (Centros de Atenção
-                Psicossocial) e clínicas particulares para realizar a
-                transferência adequada dos pacientes, garantindo a continuidade
-                e qualidade do cuidado.
+                {t('requestDisclaimer.0')}
               </p>
               <p>
-                Não oferecemos acolhimento psicológico em situações de urgência
-                e emergência. Caso precise de apoio imediato, procure
-                atendimento em um hospital mais próximo.
+                {t('requestDisclaimer.1')}
               </p>
             </div>
           </div>
@@ -242,32 +155,28 @@ const Acolhimento = () => {
         <div className={styles.acolhimentoGuide}>
           <Image
             src={guidance}
-            alt="Imagem relativa a Orientação para pais e responsáveis"
+            alt={t('guidanceTitle')}
             className={styles.guideImage}
           />
 
           <div className={styles.guideContainer}>
             <div className={styles.containerContent}>
-              <h1>Orientação para Pais e Responsáveis</h1>
+              <h1>{t('guidanceTitle')}</h1>
               <div className={styles.contentP}>
                 <p>
-                  Pais e responsáveis podem receber um encontro de orientação
-                  psicológica com profissionais da Rede Autoestima-se.
+                  {t('guidanceText.0')}
                 </p>
                 <p>
-                  A orientação tem duração de 45 minutos e segue as mesmas
-                  etapas técnicas do acolhimento de psicoterapia e poderá ser
-                  realizada via ligação telefônica ou chamada de vídeo.
+                  {t('guidanceText.1')}
                 </p>
               </div>
               <Button
                 href="https://bit.ly/SolicitaratendimentoPaiseResponsáveis"
-                label="Solicitar orientação"
+                label={t('guidanceButton')}
                 className="guideButton"
               />
               <p className={styles.lastP}>
-                Em caso de dúvidas ou sugestões você pode entrar em contato com
-                o e-mail:{" "}
+                {t('questionsContact')}{" "}
                 <Link
                   href={`mailto: assessoriapsicologica@redeautoestimase.com`}
                   className={styles.pLink}
@@ -280,77 +189,36 @@ const Acolhimento = () => {
         </div>
         <div className={styles.acolhimentoDepoimentos}>
           <div className={styles.depoimentosHeader}>
-            <div>RELATOS</div>
-            <h1>Depoimentos</h1>
+            <div>{t('testimonials.label')}</div>
+            <h1>{t('testimonials.title')}</h1>
           </div>
           <p>
-            Confira os relatos transformadores de quem já vivenciou o cuidado e
-            acolhimento da Rede Autoestima-se e descubra como o acesso à saúde
-            emocional fez a diferença em suas vidas.
+            {t('testimonials.intro')}
           </p>
           <div className={styles.depoimentosGrid}>
-            <div className={styles.gridElement}>
-              <Image src={quotation} alt="Quotation icon" />
-              <p>
-                As conversas com a Joyce foram incríveis, e eu sempre me senti
-                muito bem antes, durante e depois das consultas. Eu conseguia
-                respirar sem tanto esforço e acessei lugares importantes em mim
-                que eu não compreendia ou tinha dimensão do impacto que tinha na
-                minha vida. (M.H)”
-              </p>
-            </div>
-            <div className={styles.gridElement}>
-              <Image src={quotation} alt="Quotation icon" />
-              <p>
-                Estou bem melhor,mais motivo me fez enxergar a vida de outro
-                modo e enxergar novas oportunidades. (R.S)”
-              </p>
-            </div>
-            <div className={styles.gridElement}>
-              <Image src={quotation} alt="Quotation icon" />
-              <p>
-                Consegui aprender técnicas de relaxamento para minha ansiedade e
-                estou me sentindo melhor. (N.C)”
-              </p>
-            </div>
-            <div className={styles.gridElement}>
-              <Image src={quotation} alt="Quotation icon" />
-              <p>
-                Me sinto mais leve, que realmente tem alguém que me ouve e está
-                aqui para me ajudar, estou começando a compreender que meus
-                problemas tem soluções e que não preciso lidar sozinha e que
-                posso caminhar no meu tempo. Estou muito grata por esses
-                atendimentos com a Laís. (Y.A)”
-              </p>
-            </div>
+            {[0, 1, 2, 3].map((index) => (
+              <div key={index} className={styles.gridElement}>
+                <Image src={quotation} alt={tc("logoAlt")} />
+                <p>
+                  {t(`testimonials.items.${index}`)}
+                </p>
+              </div>
+            ))}
           </div>
           <p>
-            *Preservamos a identificação das pessoas conforme as orientações do
-            Conselho Federal de Psicologia.
+            {t('testimonials.disclaimer')}
           </p>
         </div>
       </section>
       <section className={styles.professionals}>
         <div className={styles.professionalsHeader}>
-          <div>PROFISSIONAIS</div>
-          <h1>Equipe Terapêutica</h1>
+          <div>{t('professionals.label')}</div>
+          <h1>{t('professionals.title')}</h1>
         </div>
         <div className={styles.professionalsHeaderContent}>
-          <p>
-            Este espaço é dedicado aos(às) psicólogos(as) voluntários(as) e
-            parceiros(as) da Rede Autoestima-se, que desempenham um papel
-            fundamental na nossa missão de democratizar o acesso ao atendimento
-            psicológico. 
-          </p>
-          <p>
-            Aqui, destacamos o trabalho desses profissionais por meio de
-            mini-bios e compartilhamento de suas redes sociais, oferecendo
-            visibilidade e fortalecendo parcerias. 
-          </p>
-          <p>
-            Essa iniciativa reflete nosso compromisso em valorizar e promover o
-            trabalho dos(as) psicólogos(as) no Brasil.
-          </p>
+          <p>{t('professionals.intro.0')}</p>
+          <p>{t('professionals.intro.1')}</p>
+          <p>{t('professionals.intro.2')}</p>
         </div>
         <div className={styles.professionalsCards}>
           {professionalsData.map((prof, index) => (
@@ -358,7 +226,7 @@ const Acolhimento = () => {
               <div className={styles.profInfo}>
                 <Image
                   src={prof.pic}
-                  alt={`${prof.name} picture`}
+                  alt={prof.name}
                   width={120}
                   height={120}
                   className={styles.profPic}
@@ -369,8 +237,8 @@ const Acolhimento = () => {
                 </div>
               </div>
               <div className={styles.profDesc}>
-                <p>{prof.description1}</p>
-                <p>{prof.description2}</p>
+                <p>{t(`professionals.items.${prof.key}.description1`)}</p>
+                <p>{t(`professionals.items.${prof.key}.description2`)}</p>
               </div>
             </div>
           ))}
@@ -378,39 +246,15 @@ const Acolhimento = () => {
       </section>
       <section className={styles.impact}>
         <div className={styles.impactHeader}>
-          <div>IMPACTO</div>
-          <h1>A Importância dos(as) Psicólogos(as) na Rede Autoestima-se</h1>
+          <div>{t('impact.label')}</div>
+          <h1>{t('impact.title')}</h1>
         </div>
         <div className={styles.impactContent}>
-          <p>
-            Em um país onde o acesso à saúde mental ainda é limitado para muitas
-            comunidades, o trabalho desses(as) psicólogos(as) representa um
-            alívio e uma oportunidade de transformação para aqueles(as) que mais
-            precisam.
-          </p>
-          <p>
-            Eles(as) oferecem não apenas suporte técnico e clínico, mas também
-            empatia, acolhimento e compreensão, criando um ambiente seguro e
-            confiável para o desenvolvimento pessoal e o bem-estar dos
-            nossos(as) beneficiários(as).
-          </p>
-          <p>
-            Além disso, a atuação desses(as) profissionais fortalece a nossa
-            rede, permitindo que continuemos a expandir nossos serviços e
-            alcançar cada vez mais pessoas.
-          </p>
-          <p>
-            A divulgação de suas mini-bios e redes sociais em nosso site é uma
-            maneira de reconhecer e valorizar a contribuição desses(as)
-            psicólogos(as), ao mesmo tempo em que promove o intercâmbio de
-            conhecimento e a criação de novas parcerias.
-          </p>
-          <p>
-            Por meio do comprometimento dos(as) psicólogos(as) voluntários(as) e
-            parceiros(as), a Rede Autoestima-se se consolida como um espaço de
-            transformação e acolhimento, impactando positivamente a vida de
-            diversas comunidades em todo o Brasil.
-          </p>
+          <p>{t('impact.content.0')}</p>
+          <p>{t('impact.content.1')}</p>
+          <p>{t('impact.content.2')}</p>
+          <p>{t('impact.content.3')}</p>
+          <p>{t('impact.content.4')}</p>
         </div>
       </section>
     </div>

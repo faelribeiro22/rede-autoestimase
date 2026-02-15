@@ -8,6 +8,18 @@
   justify-content: center;
   box-sizing: border-box;
   padding: 120px 135px;
+  
+  @include breakpoints.media("<desktop") {
+    padding: 80px 40px;
+  }
+  
+  @include breakpoints.media("<tablet") {
+    padding: 60px 24px;
+  }
+  
+  @include breakpoints.media("<mobile") {
+    padding: 40px 16px;
+  }
   height: 100%;
 
   .aboutContent {
@@ -94,6 +106,14 @@
     height: 421px;
     background-color: var(--primary-color);
     padding: 100px 0 0;
+    
+    @include breakpoints.media("<tablet") {
+      padding: 60px 24px 0;
+    }
+    
+    @include breakpoints.media("<mobile") {
+      padding: 40px 16px 0;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,6 +133,14 @@
       max-width: 525px;
       text-align: center;
     }
+
+    div, h1 {
+      padding: 0 24px;
+      
+      @include breakpoints.media("<mobile") {
+        padding: 0 16px;
+      }
+    }
   }
 
   .acolhimentoContent {
@@ -124,11 +152,23 @@
 
     .cardContainer {
       position: absolute;
-      top: -261px;
+      top: -170px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 28px;
+
+      @include breakpoints.media("<tablet") {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+        
+        .cardElement {
+          max-width: 100%;
+          margin: 0 auto;
+        }
+      }
 
       .cardElement {
         position: relative;

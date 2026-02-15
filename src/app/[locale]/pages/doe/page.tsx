@@ -1,4 +1,4 @@
-"use client";
+import { useTranslations } from "next-intl";
 import styles from "./styles.module.scss";
 import Banner from "@/components/Banner/Banner";
 import Image from "next/image";
@@ -6,23 +6,26 @@ import Image from "next/image";
 import bannerDoe from "@/../public/assets/images/doe/banner.png";
 
 const bannerData = {
-  title: "Apoie nossa causa",
+  titleKey: "donate.bannerTitle",
   image: bannerDoe,
 };
 
 export default function Doe() {
+  const t = useTranslations("donate");
+  const tc = useTranslations("common");
+
   return (
     <div className={styles.container}>
-      <Banner title={bannerData.title} image={bannerData.image} />
+      <Banner title={t(bannerData.titleKey)} image={bannerData.image} />
       <section className={styles.introSection}>
-        <h1 className={styles.title}>DOE AGORA</h1>
-        <p className={styles.description}>PLANO DE DOAÇÃO</p>
+        <h1 className={styles.title}>{t("intro.title")}</h1>
+        <p className={styles.description}>{t("intro.description")}</p>
       </section>
       <div className={styles.iframeWrapper}>
         <iframe
           src="https://redeautoestimase.paradoar.org/?mode=iframe"
           frameBorder="0"
-          title="Doe agora"
+          title={t("iframeTitle")}
           width="100%"
           height="100%"
           style={{ minHeight: "100vh", overflow: "hidden" }}
@@ -31,55 +34,51 @@ export default function Doe() {
 
       <section className={styles.infoSection}>
         <h2 className={styles.sectionTitle}>
-          <span className={styles.sectionSubtitle}>NOSSA PARTE</span>
+          <span className={styles.sectionSubtitle}>{t("impact.label")}</span>
           <br />
           <span className={styles.highlight}>
-            A REDE AUTOESTIMA-SE vai doar
+            {t("impact.title")}
           </span>
         </h2>
         <div className={styles.cardsWrapper}>
           <div className={styles.card}>
             <Image
               src="/assets/images/doe/logo.png"
-              alt="Logo Autoestima-se"
+              alt={tc("logoAlt")}
               width={120}
               height={120}
               className={styles.cardIcon}
             />
-            <h3>Licenciamento de Marca</h3>
+            <h3>{t("impact.items.0.title")}</h3>
             <p>
-              Empresas podem fortalecer seu valor ao utilizar a marca Rede
-              Autoestima-se, referência em saúde mental no Brasil.
+              {t("impact.items.0.description")}
             </p>
           </div>
           <div className={styles.card}>
             <Image
               src="/assets/images/doe/selo.png"
-              alt="Selo Empresa Amiga"
+              alt={tc("insigniaAlt")}
               width={120}
               height={120}
               className={styles.cardIcon}
             />
-            <h3>Selo de Empresa Amiga</h3>
+            <h3>{t("impact.items.1.title")}</h3>
             <p>
-              O licenciamento, com o Selo de Empresa Amiga da Saúde Mental,
-              destaca o compromisso com o bem-estar, oferecendo visibilidade e
-              impacto positivo.
+              {t("impact.items.1.description")}
             </p>
-            <button className={styles.ctaButton}>Seja uma Empresa Amiga</button>
+            <button className={styles.ctaButton}>{t("impact.items.1.button")}</button>
           </div>
           <div className={styles.card}>
             <Image
               src="/assets/images/doe/servico.png"
-              alt="Serviços e Contrapartidas"
+              alt={tc("serviceAlt")}
               width={120}
               height={120}
               className={styles.cardIcon}
             />
-            <h3>Serviços e Contrapartidas</h3>
+            <h3>{t("impact.items.2.title")}</h3>
             <p>
-              Com atuação nacional, oferecemos serviços que beneficiam empresas
-              e colaboradores, em troca de apoio para expandir nosso impacto.
+              {t("impact.items.2.description")}
             </p>
           </div>
         </div>

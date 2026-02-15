@@ -71,6 +71,18 @@
       z-index: 1;
       gap: 72px;
       padding: 0 295px;
+      
+      @include breakpoints.media("<desktop") {
+        padding: 0 40px;
+      }
+      
+      @include breakpoints.media("<tablet") {
+        padding: 0 24px;
+      }
+      
+      @include breakpoints.media("<mobile") {
+        padding: 0 16px;
+      }
       max-width: 851px;
 
       h1 {
@@ -185,6 +197,18 @@
 
         .containerContent {
           padding: 0 135px 0 40px;
+          
+          @include breakpoints.media("<desktop") {
+            padding: 0 40px;
+          }
+          
+          @include breakpoints.media("<tablet") {
+            padding: 0 24px;
+          }
+          
+          @include breakpoints.media("<mobile") {
+            padding: 0 16px;
+          }
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -252,6 +276,18 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
         padding: 0 135px;
+        
+        @include breakpoints.media("<desktop") {
+          padding: 0 40px;
+        }
+        
+        @include breakpoints.media("<tablet") {
+          padding: 0 24px;
+        }
+        
+        @include breakpoints.media("<mobile") {
+          padding: 0 16px;
+        }
         // width: 100%;
 
         :nth-child(1) {
@@ -350,6 +386,18 @@
       justify-content: center;
       align-items: center;
       padding: 0 135px;
+      
+      @include breakpoints.media("<desktop") {
+        padding: 0 40px;
+      }
+      
+      @include breakpoints.media("<tablet") {
+        padding: 0 24px;
+      }
+      
+      @include breakpoints.media("<mobile") {
+        padding: 0 16px;
+      }
       gap: 40px;
 
       .profCard {

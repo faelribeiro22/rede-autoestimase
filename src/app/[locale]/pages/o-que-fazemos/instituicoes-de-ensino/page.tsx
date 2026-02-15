@@ -1,3 +1,43 @@
+import { useTranslations } from "next-intl";
+
+const cardData = [
+  {
+    titleKey: "institutions.services.items.0.title",
+    icon: chats,
+    backgroundImage: rodas,
+  },
+  {
+    titleKey: "institutions.services.items.1.title",
+    icon: chalkboardTeacher,
+    backgroundImage: workshops,
+  },
+  {
+    titleKey: "institutions.services.items.2.title",
+    icon: microphoneStage,
+    backgroundImage: documentarios,
+  },
+  {
+    titleKey: "institutions.services.items.3.title",
+    icon: microscope,
+    backgroundImage: estudos,
+  },
+  {
+    titleKey: "institutions.services.items.4.title",
+    icon: smileySticker,
+    backgroundImage: felicidade,
+  },
+  {
+    titleKey: "institutions.services.items.5.title",
+    icon: student,
+    backgroundImage: bolsas,
+  },
+  {
+    titleKey: "institutions.services.items.6.title",
+    icon: bookOpenText,
+    backgroundImage: receber,
+  },
+];
+
 "use client";
 
 import React from "react";
@@ -27,57 +67,16 @@ import felicidade from "@/../public/assets/images/instituicoes-de-ensino/program
 import bolsas from "@/../public/assets/images/instituicoes-de-ensino/bolsas-de-estudo.jpg";
 import receber from "@/../public/assets/images/instituicoes-de-ensino/receber.jpg";
 
-const cardData = [
-  {
-    title: "Rodas de conversas",
-    icon: chats,
-    backgroundImage: rodas,
-  },
-  {
-    title: "Workshops",
-    icon: chalkboardTeacher,
-    backgroundImage: workshops,
-  },
-  {
-    title: "Participação em documentários e entrevistas",
-    icon: microphoneStage,
-    backgroundImage: documentarios,
-  },
-  {
-    title: "Participação em estudos científicos",
-    icon: microscope,
-    backgroundImage: estudos,
-  },
-  {
-    title: "Programa Felicidade corporativa",
-    icon: smileySticker,
-    backgroundImage: felicidade,
-  },
-  {
-    title: "Bolsa de estudos",
-    icon: student,
-    backgroundImage: bolsas,
-  },
-  {
-    title: "Receber materiais da Rede Autoestima-se",
-    icon: bookOpenText,
-    backgroundImage: receber,
-  },
-  {
-    title: "Receber materiais da<br/>Rede Autoestima-se",
-    icon: bookOpenText,
-    backgroundImage: receber,
-  },
-];
-
 const Instituicoes = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isDesktop = useMediaQuery({ minWidth: 768 });
+  const t = useTranslations("institutions");
+  const tc = useTranslations("common");
 
   return (
     <div className={styles.instituicoes}>
       <Banner
-        title="Instituições de Ensino"
+        title={t("bannerTitle")}
         image={instituicoesPic}
         className={styles.banner}
       />
@@ -85,25 +84,22 @@ const Instituicoes = () => {
       <section className={styles.splitViewSection}>
         <div className={`${styles.split} ${styles.split1}`}>
           <h1 className={styles.mobileTitle}>
-            Sua escola, universidade ou instituto federal precisa da gente?
+            {t("split1.title")}
           </h1>
 
           <Image
             src={instituicoesSplit1}
-            alt="Imagem relativa ao título: Leve a Autoestima-se para sua empresa"
+            alt={tc("imageAlt")}
             className={styles.splitImage}
           />
           <div className={styles.splitContentContainer}>
             <div className={styles.splitContent}>
               <h1 className={styles.title}>
-                Sua escola, universidade ou instituto federal precisa da gente?
+                {t("split1.title")}
               </h1>
               <div className={styles.text}>
                 <p>
-                  A Rede Autoestima-se oferece suporte especializado para
-                  escolas, universidades e institutos tecnológicos por meio de
-                  diversas ações voltadas ao fortalecimento da saúde mental no
-                  ambiente educacional.
+                  {t("split1.description")}
                 </p>
               </div>
             </div>
@@ -111,26 +107,23 @@ const Instituicoes = () => {
         </div>
         <div className={`${styles.split} ${styles.split2}`}>
           <h1 className={styles.mobileTitle}>
-            Somos uma ponte para a sua instituição
+            {t("split2.title")}
           </h1>
 
           <Image
             src={instituicoesSplit2}
-            alt="Imagem relativa ao título: Leve a Autoestima-se para sua empresa"
+            alt={tc("imageAlt")}
             className={styles.splitImage}
           />
 
           <div className={styles.splitContentContainer}>
             <div className={styles.splitContent}>
               <h1 className={styles.title}>
-                Somos uma ponte para a sua instituição
+                {t("split2.title")}
               </h1>
               <div className={styles.text}>
                 <p>
-                  Nossa organização atua como uma ponte entre escolas e
-                  oportunidades estratégicas ampliando as possibilidades de
-                  desenvolvimento pessoal e profissional de toda a comunidade
-                  escolar.
+                  {t("split2.description")}
                 </p>
               </div>
             </div>
@@ -139,72 +132,30 @@ const Instituicoes = () => {
       </section>
 
       <section className={styles.servicesWrapper}>
-        <h1 className={styles.h1Services}>Serviços</h1>
+        <h1 className={styles.h1Services}>{t("services.title")}</h1>
         <div className={styles.cardGrid}>
           <div className={styles.mainGrid}>
-            <CardService
-              title={cardData[0].title}
-              icon={cardData[0].icon}
-              backgroundImage={cardData[0].backgroundImage}
-              // hoverText={cardData[0].hoverText}
-            />
-            <CardService
-              title={cardData[1].title}
-              icon={cardData[1].icon}
-              backgroundImage={cardData[1].backgroundImage}
-              // hoverText={cardData[1].hoverText}
-            />
-            <CardService
-              title={cardData[2].title}
-              icon={cardData[2].icon}
-              backgroundImage={cardData[2].backgroundImage}
-              // hoverText={cardData[2].hoverText}
-            />
-            <CardService
-              title={cardData[3].title}
-              icon={cardData[3].icon}
-              backgroundImage={cardData[3].backgroundImage}
-              // hoverText={cardData[3].hoverText}
-            />
-            <CardService
-              title={cardData[4].title}
-              icon={cardData[4].icon}
-              backgroundImage={cardData[4].backgroundImage}
-              // hoverText={cardData[4].hoverText}
-            />
-            <CardService
-              title={cardData[5].title}
-              icon={cardData[5].icon}
-              backgroundImage={cardData[5].backgroundImage}
-              // hoverText={cardData[5].hoverText}
-            />
+            {[0, 1, 2, 3, 4, 5].map((index) => (
+              <CardService
+                key={index}
+                title={t(cardData[index].titleKey)}
+                icon={cardData[index].icon}
+                backgroundImage={cardData[index].backgroundImage}
+              />
+            ))}
           </div>
           <div className={styles.secGrid}>
-            {isMobile && (
-              <CardService
-                title={cardData[7].title}
-                icon={cardData[7].icon}
-                backgroundImage={cardData[6].backgroundImage}
-                heightClassName={styles.cardHeight}
-                widthClassName={styles.cardWidth}
-                // hoverText={cardData[6].hoverText}
-              />
-            )}
-            {isDesktop && (
-              <CardService
-                title={cardData[6].title}
-                icon={cardData[6].icon}
-                backgroundImage={cardData[6].backgroundImage}
-                heightClassName={styles.cardHeight}
-                widthClassName={styles.cardWidth}
-                // hoverText={cardData[6].hoverText}
-              />
-            )}
+            <CardService
+              title={t(cardData[6].titleKey)}
+              icon={cardData[6].icon}
+              backgroundImage={cardData[6].backgroundImage}
+              heightClassName={styles.cardHeight}
+              widthClassName={styles.cardWidth}
+            />
           </div>
         </div>
         <h2 className={styles.pServices}>
-          Se sua escola ou universidade deseja contar com nosso apoio entre em
-          contato conosco!
+          {t("services.footer")}
         </h2>
       </section>
       <Forms />

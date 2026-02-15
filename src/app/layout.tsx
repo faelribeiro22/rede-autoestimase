@@ -32,11 +32,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${outfit.className} ${openSans.className}`}>
-        <Header />
         {children}
-        <Footer />
-        <BackToTop />
-        <CookieConsentModal />
       </body>
     </html>
   );

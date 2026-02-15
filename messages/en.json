@@ -29,16 +29,16 @@
       "title": "Access to emotional support",
       "cards": {
         "psychosocial": {
-          "title": "Psychosocial Care",
-          "description": "We strengthen the emotional health of women and young activists, offering access to 12 free psychotherapy sessions and 10 group meetings, promoting well-being and personal development."
+          "title": "Psychosocial Assistance",
+          "description": "We offer psychological care through brief focal psychotherapy and support groups with psychology professionals."
         },
         "communication": {
           "title": "Communication",
-          "description": "Our channels promote content about mental health, well-being and personal transformation to help you understand your emotions and take care of yourself."
+          "description": "We spread the topic of mental health to health professionals, media and society."
         },
         "advocacy": {
           "title": "Advocacy",
-          "description": "We work in public spaces to strengthen mental health as a human right, ensuring that everyone has access to emotional care."
+          "description": "We work to influence and defend mental health and well-being policies."
         }
       },
       "readMore": "LEARN MORE"
@@ -56,7 +56,14 @@
     },
     "recognition": {
       "label": "ACHIEVEMENTS",
-      "title": "Recognition"
+      "title": "Recognition",
+      "items": [
+        "Social Entrepreneur Award by Folha de São Paulo",
+        "Recognition from the Ashoka Global Network",
+        "Brazil Representative in the UN Youth Delegation - YA",
+        "Brazil Representative in the World Bank Youth Delegation - Youth Summit",
+        "Speaker at the Ethos 360° Conference"
+      ]
     },
     "media": {
       "label": "MEDIA",
@@ -114,7 +121,12 @@
     "language": "Language",
     "portuguese": "Portuguese",
     "english": "English",
-    "spanish": "Spanish"
+    "spanish": "Spanish",
+    "logoAlt": "Rede Autoestima-se Logo",
+    "dividerAlt": "Section divider icon",
+    "saibaMoreAlt": "Arrow indicating the \"LEARN MORE\" button",
+    "minusAlt": "Less content",
+    "plusAlt": "More content"
   },
   "footer": {
     "description": "Rede Autoestima-se is a non-profit civil society organization that democratizes access to psychological care for women and young activists.",
@@ -126,10 +138,365 @@
     "support": "Support",
     "memberAssociate": "Donor Membership",
     "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of use",
+    "membershipTerm": "Donor Membership Agreement",
     "donate": "Donate",
     "contact": "Contact",
     "followUs": "Follow us",
-    "rightsReserved": "All rights reserved",
-    "developedBy": "Developed by"
+    "rightsReserved": "All rights reserved to Rede Autoestima-se",
+    "developedBy": "Developed by",
+    "designBy": "Design by",
+    "index": "Index",
+    "schedules": "Our Hours",
+    "weekdaySchedule": "Monday to Friday: 09:00 to 18:00 (BRT)",
+    "saturdaySchedule": "Saturdays: 09:00 to 14:00 (BRT)",
+    "mainEmail": "Main E-mail:",
+    "psychologicalAssessment": "Psychological Assessment (Clinical Department):",
+    "commercialSocial": "Social Commercial Department:",
+    "mobilizationPartners": "Partnerships for mobilization and resource donation:",
+    "warning": "Rede Autoestima-se does not offer psychological counseling in urgent or emergency situations. If you need immediate support, seek care at a nearby hospital or medical station.",
+    "socialReason": "Company Name: Rede Autoestima-se",
+    "cnpj": "CNPJ: 44.925.343/0001-32"
+  },
+  "about": {
+    "bannerTitle": "Our History",
+    "intro": [
+      "Rede Autoestima-se originated in 2020 in the inland city of Conceição do Almeida, in the Recôncavo Baiano region of the State of Bahia, from the mobilization of activist Mariana Nunes, current executive director and president of the organization, who was only 17 years old at the time.",
+      "From the initial idea of in-person conversation circles about mental health, self-knowledge, and related topics, activities extended online to all of Brazil, reaching the current model with the participation of volunteer psychologists offering virtual care. As early as 2021, the work was recognized by the Ashoka Global Network, which strengthened the institution in communication channels across national territory.",
+      "In 2022, Open Society Foundations donated the first financial revenue to Rede Autoestima-se focused on institutional strengthening. Shortly after, the organization and its founder represented Brazil at the UN Youth Assembly (United Nations).",
+      "Since then, Rede Autoestima-se has grown in many ways. It increased the number of beneficiaries; consolidated its methodology; expanded its institutional purpose, also covering young activists from 14 to 29 years old; achieved a significant role in mental health through emotional support; and in 2024 received the Social Entrepreneur Award in the Young Transformers category provided by Folha de São Paulo.",
+      "Today, Rede Autoestima-se develops its social activities through three action axes: psychosocial assistance, communication, and advocacy, having as important differentiators its proposal to strengthen mental health combined with technology and systematic team qualification. In these 5 years of operation, around 1,000 sessions have been held, bringing a better life to many Brazilians. Many more will come!"
+    ],
+    "team": {
+      "label": "Team",
+      "title": "Professionals working for the cause",
+      "description": "Our team is formed by a network of professionals and volunteers committed to promoting emotional well-being and democratic access to mental health. Psychologists, communicators, managers, and activists work together to offer welcoming and qualified care. We believe that with a diverse and dedicated team, we can transform lives and strengthen the mental health of those who need it most.",
+      "categories": {
+        "board": "BOARD OF DIRECTORS",
+        "council": "COUNCIL",
+        "volunteers": "VOLUNTEERS"
+      },
+      "memberRole": "Rede Autoestima-se receives recognition from the Ashoka Young Transformers Program",
+      "memberTitle": "POSITION"
+    },
+    "location": {
+      "label": "WHERE WE ARE",
+      "title": "Cities served in Brazil"
+    },
+    "sustainability": {
+      "label": "SUSTAINABILITY",
+      "title": "Together, we build a more sustainable support network, including the club of possibilities.",
+      "description": "Rede Autoestima-se is an organization committed to promoting the Sustainable Development Goals (SDGs), offering free and accessible psychosocial support for women and young people in situations of social vulnerability. Our mission is to contribute to emotional well-being, promoting mental health (SDG 3), gender equality (SDG 5), and the reduction of inequalities (SDG 10). Through online sessions conducted by volunteer psychologists, we combine technology and human care to positively impact lives and transform communities throughout Brazil.",
+      "ods": [
+        {
+          "title": "Health and Well-being",
+          "description": "We promote accessible and quality mental health through free psychosocial sessions, focused on the emotional support of women and young people facing challenges of anxiety, depression, and stress. Through brief focal psychotherapy and support groups, we help improve the well-being of the most vulnerable populations."
+        },
+        {
+          "title": "Gender Equality",
+          "description": "We support the emotional and social autonomy of women, who represent 80% of our beneficiaries. Our goal is to strengthen female mental health, promoting spaces for support and development so that these women can exercise their leadership in society."
+        },
+        {
+          "title": "Reducing Inequalities",
+          "description": "We work to reduce racial and socioeconomic inequalities, primarily serving black youth and women. We offer emotional support and personal growth opportunities for those with limited access to mental health services, aiming to promote equity and social justice."
+        }
+      ]
+    },
+    "goals": {
+      "title": "Goals for the next 6 years",
+      "items": [
+        {
+          "title": "Reduce printing of physical materials by 90%:",
+          "description": "We are committed to minimizing the use of printed materials, both for advertising and office use, aiming to significantly reduce our environmental impact."
+        },
+        {
+          "title": "Reach the mark of 2,000 people served:",
+          "description": "We will expand our services to reach and offer psychological and social support to 2,000 people, promoting well-being and inclusion."
+        },
+        {
+          "title": "Ensure that 90% of the leadership team is composed of professionals from the North and Northeast regions:",
+          "description": "We are working to increase regional representation, strengthening the leadership of talents from these areas in our structure."
+        },
+        {
+          "title": "Align 75% of partners and suppliers with sustainable practices:",
+          "description": "Our goal is to ensure that the majority of our partnerships are with suppliers committed to sustainability and decarbonization, contributing to a greener future."
+        },
+        {
+          "title": "Offer financial incentives for the use of clean energy:",
+          "description": "We will financially support our psychology professionals and the supported public in hiring renewable energy for online sessions, promoting a transition to more sustainable energy sources."
+        }
+      ]
+    },
+    "seals": "Seals and registrations"
+  },
+  "psychotherapy": {
+    "bannerTitle": "Psychological Care",
+    "description": [
+      "Our sessions are held online, providing support and psychological care for youth and women across Brazil. The sessions follow the brief focal psychotherapy model, lasting 12 sessions of 45 minutes each, conducted by qualified professionals.",
+      "In addition to individual sessions, we offer support groups mediated by psychologists, creating a safe space for dialogue and emotional care.",
+      "Sessions take place weekly and are conducted individually. All our care is guided by the guidelines of the Psychology Profession Code of Ethics and by our Psychological Care Protocol."
+    ],
+    "protocolButton": "Access our protocol",
+    "objective": "Our goal is to ensure that each person served receives personalized support, respecting their needs and experiences, always with a sensitive look at social, racial, and emotional issues.",
+    "acolhimentoTitle": "Care at Rede Autoestima-se",
+    "steps": [
+      {
+        "title": "Guidance Request",
+        "description": "The person interested in receiving care must fill out the form available on the Rede Autoestima-se website. 'Guidance' is the name given to the first 45-minute session."
+      },
+      {
+        "title": "Care Deliberation",
+        "description": "After the initial screening performed by our Psychological Assessment Department, the person who requested care will receive an email with the procedures and guidance necessary to begin the follow-up. Our return period is 7 days!"
+      },
+      {
+        "title": "Filling in Required Information",
+        "description": "After sending the requested information, the interested person will receive a link via email to access the schedule of the responsible psychologist."
+      },
+      {
+        "title": "Care Scheduling",
+        "description": "The applicant will choose the day and time for the session, and both (applicant and psychologist) will receive the call link via Google Meet by email shortly after booking."
+      },
+      {
+        "title": "Feedback After Care",
+        "description": "After the last session, the responsible psychologist will send a feedback form that must be completed to finalize the care process."
+      }
+    ],
+    "footerStep": "For youth under 18, we will send an authorization form to the guardians via the email provided in the request form.",
+    "requestTitle": "To request emotional care",
+    "requestButton": "Click here",
+    "requestOptions": {
+      "activists": "Activists",
+      "generalPublic": "General public"
+    },
+    "requestDisclaimer": [
+      "In cases that require in-person care, we have strategic partnerships with CAPS (Psychosocial Care Centers) and private clinics to perform the appropriate transfer of patients, ensuring continuity and quality of care.",
+      "We do not offer psychological care in urgent or emergency situations. If you need immediate support, seek care at the nearest hospital."
+    ],
+    "guidanceTitle": "Guidance for Parents and Guardians",
+    "guidanceText": [
+      "Parents and guardians can receive a psychological guidance meeting with professionals from Rede Autoestima-se.",
+      "The guidance lasts 45 minutes and follows the same technical steps as the psychotherapy care and can be held via phone call or video call."
+    ],
+    "guidanceButton": "Request guidance",
+    "questionsContact": "In case of questions or suggestions you can contact via email:",
+    "testimonials": {
+      "label": "TESTIMONIALS",
+      "title": "Testimonials",
+      "intro": "Check out the transformative stories of those who have experienced the care and support of Rede Autoestima-se and discover how access to emotional health made a difference in their lives.",
+      "items": [
+        "The conversations with Joyce were incredible, and I always felt very good before, during, and after the appointments. I could breathe with less effort and accessed important places in me that I didn't understand or realize the impact they had on my life. (M.H)\"",
+        "I am much better, seeing life in another way and seeing new opportunities. (R.S)\"",
+        "I managed to learn relaxation techniques for my anxiety and I am feeling better. (N.C)\"",
+        "I feel lighter, knowing that someone really listens to me and is here to help me. I am starting to understand that my problems have solutions and that I don't have to deal with them alone and that I can walk at my own pace. I am very grateful for these sessions with Laís. (Y.A)\""
+      ],
+      "disclaimer": "*We preserve the identification of individuals according to the guidelines of the Federal Psychology Council."
+    },
+    "professionals": {
+      "label": "PROFESSIONALS",
+      "title": "Therapeutic Team",
+      "intro": [
+        "This space is dedicated to the volunteer psychologists and partners of Rede Autoestima-se, who play a fundamental role in our mission to democratize access to psychological care.",
+        "Here, we highlight the work of these professionals through mini-bios and sharing their social networks, offering visibility and strengthening partnerships.",
+        "This initiative reflects our commitment to valuing and promoting the work of psychologists in Brazil."
+      ],
+      "items": {
+        "0": {
+          "description1": "I am a clinical psychologist with a specialization in psychosomatics and cognitive-behavioral therapy. I have been working in the field for over 10 years, focusing on anxiety, depression, and personal development.",
+          "description2": "I believe in the transformative power of psychotherapy and in each person's potential to overcome their emotional challenges."
+        },
+        "1": {
+          "description1": "Clinical psychologist with training in Gestalt therapy. I have experience in caring for young people and adults, especially in issues related to anxiety, self-esteem, and relationships.",
+          "description2": "My work is based on welcoming and active listening, creating a safe space for self-knowledge."
+        },
+        "2": {
+          "description1": "Psychologist with specialization in Cognitive-Behavioral Therapy. I work with a focus on anxiety disorders, depression, and various emotional issues.",
+          "description2": "I seek to promote well-being and quality of life through evidence-based interventions."
+        },
+        "3": {
+          "description1": "Clinical psychologist with experience in community mental health. I work with a humanistic approach, valuing each person's uniqueness.",
+          "description2": "My practice is guided by respect, empathy, and commitment to human development."
+        },
+        "4": {
+          "description1": "Psychologist with training in Psychoanalysis. I have experience in individual and group clinical care, focusing on mental health and quality of life.",
+          "description2": "I believe that self-knowledge is the path to a fuller and more meaningful life."
+        },
+        "5": {
+          "description1": "I am a clinical psychologist, graduated from the Federal University of Campina Grande - PB. Currently pursuing a postgraduate degree in Mental Health and Psychosocial Care at Faveni. I am currently a member of the ethics committee - COE, of the Regional Psychology Council - CRP 13.",
+          "description2": "In my academic and professional journey, I walk through the theoretical-practical ethics of psychoanalysis, social and community psychologies."
+        }
+      }
+    },
+    "impact": {
+      "label": "IMPACT",
+      "title": "The Importance of Psychologists in Rede Autoestima-se",
+      "content": [
+        "In a country where access to mental health is still limited for many communities, the work of these psychologists represents relief and an opportunity for transformation for those who need it most.",
+        "They offer not only technical and clinical support but also empathy, support, and understanding, creating a safe and reliable environment for personal development and the well-being of our beneficiaries.",
+        "Furthermore, the actions of these professionals strengthen our network, allowing us to continue expanding our services and reaching more and more people.",
+        "Sharing their mini-bios and social networks on our site is a way to recognize and value the contribution of these psychologists while promoting knowledge exchange and the creation of new partnerships.",
+        "Through the commitment of volunteer psychologists and partners, Rede Autoestima-se consolidates itself as a space for transformation and support, positively impacting the lives of diverse communities throughout Brazil."
+      ]
+    }
+  },
+  "initiativesDetail": {
+    "activists": {
+      "bannerTitle": "Psychological Care Project for Young Activists",
+      "intro": "The Project aims to take care of the mental health of young people who are on the front lines of social transformations. We know that while fighting for fundamental causes, these young people also face emotional and psychological challenges, often intensified by the pressure, wear, and overload that activism can bring.",
+      "offerTitle": "What we offer",
+      "services": {
+        "individual": {
+          "title": "Individual Psychotherapy",
+          "description": "Personalized sessions with specialized psychologists, focused on helping young activists deal with anxiety, stress, emotional burnout, and issues related to the impact of their activism on their personal lives."
+        },
+        "continuous": {
+          "title": "Continuous Support",
+          "description": "For three months, our beneficiaries are followed weekly in sessions that promote self-care and emotional strengthening, helping them balance their personal demands and social engagement."
+        },
+        "spaces": {
+          "title": "Support Spaces",
+          "description": "We create spaces for dialogue and mutual support, such as support groups, where young people can share their experiences, challenges, and achievements, finding support in a network of people living in similar contexts."
+        }
+      },
+      "requestButton": "Request care",
+      "impactTitle": "Our Impact",
+      "impactText": [
+        "Since 2022 more than 60 young people have been welcomed by Rede Autoestima-se and we launched the first study on the mental health of the public in question.",
+        "The project is a response to the growing emotional burnout that many activists face, offering support so they can continue firm in their causes but also take care of themselves throughout this journey.",
+        "We want every young activist to know they are not alone and that their mental health matters as much as their causes."
+      ],
+      "articleTitle": "Access our full article.",
+      "testimonialsTitle": "Testimonials",
+      "testimonials": [
+        "\"It helped me a lot to understand myself and deal better with myself; this has directly impacted my relationships, my personal and professional life.\"",
+        "\"It was a very big evolution because I was able to address sensitive themes like areas of my romantic life, work, and relationship with family. The themes fit like a glove at the moment I was experiencing the climax of each one and needed psychotherapy to reflect and rethink with quality time. I feel more resolved and better; Juliane is an incredible professional!\"",
+        "\"I feel more confident, happy, and a sense of freedom.\""
+      ]
+    }
+  },
+  "whatWeDoDetail": {
+    "howWeDo": {
+      "title": "HOW WE DO IT",
+      "subtitle": "Self-knowledge is the pillar of Rede Autoestima-se's methodology",
+      "sections": [
+        {
+          "title": "We Offer",
+          "description": "Online brief psychotherapy sessions in 12 sessions for youth and women from 13 to 65 years old, psychological guidance for parents and guardians, materials on emotional health, integrative practices, lectures, conversation circles, and workshops."
+        },
+        {
+          "title": "We Intervene",
+          "description": "In mental and emotional problems of anxiety, issues regarding relationships with family, interpersonal relationships, work, and studies to minimize the increase of disorders."
+        },
+        {
+          "title": "We Welcome",
+          "description": "People are followed weekly for three months."
+        },
+        {
+          "title": "We Communicate",
+          "description": "We study patient demands and produce communication materials for wide dissemination in society for mental health prevention. Example: articles and booklets."
+        }
+      ],
+      "strategies": [
+        {
+          "title": "Growth and Inclusion Strategy",
+          "description": "We developed a strategy focused on promoting self-knowledge, which is the central element of all our initiatives. We believe that by knowing themselves better, people can deal more effectively with their emotional and relational problems, generating a positive impact on their lives and surrounding communities. Our work is not limited to individual treatment only. We also provide psychological guidance for parents and guardians, aiming to improve the family environment and facilitate intergenerational dialogue. Beyond clinical care, Rede Autoestima-se is dedicated to mental health education, producing informative materials that aim to prevent the worsening of mental disorders and raise awareness in society."
+        },
+        {
+          "title": "Digital Strategy to Strengthen the Community",
+          "description": "We believe in the power of community, and therefore our digital strategy is designed to continuously connect, support, and engage people. We use online platforms to expand access to emotional well-being, creating safe and welcoming spaces where young people and women can share experiences, learn, and grow together. We invest in digital tools that facilitate dialogue and knowledge exchange among our community members. Online groups, discussion forums, virtual conversation circles, and live events are part of our routine, promoting debates on topics such as mental health, self-knowledge, and interpersonal relationships. Thus, we create an environment where everyone can express themselves, listen, and support each other. Additionally, our digital content production is focused on offering relevant and practical information, from articles and educational videos to interactive booklets, always with the goal of promoting mental health prevention and strengthening self-knowledge. Through social media and newsletters, we keep our community updated on new materials, events, and initiatives, encouraging constant engagement. Our digital strategy also commits to inclusion, ensuring that people from different regions and social contexts, especially the North and Northeast regions, have easier access to our content and care. We invest in accessible tools and strategic partnerships that share the same values of sustainability and inclusion. With a digital strategy focused on community strengthening, we create bonds that transcend physical space, helping our participants feel part of a network that supports and empowers at all times."
+        },
+        {
+          "title": "Financial Well-being Strategy: Caring for Emotional and Economic Health",
+          "description": "We understand that financial well-being is a fundamental part of integral health. Strategic financial well-being aims to promote not only emotional balance but also economic security, offering tools and opportunities that help reduce financial stress and improve quality of life. As part of this strategy, we offer incentives and financial support so our beneficiaries can make more sustainable and conscious decisions, such as partnerships with financial consulting institutions and donation of scholarship for professional courses. Simultaneously, we develop educational content focused on financial management, which is made available. These materials include tips on financial organization, expense planning, and awareness of how financial well-being impacts emotional health. Our conversation circles and lectures also address these themes, encouraging a more integrated view between finance and mental health. We believe that by creating an environment where emotional support and financial well-being go together, we are providing people with tools to make more balanced and conscious decisions, both in their personal and professional lives. Through this strategy, we seek to create a positive cycle where financial stress relief contributes to emotional growth. Additionally, we created the AutoViver Fund, which is entirely innovative. A financial well-being fund that aims to support our beneficiaries, combining financial health with the promotion of self-esteem."
+        }
+      ]
+    },
+    "companies": {
+      "bannerTitle": "Companies",
+      "introTitle": "Bring Autoestima-se to your company",
+      "introText": [
+        "Here at Rede Autoestima-se, we offer a range of personalized services for companies that want to promote the emotional and social well-being of their employees. Our services include: lectures, workshops, and development programs focused on mental health, diversity, and inclusion in the workplace.",
+        "In addition, we perform consultancies for the creation of healthier and more inclusive work environments, helping your company implement practices that value mental health and the well-being of the whole team."
+      ],
+      "investTitle": "All sales are reverted to social work",
+      "investText": "With a humanized and evidence-based approach, we are committed to supporting the sustainable growth of organizations, promoting a more empathetic and welcoming organizational culture.",
+      "services": {
+        "title": "Services",
+        "items": [
+          "Psychotherapy care",
+          "Continuous Support",
+          "Training and lectures",
+          "Business consulting for specific institutional demands"
+        ]
+      }
+    }
+  },
+  "transparencyPage": {
+    "titleLabel": "FILES",
+    "title": "Transparency",
+    "intro": [
+      "Transparency is one of the fundamental pillars of Rede Autoestima-se. We believe that trust is built through clarity in our actions and in the management of the resources that enable our projects.",
+      "Here, you will find detailed information about our funding sources, accountability, and the social impact generated by our activities.",
+      "Our commitment is to maintain an open dialogue with society and our partners, ensuring that every step taken is reflected with responsibility and ethics."
+    ],
+    "sections": {
+      "financials": {
+        "title": "Financial Statements",
+        "text": "Follow our financial statements and learn how we manage resources to ensure the sustainability of our projects."
+      },
+      "annualReport": {
+        "title": "Annual Achievement Report",
+        "text": "Explore our activity reports and see closely the impacts and results achieved by our initiatives over time."
+      },
+      "constitution": {
+        "title": "Constitution and Disclosure Documents",
+        "text": "Follow our constitution and disclosure documents and verify the regulations and structures that make up Rede Autoestima-se.",
+        "links": [
+          "Social Statute in Portuguese",
+          "Social Statute in English",
+          "Internal Regulations",
+          "Organization Brochure",
+          "Brand Manual"
+        ]
+      },
+      "policies": {
+        "title": "Institutional and Management Policies",
+        "text": "Access the institutional and management policies that guide daily work at Rede Autoestima-se. We value institutional policies and always follow the results and improvements focused on shared work, empathy, and transparency.",
+        "links": [
+          "Guidelines for coexistence, action, and best practices",
+          "Cost Center Policy"
+        ]
+      },
+      "protocols": {
+        "title": "Care Protocols",
+        "text": "Access the regulations that guide psychological care at Rede Autoestima-se and stay up to date with all provisions!",
+        "links": [
+          "Psychological care protocol",
+          "Therapeutic contract"
+        ]
+      }
+    }
+  },
+  "donatePage": {
+    "bannerTitle": "Support our cause",
+    "introTitle": "DONATE NOW",
+    "introSubtitle": "DONATION PLAN",
+    "iframeTitle": "Donate now",
+    "sectionSubtitle": "OUR PART",
+    "sectionHighlight": "REDE AUTOESTIMA-SE will donate",
+    "cards": {
+      "brand": {
+        "title": "Brand Licensing",
+        "description": "Companies can strengthen their value by using the Rede Autoestima-se brand, a reference in mental health in Brazil."
+      },
+      "seal": {
+        "title": "Friendly Company Seal",
+        "description": "Licensing, with the Mental Health Friendly Company Seal, highlights the commitment to well-being, offering visibility and positive impact.",
+        "button": "Become a Friendly Company"
+      },
+      "services": {
+        "title": "Services and Counterparts",
+        "description": "With national operations, we offer services that benefit companies and employees in exchange for support to expand our impact."
+      }
+    }
   }
 }

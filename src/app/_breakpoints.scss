@@ -5,6 +5,7 @@
 @use "sass:string";
 $breakpoints: (
   "phone": 360px,
+  "mobile": 414px,
   "tablet": 768px,
   "desktop": 1366px,
   "LGdesktop": 1920px

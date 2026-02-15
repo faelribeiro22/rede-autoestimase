@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Trabalho = () => {
-  return <div>O que fazemos</div>;
+  const t = useTranslations("whatWeDo");
+  return <div>{t("title")}</div>;
 };
 
 export default Trabalho;
