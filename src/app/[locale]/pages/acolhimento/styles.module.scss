@@ -30,6 +30,7 @@
       font-size: 18px;
       line-height: 32px;
       max-width: 760px;
+      text-align: center;
     }
   }
 
@@ -70,7 +71,7 @@
       justify-content: center;
       z-index: 1;
       gap: 72px;
-      padding: 0 295px;
+      padding: 0 40px; // Reduzindo o padding para dar mais espaço ao título na desktop
       
       @include breakpoints.media("<desktop") {
         padding: 0 40px;
@@ -87,6 +88,12 @@
 
       h1 {
         font-size: 3rem; //mesmo tamanho da font do banner
+        white-space: nowrap; // Impede a quebra de linha
+        text-align: center;
+        
+        @include breakpoints.media("<tablet") {
+          white-space: normal; // Permite quebra de linha no mobile se for muito longo
+        }
       }
 
       .steps {
@@ -153,6 +160,12 @@
 
       h1 {
         font-size: 36px;
+        white-space: nowrap;
+        text-align: center;
+        
+        @include breakpoints.media("<tablet") {
+          white-space: normal;
+        }
       }
 
       .requestButton {
@@ -168,11 +181,13 @@
       .requestContent {
         display: flex;
         flex-direction: column;
+        align-items: center; // Centralizar o flex container
         font-size: 18px;
         line-height: 32px;
         gap: 32px;
         margin-top: 32px;
         max-width: 760px;
+        text-align: center; // Centralizar os textos internamente
       }
     }
 
@@ -211,24 +226,31 @@
           }
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center; // Centralizar os itens do container flexível
           justify-content: center;
           gap: 40px;
 
           h1 {
             font-size: 36px;
             line-height: 42px;
+            white-space: nowrap;
+            text-align: center;
+            
+            @include breakpoints.media("<tablet") {
+              white-space: normal;
+            }
           }
 
           p {
             font-size: 16px;
             line-height: 24px;
+            text-align: center;
           }
 
           .contentP {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center; // Centralizar
             justify-content: center;
             gap: 40px;
           }
@@ -268,6 +290,12 @@
 
         h1 {
           font-size: 36px;
+          text-align: center;
+          white-space: nowrap;
+
+          @include breakpoints.media("<tablet") {
+            white-space: normal;
+          }
         }
       }
 
@@ -313,7 +341,8 @@
         .gridElement {
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center; // Centralizar os textos / citação
+          text-align: center;
           padding: 32px 24px;
           gap: 24px;
           border-radius: 16px;
@@ -333,6 +362,7 @@
         max-width: 760px;
         font-size: 18px;
         line-height: 32px;
+        text-align: center;
       }
     }
   }
@@ -365,13 +395,20 @@
       h1 {
         font-size: 36px;
         color: var(--primary-color);
+        text-align: center;
+        white-space: nowrap;
+
+        @include breakpoints.media("<tablet") {
+          white-space: normal;
+        }
       }
     }
 
     .professionalsHeaderContent {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center; // Centralizar
+      text-align: center;
       justify-content: center;
       gap: 32px;
       font-size: 18px;
@@ -412,7 +449,7 @@
         .profInfo {
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center; // Centralizar
           justify-content: center;
           gap: 32px;
           min-width: 320px;
@@ -426,9 +463,10 @@
           .infoCredentials {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center; // Centralizar
             justify-content: center;
             gap: 8px;
+            text-align: center;
 
             h2 {
               font-size: 32px;
@@ -444,13 +482,14 @@
         .profDesc {
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center; // Centralizar
           justify-content: center;
           gap: 32px;
 
           p {
             font-size: 18px;
             line-height: 32px;
+            text-align: center;
           }
         }
       }
@@ -469,7 +508,7 @@
     color: var(--primary-neutral-color);
 
     .impactHeader {
-      max-width: 714px;
+      max-width: 100%; // Remover a restrição de largura para manter numa linha 
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -487,6 +526,11 @@
         font-size: 36px;
         color: var(--primary-neutral-color);
         text-align: center;
+        white-space: nowrap;
+
+        @include breakpoints.media("<tablet") {
+          white-space: normal;
+        }
       }
     }
 
@@ -501,6 +545,7 @@
         font-size: 18px;
         line-height: 32px;
         max-width: 760px;
+        text-align: center;
       }
     }
   }
