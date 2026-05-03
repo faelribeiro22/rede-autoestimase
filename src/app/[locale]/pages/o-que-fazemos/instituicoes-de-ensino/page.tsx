@@ -1,4 +1,31 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
+
+//Components and archives
+import styles from "./styles.module.scss";
+import Banner from "@/components/Banner/Banner";
+import CardService from "@/components/CardService";
+import Forms from "@/components/Forms";
+import instituicoesPic from "@/../public/assets/images/instituicoes-de-ensino.png";
+import instituicoesSplit1 from "@/../public/assets/images/instituicoes-split1.png";
+import instituicoesSplit2 from "@/../public/assets/images/instituicoes-split2.png";
+import bookOpenText from "@/../public/assets/icons/BookOpenText.png";
+import chats from "@/../public/assets/icons/Chats.png";
+import chalkboardTeacher from "@/../public/assets/icons/ChalkboardTeacher.png";
+import microphoneStage from "@/../public/assets/icons/MicrophoneStage.png";
+import microscope from "@/../public/assets/icons/Microscope.png";
+import smileySticker from "@/../public/assets/icons/SmileySticker.png";
+import student from "@/../public/assets/icons/Student.png";
+import rodas from "@/../public/assets/images/instituicoes-de-ensino/rodas-de-conversa.jpg";
+import workshops from "@/../public/assets/images/instituicoes-de-ensino/workshops.jpg";
+import documentarios from "@/../public/assets/images/instituicoes-de-ensino/documentarios.jpg";
+import estudos from "@/../public/assets/images/instituicoes-de-ensino/estudos-cientificos.jpg";
+import felicidade from "@/../public/assets/images/instituicoes-de-ensino/programa-felicidade.jpg";
+import bolsas from "@/../public/assets/images/instituicoes-de-ensino/bolsas-de-estudo.jpg";
+import receber from "@/../public/assets/images/instituicoes-de-ensino/receber.jpg";
 
 const cardData = [
   {
@@ -38,38 +65,7 @@ const cardData = [
   },
 ];
 
-"use client";
-
-import React from "react";
-import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
-
-//Components and archives
-import styles from "./styles.module.scss";
-import Banner from "@/components/Banner/Banner";
-import CardService from "@/components/CardService";
-import Forms from "@/components/Forms";
-import instituicoesPic from "@/../public/assets/images/instituicoes-de-ensino.png";
-import instituicoesSplit1 from "@/../public/assets/images/instituicoes-split1.png";
-import instituicoesSplit2 from "@/../public/assets/images/instituicoes-split2.png";
-import bookOpenText from "@/../public/assets/icons/BookOpenText.png";
-import chats from "@/../public/assets/icons/Chats.png";
-import chalkboardTeacher from "@/../public/assets/icons/ChalkboardTeacher.png";
-import microphoneStage from "@/../public/assets/icons/MicrophoneStage.png";
-import microscope from "@/../public/assets/icons/Microscope.png";
-import smileySticker from "@/../public/assets/icons/SmileySticker.png";
-import student from "@/../public/assets/icons/Student.png";
-import rodas from "@/../public/assets/images/instituicoes-de-ensino/rodas-de-conversa.jpg";
-import workshops from "@/../public/assets/images/instituicoes-de-ensino/workshops.jpg";
-import documentarios from "@/../public/assets/images/instituicoes-de-ensino/documentarios.jpg";
-import estudos from "@/../public/assets/images/instituicoes-de-ensino/estudos-cientificos.jpg";
-import felicidade from "@/../public/assets/images/instituicoes-de-ensino/programa-felicidade.jpg";
-import bolsas from "@/../public/assets/images/instituicoes-de-ensino/bolsas-de-estudo.jpg";
-import receber from "@/../public/assets/images/instituicoes-de-ensino/receber.jpg";
-
 const Instituicoes = () => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isDesktop = useMediaQuery({ minWidth: 768 });
   const t = useTranslations("institutions");
   const tc = useTranslations("common");
 
