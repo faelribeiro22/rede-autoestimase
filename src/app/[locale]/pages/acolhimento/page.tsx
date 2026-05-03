@@ -1,9 +1,8 @@
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import React from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 //Components and archives
 import Banner from "@/components/Banner/Banner";
@@ -28,12 +27,6 @@ const bannerData = [
   },
 ];
 
-type Step = {
-  number: string;
-  title: string;
-  description: string;
-};
-
 const stepData = [
   { number: "01", index: 0 },
   { number: "02", index: 1 },
@@ -41,14 +34,6 @@ const stepData = [
   { number: "04", index: 3 },
   { number: "05", index: 4 },
 ];
-
-type Professionals = {
-  pic: StaticImport;
-  name: string;
-  crp: string;
-  description1: string;
-  description2: string | null;
-};
 
 const professionalsData = [
   { pic: joyce, name: "Joyce Jordy Penido Burnier", crp: "CRP 06/147759", key: "0" },
@@ -62,7 +47,6 @@ const professionalsData = [
 const Acolhimento = () => {
   const t = useTranslations("psychotherapy");
   const tc = useTranslations("common");
-  const locale = useLocale();
 
   return (
     <div className={styles.pageWrapper}>

@@ -46,7 +46,6 @@ const servicesData = [
 
 export default function Voluntariado() {
   const t = useTranslations("volunteering");
-  const tc = useTranslations("common");
 
   const stepsData = [
     {

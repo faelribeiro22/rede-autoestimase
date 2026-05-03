@@ -23,20 +23,6 @@ const bannerData = [
   },
 ];
 
-const sectionData = [
-  {
-    title: "",
-    text: "Estamos comprometidos em promover o bem-estar emocional e psicológico das comunidades amazônicas por meio do nosso projeto Saúde Mental na Amazônia. Reconhecemos a riqueza cultural e os desafios únicos enfrentados por essas populações e sabemos que a saúde mental é fundamental para o desenvolvimento sustentável e a qualidade de vida na região.",
-  },
-  {
-    title: "Nossa atuação está apoiada em",
-  },
-  {
-    title: "Como fazemos",
-    text: "Utilizamos abordagens integrativas que respeitam a cultura local, oferecendo acolhimento e escuta ativa. Trabalhamos em colaboração com lideranças comunitárias e profissionais multidisciplinares para garantir que nossas intervenções sejam culturalmente relevantes e eficazes, atendendo às reais necessidades das comunidades. Fazemos tudo isso com apoio de parcerias estratégicas!\nPor meio do Projeto Saúde Mental na Amazônia, buscamos transformar vidas, contribuindo para um futuro onde a saúde mental seja priorizada, respeitada e acessível a todos.",
-  },
-];
-
 const splitViewData = [
   {
     icon: "sentiment_satisfied",

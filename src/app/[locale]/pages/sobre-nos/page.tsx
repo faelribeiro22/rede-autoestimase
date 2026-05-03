@@ -16,7 +16,7 @@ import ODS5 from "@/../public/assets/images/premios/ods5.png";
 import ODS10 from "@/../public/assets/images/premios/ods10.png";
 import governofederal from "@/../public/assets/images/premios/Governo.png";
 import samgov from "@/../public/assets/images/premios/SAMGOV.png";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
 const bannerData = {

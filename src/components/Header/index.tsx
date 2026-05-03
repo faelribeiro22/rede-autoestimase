@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 
 //Components and archives
@@ -20,7 +19,6 @@ const Header = () => {
   const t = useTranslations("navigation");
   const tc = useTranslations("common");
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
   const locale = useLocale();
 
   // Previne scroll quando o menu está aberto

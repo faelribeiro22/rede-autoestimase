@@ -4,10 +4,6 @@ import { Outfit, Open_Sans } from "next/font/google";
 
 //Components and archives
 import "./globals.scss";
-import Header from "@/components/Header";
-import Footer from "../components/Footer/Footer";
-import BackToTop from "@/components/BackToTop/BackToTop";
-import CookieConsentModal from "@/components/CookieConsentModal/CookieConsentModal";
 
 const outfit = Outfit({
   variable: "--font-heading",

@@ -1,4 +1,4 @@
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import React from "react";
 import Image from "next/image";
 import SplitView from "@/components/SplitView/SplitView";
@@ -17,16 +17,6 @@ const bannerData = [
   {
     titleKey: "initiatives.fundo.bannerTitle",
     image: fundoAutoViver,
-  },
-];
-
-const sectionData = [
-  {
-    title: "",
-    text: "O Fundo AutoViver é uma iniciativa inovadora da Rede Autoestima-se, criada para promover o bem-estar financeiro e emocional de jovens e mulheres. Compreendemos que a saúde financeira está intrinsecamente ligada à autoestima e à qualidade de vida, e, por isso, nosso fundo oferece suporte financeiro direcionado  em gestão de finanças pessoais e recursos para o desenvolvimento de habilidades que fortalecem a autonomia.",
-  },
-  {
-    title: "Objetivos do Fundo",
   },
 ];
 
@@ -73,7 +63,6 @@ const splitViewData = [
 
 export default function AutoViver() {
   const t = useTranslations("initiatives.fundo");
-  const tc = useTranslations("common");
 
   return (
     <div className={styles.pageContainer}>
