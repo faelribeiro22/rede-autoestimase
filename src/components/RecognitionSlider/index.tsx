@@ -1,17 +1,18 @@
-
 import React, { useCallback, useEffect, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
+import { useTranslations } from 'next-intl';
 import { SlArrowRight , SlArrowLeft } from 'react-icons/sl';
 import styles from './styles.module.scss';
 
 interface RecognitionSliderProps {
   reconContent: {
     icon: StaticImageData;
-    subject: string;
+    nameKey: string;
   }[];
 }
 
 const RecognitionSlider: React.FC<RecognitionSliderProps> = ({ reconContent }) => {
+  const t = useTranslations();
   const [current, setCurrent] = useState(0);
 
   const handleSlide = useCallback((direction: "left" | "right", total: number) => {
@@ -36,13 +37,14 @@ const RecognitionSlider: React.FC<RecognitionSliderProps> = ({ reconContent }) =
   }, [current]);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       if (current < reconContent.length - 1) {
         handleSlide("right", reconContent.length);
       } else {
         setCurrent(0);
       }
     }, 5000);
+    return () => clearTimeout(timer);
   }, [handleSlide, reconContent.length, current]);
 
 
@@ -56,8 +58,8 @@ const RecognitionSlider: React.FC<RecognitionSliderProps> = ({ reconContent }) =
         <SlArrowLeft size={40} fill='#fff'/>
       </button>
       <div className={styles.conquistasCardElement}>
-        <Image src={reconContent[current].icon} alt="Logo da matéria" />
-        <p>{reconContent[current].subject}</p>
+        <Image src={reconContent[current].icon} alt={t(reconContent[current].nameKey)} />
+        <p>{t(reconContent[current].nameKey)}</p>
       </div>
       <button
         onClick={() => handleSlide("right", reconContent.length)}

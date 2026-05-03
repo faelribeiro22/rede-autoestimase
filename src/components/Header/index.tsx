@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import MediaQuery from 'react-responsive'
+import { usePathname } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 
 //Components and archives
 import "./styles.modules.scss";
@@ -13,28 +14,52 @@ import Menu from "../Icons/Menu";
 import Close from "../Icons/Close";
 import MenuMobile from "../MenuMobile/MenuMobile";
 import LanguageFlag from "../LanguageFlag/LanguageFlag";
+import SearchBar from "../SearchBar";
 
 const Header = () => {
+  const t = useTranslations("navigation");
+  const tc = useTranslations("common");
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const locale = useLocale();
+
+  // Previne scroll quando o menu está aberto
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <header>
-      <Link href={"/"} className="logo-desktop">
-        <Image
-          src="/assets/logo/logo-desktop.svg"
-          alt="Logo da Rede Autoestima-se"
-          width={198}
-          height={56}
-          priority
-          quality={100}
-        />
-      </Link>
-      <MediaQuery maxWidth={1366}>
+    <>
+      <header>
+        <Link href={`/${locale}`} className="logo-desktop">
+          <Image
+            src="/assets/logo/logo-desktop.svg"
+            alt={tc("logoAlt")}
+            width={198}
+            height={56}
+            priority
+            quality={100}
+          />
+        </Link>
+        
+        {/* Mobile Header */}
         <div className="header-mobile">
-          <Link href={"/"} className="logo-mobile">
+          <Link href={`/${locale}`} className="logo-mobile">
             <Image
               src="/assets/logo/logo-mobile.svg"
-              alt="Logo da Rede Autoestima-se"
+              alt={tc("logoAlt")}
               width={90}
               height={112}
               priority
@@ -42,38 +67,33 @@ const Header = () => {
               style={{ width: 'auto', height: '56px' }}
             />
           </Link>
-          <Button label={"Doe"} href={"/pages/doe"} className="donate" />
-          <div className="menu-button" onClick={() => setIsOpen(!isOpen)}>
+          <Button label={t("donate")} href={`/${locale}/pages/doe`} className="donate" />
+          <div className="menu-button" onClick={toggleMenu}>
             {isOpen ? <Close /> : <Menu />}
           </div>
         </div>
 
-      </MediaQuery>
-      {isOpen ? <div>
-        <MenuMobile toggleMenu={() => setIsOpen(!isOpen)}/>
-      </div> : ''}
-
-      <MediaQuery minWidth={1366}>
+        {/* Desktop Navigation */}
         <div className="navigation">
           <div className="desktop-nav">
             <Navbar />
           </div>
           <div className="main-buttons">
-            <button className="search" aria-label="Pesquisar no site">
-              <Image
-                src="/assets/icons/lupa.png"
-                alt="Imagem de uma lupa indicando um botão de pesquisar no site"
-                width={25}
-                height={24}
-                quality={100}
-              />
-            </button>
-            <Button label={"Doe"} href={"/pages/doe"} className="donate" />
+            <SearchBar />
+            <Button label={t("donate")} href={`/${locale}/pages/doe`} className="donate" />
           </div>
           <LanguageFlag />
         </div>
-      </MediaQuery>
-    </header>
+      </header>
+
+      {/* Menu Mobile com Overlay */}
+      {isOpen && (
+        <>
+          <div className="menu-overlay" onClick={toggleMenu} />
+          <MenuMobile toggleMenu={toggleMenu} />
+        </>
+      )}
+    </>
   );
 };
 

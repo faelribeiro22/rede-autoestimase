@@ -19,7 +19,15 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 40px;
+  
+  @include breakpoints.media("<tablet") {
+    padding: 0 24px;
+  }
+
+  @include breakpoints.media("<mobile") {
+    padding: 0 16px;
+  }
   margin-bottom: 40px;
 }
 
@@ -93,7 +101,15 @@
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 40px;
+
+  @include breakpoints.media("<tablet") {
+    padding: 0 24px;
+  }
+
+  @include breakpoints.media("<mobile") {
+    padding: 0 16px;
+  }
 }
 
 .footer_legal {

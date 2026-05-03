@@ -13,6 +13,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 138px;
+  
+  @include breakpoints.media("<desktop") {
+    padding: 0 40px;
+  }
+
+  @include breakpoints.media("<tablet") {
+    padding: 0 24px;
+  }
+
+  @include breakpoints.media("<mobile") {
+    padding: 0 16px;
+  }
   height: 88px;
   background-color: var(--primary-neutral-color);
   border-bottom: 1px solid var(--header-border-color);
@@ -42,10 +54,14 @@ header {
   }
 
   .navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
+    display: none; // Escondido por padrão (mobile)
+    
+    @include breakpoints.media(">=desktop") {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+    }
 
     .desktop-nav {
       display: flex;
@@ -88,15 +104,25 @@ header {
   width: 100%;
   align-items: center;
   margin: 0;
+  gap: 12px;
+
+  @include breakpoints.media(">=desktop") {
+    display: none; // Escondido no desktop
+  }
+
+  .donate {
+    flex-shrink: 0;
+  }
 
   svg {
     cursor: pointer;
+    flex-shrink: 0;
   }
 }
 
 @include breakpoints.media("<desktop") {
   header {
-    padding: 0 24px;
+    height: 72px;
 
     .logo-desktop {
       display: none;
@@ -105,25 +131,6 @@ header {
     .logo-mobile {
       display: block;
       max-width: 100%;
-    }
-
-    .navigation {
-      .main-buttons {
-        margin-left: 0.75rem;
-
-        .search {
-          display: none;
-        }
-
-        .donate {
-          display: flex;
-          justify-content: center;
-          height: 1.25rem;
-          padding: 0.75rem 2rem;
-          border-radius: 40px;
-          margin: 0 0.75rem;
-        }
-      }
     }
   }
 }

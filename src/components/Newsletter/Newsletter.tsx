@@ -35,7 +35,12 @@ const Newsletter = () => {
           className={styles.newsletterInput}
         />
         <button type="submit" className={styles.newsletterButton}>
-          <Image src="/assets/icons/send.svg" alt="/" />
+          <Image 
+            src="/assets/icons/send.svg" 
+            alt="Enviar" 
+            width={24}
+            height={24}
+          />
         </button>
       </form>
       {message && <p className={styles.newsletterMessage}>{message}</p>}

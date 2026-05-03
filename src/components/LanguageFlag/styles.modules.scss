@@ -10,6 +10,16 @@
     font-weight: var(--font-weight-bold);
   }
 
+  .language-desktop {
+    display: none;
+  }
+
+  .language-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .flag-toggle {
     display: flex;
     align-items: center;
@@ -55,20 +65,24 @@
       }
     }
   }
-}
 
-@include breakpoints.media("<desktop") {
-  .languages {
+  @include breakpoints.media("<desktop") {
     width: 35%;
     justify-content: space-between;
-    margin-top: 3.5rem
+    margin-top: 3.5rem;
   }
-}
 
-@include breakpoints.media(">desktop") {
-  .languages {
+  @include breakpoints.media(">=desktop") {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: absolute;
     right: 2.5rem;
+
+    .language-desktop {
+      display: block;
+    }
+
+    .language-mobile {
+      display: none;
+    }
   }
 }

@@ -1,0 +1,503 @@
+{
+  "navigation": {
+    "home": "Início",
+    "aboutUs": "Sobre nós",
+    "whatWeDo": "O que fazemos",
+    "howWeDo": "Como fazemos",
+    "companies": "Empresas",
+    "educationalInstitutions": "Instituições de Ensino",
+    "volunteering": "Voluntariado",
+    "psychotherapy": "Psicoterapia",
+    "initiatives": "Iniciativas",
+    "activistSupport": "Atendimento para ativistas",
+    "autoViverFund": "Fundo AutoViver",
+    "mentalHealthAmazonia": "Saúde mental na Amazônia",
+    "voicesOfWellBeing": "Vozes do Bem-Estar",
+    "transparency": "Transparência",
+    "donate": "Doe",
+    "donateNow": "Doe Agora"
+  },
+  "home": {
+    "about": {
+      "label": "SOBRE AUTOESTIMA-SE",
+      "title": "O que nos traz aqui?",
+      "description": "A Rede Autoestima-se é uma organização da sociedade civil sem fins lucrativos que desde 2020, democratiza o acesso a atendimentos psicológicos e práticas terapêuticas para mulheres e jovens ativistas em situação de vulnerabilidade social. Atuamos de forma online, beneficiando pessoas de diversas regiões do Brasil, oferecendo suporte psicossocial essencial para quem enfrenta desafios emocionais como:ansiedade, depressão e estresse, com foco especial nos jovens e mulheres negras.",
+      "button": "Acesse nossa ONE PAGE"
+    },
+    "whatWeDo": {
+      "label": "O QUE FAZEMOS",
+      "title": "Acesso ao acolhimento emocional",
+      "cards": {
+        "psychosocial": {
+          "title": "Assistência psicossocial",
+          "description": "Oferecemos atendimento psicológico de psicoterapia focal breve e grupos de acolhimento com profissionais da psicologia."
+        },
+        "communication": {
+          "title": "Comunicação",
+          "description": "Propagamos o tema da saúde mental para profissionais da saúde, mídia e sociedade."
+        },
+        "advocacy": {
+          "title": "Advocacy",
+          "description": "Trabalhamos para influenciar e defender as políticas de saúde mental e bem-estar."
+        }
+      },
+      "readMore": "SAIBA MAIS"
+    },
+    "results": {
+      "label": "RESULTADOS",
+      "title": "Nossas ações",
+      "description": "Promovem o fortalecimento da saúde mental aliada à tecnologia para todo o Brasil através de uma comunidade digital.",
+      "stats": {
+        "sessions": "sessões de psicoterapia realizadas",
+        "cities": "cidades atendidas",
+        "states": "estados brasileiros",
+        "partners": "parceiros voluntários"
+      }
+    },
+    "recognition": {
+      "label": "CONQUISTAS",
+      "title": "Reconhecimentos",
+      "items": [
+        "Prêmio Empreendedor Social pela Folha de São Paulo",
+        "Reconhecimento da Rede Global Ashoka",
+        "Representante do Brasil na Delegação Jovem da ONU - YA",
+        "Representante do Brasil na Delegação Jovem do Banco Mundial- Youth Summit",
+        "Palestrante na Conferência Ethos 360°"
+      ]
+    },
+    "media": {
+      "label": "MÍDIA",
+      "title": "A Rede na Mídia"
+    },
+    "sponsors": {
+      "label": "FAZEM A DIFERENÇA",
+      "title": "Doadores",
+      "buttonMobile": "Seja Nosso parceiro",
+      "buttonDesktop": "Conheça nossa lista de apoiadores",
+      "altLogoOrg": "Logo Mapa OSC"
+    },
+    "partners": {
+      "titleMobile": "Parceiros estratégicos",
+      "titleDesktop": "Parceiros"
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Tire suas dúvidas",
+      "description": "Reunimos respostas para as principais dúvidas sobre a Rede Autoestima-se e os atendimentos de psicoterapia. *A terapia online foi regulamentada no Brasil no dia 12 de novembro de 2018 por meio da Resolução do CFP 011/2018.",
+      "questions": [
+        {
+          "question": "A Rede Autoestima-se disponibiliza apoio psicológico para o público?",
+          "answer": "Sim, oferecemos apoio psicológico gratuito, com foco em mulheres com até 65 anos e jovens de 13 a 29 anos, por meio de atendimentos online realizados por psicólogos (as) voluntários."
+        },
+        {
+          "question": "Como funcionam os acolhimentos psicológicos?",
+          "answer": "Os acolhimentos são realizados em sessões online, onde os participantes recebem suporte emocional em psicoterapia breve focal, com a triagem e orientação de profissionais qualificados e devidamente inscritos no Conselho Regional de Psicologia."
+        },
+        {
+          "question": "Como funcionam os atendimentos para jovens com menos de 18 anos?",
+          "answer": "Para jovens de 13 a 17 anos, os atendimentos são realizados com autorização dos responsáveis e seguem a mesma estrutura de acolhimento psicossocial oferecida aos demais beneficiários. Após solicitar o atendimento, encaminharemos via e-mail o documento."
+        },
+        {
+          "question": "Quanto tempo dura a terapia?",
+          "answer": "Ao todo são realizadas 12 sessões de psicoterapia com duração média de 45 minutos, 1 vezpor semana. Para solicitar o atendimento acesse: https://bit.ly/solicitarAtendimentoPsicologicoAutoestimase"
+        },
+        {
+          "question": "Como posso ser voluntário (a)?",
+          "answer": "Para ser voluntário(a), você pode se inscrever em nossos processos seletivos ou caso você seja psicólogo (a), pode encaminhar o seu currículo para o e-mail: trabalheconosco@redeautoestimase.com com o Título: Candidatura Voluntária."
+        }
+      ]
+    }
+  },
+  "common": {
+    "readMore": "Saiba mais",
+    "seeMore": "Ver mais",
+    "seeLess": "Ver menos",
+    "backToTop": "Voltar ao topo",
+    "loading": "Carregando...",
+    "error": "Erro ao carregar",
+    "close": "Fechar",
+    "open": "Abrir",
+    "menu": "Menu",
+    "search": "Buscar",
+    "language": "Idioma",
+    "portuguese": "Português",
+    "english": "Inglês",
+    "spanish": "Espanhol",
+    "logoAlt": "Logo da Rede Autoestima-se",
+    "dividerAlt": "Ícone de divisão de secção",
+    "saibaMoreAlt": "Seta indicando o botão \"SAIBA MAIS\"",
+    "minusAlt": "Menos conteúdo",
+    "plusAlt": "Mais conteudo"
+  },
+  "footer": {
+    "description": "A Rede Autoestima-se é uma organização da sociedade civil sem fins lucrativos que democratiza o acesso a atendimentos psicológicos para mulheres e jovens ativistas.",
+    "quickLinks": "Links Rápidos",
+    "aboutUs": "Sobre Nós",
+    "whatWeDo": "O que Fazemos",
+    "psychotherapy": "Psicoterapia",
+    "transparency": "Transparência",
+    "support": "Apoio",
+    "memberAssociate": "Adesão Sócio Doador",
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfUse": "Termos de uso",
+    "membershipTerm": "Termo de Adesão de sócio doador",
+    "donate": "Doar",
+    "contact": "Contato",
+    "followUs": "Siga-nos",
+    "rightsReserved": "Todos os direitos reservados à Rede Autoestima-se",
+    "developedBy": "Desenvolvido por",
+    "designBy": "Design por",
+    "index": "Índice",
+    "schedules": "Nossos Horários",
+    "weekdaySchedule": "Segunda a Sexta: 09:00 até 18:00 (BRT)",
+    "saturdaySchedule": "Sábados: 09:00 até 14:00 (BRT)",
+    "mainEmail": "E-mail principal:",
+    "psychologicalAssessment": "Assessoria Psicológica (Departamento Clínico):",
+    "commercialSocial": "Departamento do Comercial Social:",
+    "mobilizationPartners": "Parcerias para mobilização e doação de recursos:",
+    "warning": "A Rede Autoestima-se não oferece aconselhamento psicológico em situações de urgência e emergência. Caso precise de apoio imediato, procure atendimento em um hospital ou posto médico próximo.",
+    "socialReason": "Razão Social: Rede Autoestima-se",
+    "cnpj": "CNPJ: 44.925.343/0001-32"
+  },
+  "about": {
+    "bannerTitle": "Nossa história",
+    "intro": [
+      "A Rede Autoestima-se tem sua origem em 2020 na cidade interiorana de Conceição do Almeida, região do Recôncavo Baiano, no Estado da Bahia, a partir da mobilização da ativista Mariana Nunes, atual diretora executiva e presidente da organização, na época com apenas 17 anos.",
+      "Da ideia inicial, de rodas de conversas presenciais sobre saúde mental, autoconhecimento e temas afins, as atividades se estenderam, de forma online, para todo o Brasil, chegando ao modelo atual, com a participação de psicólogos voluntários oferecendo atendimento virtual. Já em 2021, o trabalho foi reconhecido pela Rede Global da Ashoka, que fortaleceu a instituição nos canais de comunicação no território nacional.",
+      "Em 2022, a Open Society Foundations doou à Rede Autoestima-se a primeira receita financeira com foco no fortalecimento institucional. Pouco tempo depois, a organização e sua fundadora representaram o Brasil na Assembleia Jovem da ONU (Organização das Nações Unidas).",
+      "De lá para cá, a Rede Autoestima-se cresceu em muitos sentidos. Aumentou o número de beneficiários; consolidou a sua metodologia; ampliou o propósito institucional, abrangendo também jovens ativistas de 14 até 29 anos; conquistou um papel relevante na saúde mental através do acolhimento emocional e em 2024 recebeu o Prêmio Empreendedor Social na categoria Jovens Transformadores fornecido pela Folha de São Paulo.",
+      "Hoje, a Rede Autoestima-se desenvolve suas atividades sociais por meio de três eixos de atuação: assistência psicossocial, comunicação e advocacy, tendo como importantes diferenciais a sua proposta de fortalecer a saúde mental aliada à tecnologia e a qualificação sistemática da equipe. Nesses 5 anos de atuação, cerca de 1000 atendimentos foram realizados, levando uma vida melhor para muitas brasileiras e brasileiros. Muitos virão!"
+    ],
+    "team": {
+      "label": "Equipe",
+      "title": "Profissionais que atuam na causa",
+      "description": "Nosso time é formado por uma rede de profissionais e voluntários comprometidos em promover o bem-estar emocional e o acesso democrático à saúde mental. Psicólogos (as), comunicadores, gestores e ativistas trabalham juntos para oferecer um atendimento acolhedor e qualificado. Acreditamos que, com uma equipe diversa e dedicada, podemos transformar vidas e fortalecer a saúde mental de quem mais precisa.",
+      "categories": {
+        "board": "DIRETORIA",
+        "council": "CONSELHO",
+        "volunteers": "VOLUNTÁRIOS"
+      },
+      "memberRole": "Rede Autoestima-se recebe o reconhecimento do Programa Jovens Transformadores Ashoka",
+      "memberTitle": "CARGO"
+    },
+    "location": {
+      "label": "ONDE ESTAMOS",
+      "title": "Cidades atendidas no Brasil"
+    },
+    "sustainability": {
+      "label": "SUSTENTABILIDADE",
+      "title": "Juntas, construímos uma rede de apoio mais sustentável, incluindo o clube de possibilidades.",
+      "description": "A Rede Autoestima-se é uma organização comprometida com a promoção dos Objetivos de Desenvolvimento Sustentável (ODS), oferecendo apoio psicossocial gratuito e acessível para mulheres e jovens em situação de vulnerabilidade. Nossa missão é contribuir para o bem-estar emocional, promovendo saúde mental (ODS 3), igualdade de gênero (ODS 5) e a redução das desigualdades (ODS 10). Por meio de atendimentos online realizados por psicólogos voluntários, aliamos tecnologia e acolhimento humano para impactar positivamente vidas e transformar comunidades em todo o Brasil.",
+      "ods": [
+        {
+          "title": "Saúde e Bem-estar",
+          "description": "Promovemos saúde mental acessível e de qualidade por meio de atendimentos psicossociais gratuitos, focados no acolhimento emocional de mulheres e jovens que enfrentam desafios de ansiedade, depressão e estresse. Através de psicoterapia breve focal e grupos de acolhimento, ajudamos a melhorar o bem-estar das populações mais vulneráveis."
+        },
+        {
+          "title": "Igualdade de gênero",
+          "description": "Apoiamos a autonomia emocional e social de mulheres, que representam 80% dos nossos beneficiários. Nosso objetivo é fortalecer a saúde mental feminina, promovendo espaços de acolhimento e desenvolvimento para que essas mulheres possam exercer seu protagonismo na sociedade."
+        },
+        {
+          "title": "Redução das Desigualdades",
+          "description": "Atuamos para reduzir as desigualdades raciais e socioeconômicas, atendendo principalmente jovens e mulheres negras. Oferecemos suporte emocional e oportunidades de crescimento pessoal para aqueles que têm acesso limitado a serviços de saúde mental, visando promover a equidade e justiça social."
+        }
+      ]
+    },
+    "goals": {
+      "title": "Metas para os próximos 6 anos",
+      "items": [
+        {
+          "title": "Reduzir em 90% a impressão de materiais físicos:",
+          "description": "Estamos comprometidos em minimizar o uso de materiais impressos, tanto publicitários quanto de escritório, visando reduzir significativamente nosso impacto ambiental."
+        },
+        {
+          "title": "Atingir a marca de 2 mil pessoas atendidas:",
+          "description": "Expandiremos nossos serviços para alcançar e oferecer suporte psicológico e social a 2 mil pessoas, promovendo bem-estar e inclusão."
+        },
+        {
+          "title": "Garantir que 90% da equipe de liderança seja composta por profissionais das regiões Norte e Nordeste:",
+          "description": "Estamos trabalhando para aumentar a representatividade regional, fortalecendo o protagonismo de talentos dessas áreas em nossa estrutura de liderança."
+        },
+        {
+          "title": "Alinhar 75% dos parceiros e fornecedores com práticas sustentáveis:",
+          "description": "Nosso objetivo é garantir que a maioria de nossas parcerias seja com fornecedores comprometidos com a sustentabilidade e a descarbonização, contribuindo para um futuro mais verde."
+        },
+        {
+          "title": "Oferecer incentivos financeiros para o uso de energia limpa:",
+          "description": "Vamos apoiar financeiramente nossos profissionais de psicologia e o público assistido na contratação de energia renovável para os atendimentos online, promovendo uma transição para fontes energéticas mais sustentáveis."
+        }
+      ]
+    },
+    "seals": "Selos e inscrições"
+  },
+  "psychotherapy": {
+    "bannerTitle": "Atendimento Psicológico",
+    "description": [
+      "Nossos atendimentos são realizados de forma online, proporcionando acolhimento e suporte psicológico para jovens e mulheres de todo o Brasil. Os atendimentos seguem o modelo de psicoterapia breve focal, com duração de 12 sessões de 45 minutos, conduzidas por profissionais qualificados.",
+      "Além das sessões individuais, oferecemos grupos de acolhimento mediado por psicólogos, criando um espaço seguro para diálogo e cuidado emocional.",
+      "As sessões acontecem semanalmente e são realizadas individualmente. Todos os nossos atendimentos são direcionados pelas orientações do Código de Ética da Profissão da Psicologia e pelo nosso Protocolo de Atendimento psicológico."
+    ],
+    "protocolButton": "Acesse o nosso protocolo",
+    "objective": "Nosso objetivo é garantir que cada pessoa atendida receba suporte personalizado, respeitando suas necessidades e vivências, sempre com um olhar sensível para questões sociais, raciais e emocionais.",
+    "acolhimentoTitle": "Acolhimento na Rede Autoestima-se",
+    "steps": [
+      {
+        "title": "Solicitação da Orientação",
+        "description": "A pessoa interessada em receber o acolhimento deve preencher o formulário disponível no site da Rede Autoestima-se. “Orientação” é o nome dado ao primeiro atendimento de 45 minutos."
+      },
+      {
+        "title": "Deliberação do Atendimento",
+        "description": "Após a triagem inicial realizada pelo nosso Departamento da Assessoria Psicológica, a pessoa que solicitou o atendimento receberá um e-mail com os procedimentos e orientações necessários para iniciar o acompanhamento. O nosso prazo para retorno é de 7 dias!"
+      },
+      {
+        "title": "Preenchimento das Informações Requeridas",
+        "description": "Após enviar as informações solicitadas, o(a) interessado(a) receberá o link via e-mail para acessar a agenda da(o) psicóloga(o) responsável."
+      },
+      {
+        "title": "Agendamento do Atendimento",
+        "description": "O solicitante escolherá o dia e horário para a sessão, e ambos (solicitante e psicóloga/o) receberão o link da chamada via Google Meet por e-mail logo após a marcação."
+      },
+      {
+        "title": "Feedback Após o Atendimento",
+        "description": "Após a última sessão, a psicóloga(o) responsável enviará um formulário de feedback que deverá ser preenchido para finalizar o processo de acolhimento."
+      }
+    ],
+    "footerStep": "Jovens com menos de 18 anos, encaminharemos um termo de ciência aos responsáveis através do e-mail informado no formulário de solicitação.",
+    "requestTitle": "Para solicitar o acolhimento emocional",
+    "requestButton": "Clique aqui",
+    "requestOptions": {
+      "activists": "Ativistas",
+      "generalPublic": "Público geral"
+    },
+    "requestDisclaimer": [
+      "Em casos que requerem atendimento presencial, contamos com parcerias estratégicas com CAPS (Centros de Atenção Psicossocial) e clínicas particulares para realizar a transferência adequada dos pacientes, garantindo a continuidade e qualidade do cuidado.",
+      "Não oferecemos acolhimento psicológico em situações de urgência e emergência. Caso precise de apoio imediato, procure atendimento em um hospital mais próximo."
+    ],
+    "guidanceTitle": "Orientação para Pais e Responsáveis",
+    "guidanceText": [
+      "Pais e responsáveis podem receber um encontro de orientação psicológica com profissionais da Rede Autoestima-se.",
+      "A orientação tem duração de 45 minutos e segue as mesmas etapas técnicas do acolhimento de psicoterapia e poderá ser realizada via ligação telefônica ou chamada de vídeo."
+    ],
+    "guidanceButton": "Solicitar orientação",
+    "questionsContact": "Em caso de dúvidas ou sugestões você pode entrar em contato com o e-mail:",
+    "testimonials": {
+      "label": "RELATOS",
+      "title": "Depoimentos",
+      "intro": "Confira os relatos transformadores de quem já vivenciou o cuidado e acolhimento da Rede Autoestima-se e descubra como o acesso à saúde emocional fez a diferença em suas vidas.",
+      "items": [
+        "As conversas com a Joyce foram incríveis, e eu sempre me senti muito bem antes, durante e depois das consultas. Eu conseguia respirar sem tanto esforço e acessei lugares importantes em mim que eu não compreendia ou tinha dimensão do impacto que tinha na minha vida. (M.H)”",
+        "Estou bem melhor,mais motivo me fez enxergar a vida de outro modo e enxergar novas oportunidades. (R.S)”",
+        "Consegui aprender técnicas de relaxamento para minha ansiedade e estou me sentindo melhor. (N.C)”",
+        "Me sinto mais leve, que realmente tem alguém que me ouve e está aqui para me ajudar, estou começando a compreender que meus problemas tem soluções e que não preciso lidar sozinha e que posso caminhar no meu tempo. Estou muito grata por esses atendimentos com a Laís. (Y.A)”"
+      ],
+      "disclaimer": "*Preservamos a identificação das pessoas conforme as orientações do Conselho Federal de Psicologia."
+    },
+    "professionals": {
+      "label": "PROFISSIONAIS",
+      "title": "Equipe Terapêutica",
+      "intro": [
+        "Este espaço é dedicado aos(às) psicólogos(as) voluntários(as) e parceiros(as) da Rede Autoestima-se, que desempenham um papel fundamental na nossa missão de democratizar o acesso ao atendimento psicológico.",
+        "Aqui, destacamos o trabalho desses profissionais por meio de mini-bios e compartilhamento de suas redes sociais, oferecendo visibilidade e fortalecendo parcerias.",
+        "Essa iniciativa reflete nosso compromisso em valorizar e promover o trabalho dos(as) psicólogos(as) no Brasil."
+      ],
+      "items": {
+        "0": {
+          "description1": "Sou psicóloga clínica com especialização em psicossomática e terapia cognitivo-comportamental. Atuo há mais de 10 anos na área, com foco em ansiedade, depressão e desenvolvimento pessoal.",
+          "description2": "Acredito no poder transformador da psicoterapia e no potencial de cada pessoa para superar seus desafios emocionais."
+        },
+        "1": {
+          "description1": "Psicóloga clínica com formação em Gestalt-terapia. Tenho experiência em atendimento a jovens e adultos, especialmente em questões relacionadas a ansiedade, autoestima e relacionamentos.",
+          "description2": "Meu trabalho é pautado no acolhimento e na escuta ativa, criando um espaço seguro para o autoconhecimento."
+        },
+        "2": {
+          "description1": "Psicóloga com especialização em Terapia Cognitivo-Comportamental. Atuo com foco em transtornos de ansiedade, depressão e questões emocionais diversas.",
+          "description2": "Busco promover o bem-estar e a qualidade de vida através de intervenções baseadas em evidências científicas."
+        },
+        "3": {
+          "description1": "Psicóloga clínica com experiência em saúde mental comunitária. Trabalho com abordagem humanista, valorizando a singularidade de cada pessoa.",
+          "description2": "Minha prática é guiada pelo respeito, empatia e compromisso com o desenvolvimento humano."
+        },
+        "4": {
+          "description1": "Psicóloga com formação em Psicanálise. Tenho experiência em atendimento clínico individual e em grupo, com foco em saúde mental e qualidade de vida.",
+          "description2": "Acredito que o autoconhecimento é o caminho para uma vida mais plena e significativa."
+        },
+        "5": {
+          "description1": "Sou psicóloga clínica, formada pela Universidade Federal de Campina Grande - PB. Pós-graduanda em Saúde Mental e Atenção Psicossocial pela Faveni. Atualmente sou membro do comitê de ética - COE, do Conselho Regional de Psicologia - CRP 13.",
+          "description2": "Na minha trajetória acadêmica e profissional, caminho atravessada pela ética teórico-prática da psicanálise, das psicologias sociais e comunitárias."
+        }
+      }
+    },
+    "impact": {
+      "label": "IMPACTO",
+      "title": "A Importância dos(as) Psicólogos(as) na Rede Autoestima-se",
+      "content": [
+        "Em um país onde o acesso à saúde mental ainda é limitado para muitas comunidades, o trabalho desses(as) psicólogos(as) representa um alívio e uma oportunidade de transformação para aqueles(as) que mais precisam.",
+        "Eles(as) oferecem não apenas suporte técnico e clínico, mas também empatia, acolhimento e compreensão, criando um ambiente seguro e confiável para o desenvolvimento pessoal e o bem-estar dos nossos(as) beneficiários(as).",
+        "Além disso, a atuação desses(as) profissionais fortalece a nossa rede, permitindo que continuemos a expandir nossos serviços e alcançar cada vez mais pessoas.",
+        "A divulgação de suas mini-bios e redes sociais em nosso site é uma maneira de reconhecer e valorizar a contribuição desses(as) psicólogos(as), ao mesmo tempo em que promove o intercâmbio de conhecimento e a criação de novas parcerias.",
+        "Por meio do comprometimento dos(as) psicólogos(as) voluntários(as) e parceiros(as), a Rede Autoestima-se se consolida como um espaço de transformação e acolhimento, impactando positivamente a vida de diversas comunidades em todo o Brasil."
+      ]
+    }
+  },
+  "initiativesDetail": {
+    "activists": {
+      "bannerTitle": "Projeto de Atendimento Psicológico para Jovens Ativistas",
+      "intro": "O Projeto tem como objetivo cuidar da saúde mental de jovens que estão na linha de frente das transformações sociais. Sabemos que, enquanto lutam por causas fundamentais, esses jovens também enfrentam desafios emocionais e psicológicos, muitas vezes intensificados pela pressão, desgaste e sobrecarga que o ativismo pode trazer.",
+      "offerTitle": "O que oferecemos",
+      "services": {
+        "individual": {
+          "title": "Psicoterapia Individual",
+          "description": "Atendimentos personalizados com psicólogos especializados, focados em auxiliar jovens ativistas a lidar com a ansiedade, estresse, esgotamento emocional e questões relacionadas ao impacto de seu ativismo em suas vidas pessoais."
+        },
+        "continuous": {
+          "title": "Apoio Contínuo",
+          "description": "Durante três meses, nossos beneficiários são acompanhados semanalmente em sessões que promovem o autocuidado e o fortalecimento emocional, ajudando-os a equilibrar suas demandas pessoais e seu engajamento social."
+        },
+        "spaces": {
+          "title": "Espaços de Acolhimento",
+          "description": "Criamos espaços de diálogo e apoio mútuo, como grupos de acolhimento, onde os jovens podem compartilhar suas experiências, desafios e conquistas, encontrando suporte em uma rede de pessoas que vivem contextos semelhantes."
+        }
+      },
+      "requestButton": "Solicitar atendimento",
+      "impactTitle": "Nosso Impacto",
+      "impactText": [
+        "Desde 2022 mais de 60 jovens foram acolhidos pela Rede Autoestima-se e lançamos o primeiro estudo sobre a saúde mental do público em questão.",
+        "O projeto é uma resposta ao crescente esgotamento emocional que muitos ativistas enfrentam, oferecendo suporte para que continuem firmes em suas causas, mas também se cuidem ao longo dessa jornada.",
+        "Queremos que cada jovem ativista saiba que não está sozinho e que a sua saúde mental importa tanto quanto suas causas."
+      ],
+      "articleTitle": "Acesse nosso artigo completo.",
+      "testimonialsTitle": "Depoimentos",
+      "testimonials": [
+        "“Me ajudou muito a me entender e lidar melhor comigo mesma, isso tem impactado diretamente nas minhas relações, na minha vida pessoal e profissional.”",
+        "“Foi uma evolução bem grande, pois consegui abordar temas sensíveis como áreas da minha vida amorosa, trabalho e relacionamento com a família. Os temas caíram como luva no momento que estava vivendo o clímax de cada um e precisava da psicoterapia para refletir e repensar com tempo de qualidade. Me sinto mais resolvida e melhor, a Juliane é uma profissional incrível!”",
+        "”Me sinto mais confiante, feliz e um sentimento de liberdade.”"
+      ]
+    }
+  },
+  "whatWeDoDetail": {
+    "howWeDo": {
+      "title": "COMO FAZEMOS",
+      "subtitle": "O autoconhecimento é o pilar da metodologia da Rede Autoestima-se",
+      "sections": [
+        {
+          "title": "Oferecemos",
+          "description": "Atendimentos de psicoterapia breve online em 12 sessões para jovens e mulheres de 13 até 65 anos, orientação psicológica para pais e responsáveis, materiais sobre saúde emocional, práticas integrativas, palestras, rodas de conversas e oficinas."
+        },
+        {
+          "title": "Intervimos",
+          "description": "Em problemas mentais e emocionais de ansiedade, questões referentes às relações com a família, relações interpessoais, trabalho e estudos para minimizar o aumento dos transtornos."
+        },
+        {
+          "title": "Acolhemos",
+          "description": "As pessoas são acompanhadas semanalmente durante três meses."
+        },
+        {
+          "title": "Comunicamos",
+          "description": "Estudamos as demandas dos pacientes e produzimos materiais de comunicação de ampla divulgação na sociedade para prevenção em saúde mental. Exemplo: artigos e cartilhas."
+        }
+      ],
+      "strategies": [
+        {
+          "title": "Estratégia de Crescimento e Inclusão",
+          "description": "Desenvolvemos uma estratégia focada na promoção do autoconhecimento, que é o elemento central de todas as nossas iniciativas. Nós acreditamos que, ao se conhecerem melhor, as pessoas conseguem lidar de forma mais eficaz com seus problemas emocionais e relacionais, gerando um impacto positivo em suas vidas e nas comunidades ao redor. Nosso trabalho não se limita apenas ao tratamento individual. Também proporcionamos orientação psicológica para pais e responsáveis, visando melhorar o ambiente familiar e facilitar o diálogo intergeracional. Para além dos atendimentos, a Rede Autoestima-se se dedica à educação em saúde mental, produzindo materiais informativos que têm como objetivo prevenir o agravamento de transtornos mentais e conscientizar a sociedade."
+        },
+        {
+          "title": "Estratégia Digital para Fortalecer a Comunidade",
+          "description": "Acreditamos no poder da comunidade e por isso, nossa estratégia digital é desenhada para conectar, apoiar e engajar pessoas de forma contínua. Utilizamos plataformas online para ampliar o acesso ao bem-estar emocional, criando espaços seguros e acolhedores onde jovens e mulheres podem compartilhar experiências, aprender e crescer juntas. Apostamos em ferramentas digitais que facilitam o diálogo e a troca de conhecimentos entre os membros da nossa comunidade. Grupos online, fóruns de discussão, rodas de conversa virtuais e eventos ao vivo são parte da nossa rotina, promovendo debates sobre temas como saúde mental, autoconhecimento e relações interpessoais. Assim, criamos um ambiente em que todos podem se expressar, ouvir e apoiar uns aos outros. Além disso, nossa produção de conteúdo digital é focada em oferecer informações relevantes e práticas, desde artigos e vídeos educativos e cartilhas interativas, sempre com o objetivo de promover a prevenção em saúde mental e o fortalecimento do autoconhecimento. Através das redes sociais e newsletters, nós mantemos nossa comunidade atualizada sobre novos materiais, eventos e iniciativas, incentivando o engajamento constante. Nossa estratégia digital também se compromete com a inclusão, assegurando que pessoas de diferentes regiões e contextos sociais, especialmente das regiões Norte e Nordeste, tenham acesso facilitado aos nossos conteúdos e atendimentos. Investimos em ferramentas acessíveis e em parcerias estratégicas que compartilham dos mesmos valores de sustentabilidade e inclusão. Com uma estratégia digital focada no fortalecimento comunitário, nós criamos laços que transcendem o espaço físico, ajudando nossos participantes a se sentirem parte de uma rede que apoia e empodera em todos os momentos."
+        },
+        {
+          "title": "Estratégia de Bem-Estar Financeiro: Cuidando da Saúde Emocional e Econômica",
+          "description": "Entendemos que o bem-estar financeiro é parte fundamental da saúde integral. Por isso, nossa estratégia de bem-estar financeiro visa promover não apenas o equilíbrio emocional, mas também a segurança econômica, oferecendo ferramentas e oportunidades que ajudam a reduzir o estresse financeiro e melhorar a qualidade de vida. Como parte dessa estratégia, oferecemos incentivos e apoio financeiro para que nossos beneficiários possam tomar decisões mais sustentáveis e conscientes, como: parcerias com instituições de consultoria financeira e doação de bolsas de cursos de aperfeiçoamento. Paralelamente, desenvolvemos conteúdos educativos focados em gestão financeira, que são disponibilizados e esses materiais incluem dicas sobre organização financeira, planejamento de despesas e conscientização sobre como o bem-estar financeiro impacta a saúde emocional. Nossas rodas de conversa e palestras também abordam esses temas, incentivando uma visão mais integrada entre finanças e saúde mental. Nós acreditamos que, ao criar um ambiente onde o suporte emocional e o bem-estar financeiro andam juntos, estamos proporcionando às pessoas ferramentas para tomarem decisões mais equilibradas e conscientes, tanto em suas vidas pessoais quanto profissionais. Por meio dessa estratégia, buscamos criar um ciclo positivo, em que o alívio do estresse financeiro contribui para o crescimento emocional. Além disso, criamos o Fundo AutoViver que é totalmente inovador. Um fundo de bem-estar financeiro que visa apoiar nossos beneficiários, aliando saúde financeira à promoção da autoestima."
+        }
+      ]
+    },
+    "companies": {
+      "bannerTitle": "Empresas",
+      "introTitle": "Leve a Autoestima-se para sua empresa",
+      "introText": [
+        "Aqui na Rede Autoestima-se, oferecemos uma gama de serviços personalizados para empresas que desejam promover o bem-estar emocional e social de seus colaboradores. Nossos serviços incluem: palestras, workshops, e programas de desenvolvimento focados em saúde mental, diversidade, e inclusão no ambiente de trabalho.",
+        "Além disso, realizamos consultorias para a criação de ambientes de trabalho mais saudáveis e inclusivos, ajudando sua empresa a implementar práticas que valorizam a saúde mental e o bem-estar de toda a equipe."
+      ],
+      "investTitle": "Todas as vendas são revertidas para o trabalho social",
+      "investText": "Com uma abordagem humanizada e baseada em evidências, estamos comprometidos em apoiar o crescimento sustentável das organizações, promovendo uma cultura organizacional mais empática e acolhedora.",
+      "services": {
+        "title": "Serviços",
+        "items": [
+          "Atendimentos de psicoterapia",
+          "Apoio Contínuo",
+          "Treinamentos e palestras",
+          "Consultoria empresarial para demandas específicas da instituição"
+        ]
+      }
+    }
+  },
+  "transparencyPage": {
+    "titleLabel": "ARQUIVOS",
+    "title": "Transparência",
+    "intro": [
+      "A transparência é um dos pilares fundamentais da Rede Autoestima-se. Acreditamos que a confiança é construída por meio da clareza nas nossas ações e na gestão dos recursos que possibilitam nossos projetos.",
+      "Aqui, você encontrará informações detalhadas sobre nossas fontes de financiamento, prestação de contas e o impacto social gerado por nossas atividades.",
+      "Nosso compromisso é manter um diálogo aberto com a sociedade e nossos parceiros, garantindo que cada passo dado seja refletido com responsabilidade e ética."
+    ],
+    "sections": {
+      "financials": {
+        "title": "Demonstrativos Financeiros",
+        "text": "Acompanhe nossos demonstrativos financeiros e saiba como gerenciamos os recursos para garantir a sustentabilidade de nossos projetos."
+      },
+      "annualReport": {
+        "title": "Relatório Anual de Realizações",
+        "text": "Explore nossos relatórios de atividades e veja de perto os impactos e resultados alcançados pelas nossas iniciativas ao longo do tempo."
+      },
+      "constitution": {
+        "title": "Documentos de Constituição e Divulgação",
+        "text": "Acompanhe nossos documentos de constituição e divulgação e verifique as normativas e estruturas que compõem a Rede Autoestima-se.",
+        "links": [
+          "Estatuto Social em Português",
+          "Estatuto Social em Inglês",
+          "Regimento interno",
+          "Brochura da Organização",
+          "Manual da Marca"
+        ]
+      },
+      "policies": {
+        "title": "Políticas Institucionais e de Gestão",
+        "text": "Acesse as políticas institucionais e de gestão que orientam os trabalhos diários na Rede Autoestima-se. Prezamos pelas políticas institucionais e sempre acompanhamos os resultados e melhorias com foco no trabalho compartilhado, na empatia e transparência.",
+        "links": [
+          "Diretrizes de convivência, atuação e de boas-práticas",
+          "Política do Centro de Custos"
+        ]
+      },
+      "protocols": {
+        "title": "Protocolos de Atendimento",
+        "text": "Acesse as normativas que orientam os atendimentos psicológicos realizados na Rede Autoestima-se e fique por dentro de todas disposições!",
+        "links": [
+          "Protocolo de atendimento psicológico",
+          "Contrato terapêutico"
+        ]
+      }
+    }
+  },
+  "donatePage": {
+    "bannerTitle": "Apoie nossa causa",
+    "introTitle": "DOE AGORA",
+    "introSubtitle": "PLANO DE DOAÇÃO",
+    "iframeTitle": "Doe agora",
+    "sectionSubtitle": "NOSSA PARTE",
+    "sectionHighlight": "A REDE AUTOESTIMA-SE vai doar",
+    "cards": {
+      "brand": {
+        "title": "Licenciamento de Marca",
+        "description": "Empresas podem fortalecer seu valor ao utilizar a marca Rede Autoestima-se, referência em saúde mental no Brasil."
+      },
+      "seal": {
+        "title": "Selo de Empresa Amiga",
+        "description": "O licenciamento, com o Selo de Empresa Amiga da Saúde Mental, destaca o compromisso com o bem-estar, oferecendo visibilidade e impacto positivo.",
+        "button": "Seja uma Empresa Amiga"
+      },
+      "services": {
+        "title": "Serviços e Contrapartidas",
+        "description": "Com atuação nacional, oferecemos serviços que beneficiam empresas e colaboradores, em troca de apoio para expandir nosso impacto."
+      }
+    }
+  }
+}

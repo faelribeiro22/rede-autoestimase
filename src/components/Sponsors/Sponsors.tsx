@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
+import { useTranslations } from 'next-intl';
 import styles from "./styles.module.scss";
-import MediaQuery from 'react-responsive';
 
 type SponsorLogo = {
   logo: StaticImageData;
@@ -15,47 +15,47 @@ type SponsorsProps = {
 }
 
 const Sponsors = ({doadoresLogos1, doadoresLogos2, org, orgMobile, Button}: SponsorsProps) => {
+  const t = useTranslations("home.sponsors");
+  const tc = useTranslations("common");
+
   return (
     <div className={styles.doadoresTop}>
       <div className={styles.doadoresHeader}>
-        <div>FAZEM A DIFERENÇA</div>
-        <h1>Doadores</h1>
+        <div>{t("label")}</div>
+        <h1>{t("title")}</h1>
       </div>
       <div className={styles.logosContainer}>
         <div className={styles.topLogos}>
           {doadoresLogos1.map((item, index) => (
-            <Image key={index} src={item.logo} alt="Logo"/>
+            <Image key={index} src={item.logo} alt={tc("logoAlt")}/>
           ))}
         </div>
         <div className={styles.bottomLogos}>
           {doadoresLogos2.map((item, index) => (
-            <Image key={index} src={item.logo} alt="Logo" />
+            <Image key={index} src={item.logo} alt={tc("logoAlt")} />
           ))}
         </div>
-        <MediaQuery maxWidth={1366}>
-          <div className={styles.org}>
-            <Image
-              src={orgMobile}
-              alt="Logo indicando que fazemos parte do Mapa das Organizações da Sociedade Civil"
-            />
-          </div>
-        </MediaQuery>
-
-        <MediaQuery minWidth={1366}>
-          <div className={styles.org}>
-            <Image
-              src={org}
-              alt="Logo indicando que fazemos parte do Mapa das Organizações da Sociedade Civil"
-            />
-          </div>
-        </MediaQuery>
+        <div className={styles.org}>
+          <Image
+            className={styles.orgMobile}
+            src={orgMobile}
+            alt={t("altLogoOrg", { defaultValue: "Logo Mapa OSC" })}
+          />
+          <Image
+            className={styles.orgDesktop}
+            src={org}
+            alt={t("altLogoOrg", { defaultValue: "Logo Mapa OSC" })}
+          />
+        </div>
       </div>
-      <MediaQuery maxWidth={768}>
-        <Button label="Seja Nosso parceiro" />
-      </MediaQuery>
-      <MediaQuery minWidth={769}>
-        <Button label="Conheça nossa lista de apoiadores" />
-      </MediaQuery>
+      <div className={styles.buttonContainer}>
+        <div className={styles.buttonMobile}>
+          <Button label={t("buttonMobile")} />
+        </div>
+        <div className={styles.buttonDesktop}>
+          <Button label={t("buttonDesktop")} />
+        </div>
+      </div>
     </div>
   )
 }
