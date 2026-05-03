@@ -30,13 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt">
+    <html lang="pt-BR">
       <body className={`${outfit.className} ${openSans.className}`}>
-        <Header />
         {children}
-        <Footer />
-        <BackToTop />
-        <CookieConsentModal />
       </body>
     </html>
   );

@@ -193,22 +193,29 @@
   @include breakpoints.media("<tablet") {
     .Slider___text--button_1,
     .Slider___text--button_2 {
-      max-width: 85%;
+      max-width: 90%;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
+      width: 100%; // Ensure it takes available width up to max-width
     }
 
     .Slider___text--button_1 p,
     .Slider___text--button_2 p {
       font-size: 22px;
+      width: auto; // Reset fixed width
+      max-width: 100%; // Ensure it doesn't overflow
     }
 
     .Slider___text--button_1 a,
     .Slider___text--button_2 a {
       font-size: 14px;
       padding: 8px 14px;
-      display: none;
+      // display: none; // Keep buttons visible if possible, or decide based on design. Original code hid them.
+      // If the intention is to hide them, keep display: none. 
+      // Assuming the user wants to fix overflow, not necessarily change visibility logic, but let's make them responsive if they were to be shown.
+      // The original code had display: none, so I will keep it for now to avoid changing behavior, but the overflow issue was likely the p tag width.
+      display: none; 
     }
   }
   @include breakpoints.media("<tablet") {

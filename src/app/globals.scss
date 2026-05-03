@@ -26,6 +26,19 @@
 
   --font-heading: "Outfit";
   --font-body: "Open Sans";
+
+  // Fluid Typography
+  --font-size-h1-mobile: clamp(24px, 5vw, 32px);
+  --font-size-h1-desktop: clamp(32px, 3vw, 42px);
+  
+  --font-size-h2-mobile: clamp(20px, 4vw, 24px);
+  --font-size-h2-desktop: clamp(24px, 2.5vw, 32px);
+  
+  --font-size-body-mobile: clamp(14px, 3.5vw, 16px);
+  --font-size-body-desktop: 16px;
+  
+  --line-height-mobile: 1.5;
+  --line-height-desktop: 1.75;
 }
 
 html,
@@ -42,15 +55,30 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100vw;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 // Image optimization for Retina displays
 img,
 picture,
-svg {
+svg,
+video,
+iframe {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;
+  max-width: 100%;
+  height: auto;
 }
 
 // Specific optimization for Next.js Image component
@@ -66,6 +94,36 @@ h5,
 h6,
 button {
   font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: var(--font-size-h1-mobile);
+  line-height: var(--line-height-mobile);
+  
+  @media (min-width: 768px) {
+    font-size: var(--font-size-h1-desktop);
+    line-height: var(--line-height-desktop);
+  }
+}
+
+h2 {
+  font-size: var(--font-size-h2-mobile);
+  line-height: var(--line-height-mobile);
+  
+  @media (min-width: 768px) {
+    font-size: var(--font-size-h2-desktop);
+    line-height: var(--line-height-desktop);
+  }
+}
+
+p {
+  font-size: var(--font-size-body-mobile);
+  line-height: var(--line-height-mobile);
+  
+  @media (min-width: 768px) {
+    font-size: var(--font-size-body-desktop);
+    line-height: var(--line-height-desktop);
+  }
 }
 
 p {

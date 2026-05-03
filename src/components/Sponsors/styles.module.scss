@@ -88,6 +88,46 @@
   gap: 40px;
 }
 
+.org {
+  .orgMobile {
+    display: block;
+  }
+  
+  .orgDesktop {
+    display: none;
+  }
+
+  @include breakpoints.media(">=desktop") {
+    .orgMobile {
+      display: none;
+    }
+    
+    .orgDesktop {
+      display: block;
+    }
+  }
+}
+
+.buttonContainer {
+  .buttonMobile {
+    display: block;
+  }
+  
+  .buttonDesktop {
+    display: none;
+  }
+
+  @include breakpoints.media(">tablet") {
+    .buttonMobile {
+      display: none;
+    }
+    
+    .buttonDesktop {
+      display: block;
+    }
+  }
+}
+
 @include breakpoints.media(">tablet" and "<desktop") {
   .topLogos {
     gap: 30px !important;
