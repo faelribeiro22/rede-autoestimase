@@ -7,6 +7,8 @@ import Footer from "../../components/Footer/Footer";
 import BackToTop from "@/components/BackToTop/BackToTop";
 import CookieConsentModal from "@/components/CookieConsentModal/CookieConsentModal";
 
+export const runtime = "edge";
+
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
