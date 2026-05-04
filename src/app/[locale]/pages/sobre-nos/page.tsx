@@ -20,7 +20,7 @@ import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
 const bannerData = {
-  titleKey: "about.bannerTitle",
+  titleKey: "bannerTitle",
   image: bannersobrenos,
 };
 
@@ -153,20 +153,20 @@ const odsData = [
   {
     icon: ODS3,
     number: "ODS 3",
-    titleKey: "about.sustainability.ods.0.title",
-    descriptionKey: "about.sustainability.ods.0.description",
+    titleKey: "sustainability.ods.0.title",
+    descriptionKey: "sustainability.ods.0.description",
   },
   {
     icon: ODS5,
     number: "ODS 5",
-    titleKey: "about.sustainability.ods.1.title",
-    descriptionKey: "about.sustainability.ods.1.description",
+    titleKey: "sustainability.ods.1.title",
+    descriptionKey: "sustainability.ods.1.description",
   },
   {
     icon: ODS10,
     number: "ODS 10",
-    titleKey: "about.sustainability.ods.2.title",
-    descriptionKey: "about.sustainability.ods.2.description",
+    titleKey: "sustainability.ods.2.title",
+    descriptionKey: "sustainability.ods.2.description",
   },
 ];
 
@@ -182,7 +182,7 @@ export default function SobreNos() {
   function Selo() {
     return (
       <section className={styles.selosContainer}>
-        <h3>{t('insignias.title')}</h3>
+        <h3>{t('seals')}</h3>
         <div className={styles.selos}>
           {selos.map((selo, index) => (
             <Image
@@ -248,18 +248,19 @@ export default function SobreNos() {
           <AwardsSection />
           <Selo />
           <Timeline />
+          <EmojiDivider />
         </>
       )}
 
       <section className={styles.teamSection}>
         <div className={styles.teamSectiontexto}>
-          <p>{t('team.label')}</p>
+          <p className={styles.teamSectiontextoParagraph}>
+            {t('team.label')}
+          </p>
           <h2>{t('team.title')}</h2>
-        </div>
-        <div className={styles.titletexto}>
-          <a>
+          <p className={styles.titletexto}>
             {t('team.description')}
-          </a>
+          </p>
         </div>
         {[
           { titulo: t('team.categories.board'), chave: "diretoria" as TeamCategoryKey },
