@@ -29,6 +29,8 @@ const CookieConsentModal = () => {
       onClose={() => {}} // Passamos uma função vazia pois o fechamento é controlado pelos botões
       disableBackdropClick={true}
       disableEscapeKeyDown={true}
+      backdropClassName={styles.cookieBackdrop}
+      containerClassName={styles.cookieContainer}
     >
       <Modal.Header hideCloseButton={true}>Valorizamos sua privacidade</Modal.Header>
       <Modal.Body>

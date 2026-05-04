@@ -1,3 +1,24 @@
+.cookieBackdrop {
+  align-items: flex-end;
+  padding-bottom: 1.5rem;
+}
+
+.cookieContainer {
+  width: min(100%, 900px);
+  animation: slideInFromBottom 0.4s ease-out;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .cookieFooter {
   width: 100%;
   display: flex;
