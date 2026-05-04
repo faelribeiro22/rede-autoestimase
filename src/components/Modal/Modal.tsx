@@ -22,6 +22,8 @@ type ModalProps = {
   children: ReactNode;
   disableBackdropClick?: boolean;
   disableEscapeKeyDown?: boolean;
+  backdropClassName?: string;
+  containerClassName?: string;
 };
 
 const useModalContext = () => {
@@ -38,6 +40,8 @@ const Modal = ({
   children,
   disableBackdropClick = false,
   disableEscapeKeyDown = false,
+  backdropClassName,
+  containerClassName,
 }: ModalProps) => {
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
@@ -64,9 +68,9 @@ const Modal = ({
 
   return (
     <ModalContext.Provider value={{ onClose }}>
-      <div className={styles.modalBackdrop} onClick={handleBackdropClick}>
+      <div className={`${styles.modalBackdrop} ${backdropClassName || ""}`.trim()} onClick={handleBackdropClick}>
         <div
-          className={styles.modalContainer}
+          className={`${styles.modalContainer} ${containerClassName || ""}`.trim()}
           onClick={(e) => e.stopPropagation()}
         >
           {children}
