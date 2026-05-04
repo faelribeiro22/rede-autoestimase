@@ -327,6 +327,18 @@
   gap: 44px;
   padding: 100px 135px 74px;
   background-color: var(--secondary-neutral-color);
+  
+  @include breakpoints.media("<desktop") {
+    padding: 80px 40px 60px;
+  }
+  
+  @include breakpoints.media("<tablet") {
+    padding: 60px 24px 40px;
+  }
+  
+  @include breakpoints.media("<mobile") {
+    padding: 40px 16px 32px;
+  }
 
   .conquistasHeader {
     display: flex;
@@ -408,6 +420,15 @@
   justify-content: center;
   background-color: var(--primary-color);
   height: 943px;
+  
+  @include breakpoints.media("<tablet") {
+    height: auto;
+    padding: 60px 24px;
+  }
+  
+  @include breakpoints.media("<mobile") {
+    padding: 40px 16px;
+  }
 
   .midiaHeader {
     display: flex;

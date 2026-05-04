@@ -60,6 +60,6 @@
 
 @include breakpoints.media("<tablet") {
   .card {
-    width: 300px;
+    width: min(300px, 100%);
   }
 }

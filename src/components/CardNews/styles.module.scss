@@ -55,7 +55,7 @@
   .cardWrapper {
     flex-direction: row;
     height: 4.5rem;
-    width: 23.25rem;
+    width: min(23.25rem, 100%);
 
     background: linear-gradient(
       to right,

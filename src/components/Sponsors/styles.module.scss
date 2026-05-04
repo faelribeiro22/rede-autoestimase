@@ -7,6 +7,21 @@
   justify-content: center;
   padding: 120px 136px;
   gap: 112px;
+  
+  @include breakpoints.media("<desktop") {
+    padding: 80px 40px;
+    gap: 80px;
+  }
+  
+  @include breakpoints.media("<tablet") {
+    padding: 60px 24px;
+    gap: 60px;
+  }
+  
+  @include breakpoints.media("<mobile") {
+    padding: 40px 16px;
+    gap: 40px;
+  }
 }
 
 .doadoresBottom {
