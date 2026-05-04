@@ -144,8 +144,8 @@ export default function SearchBar({ isMobile = false }: SearchBarProps) {
         <Image
           src="/assets/icons/lupa.png"
           alt="Ícone de busca"
-          width={25}
-          height={24}
+          width={isMobile ? 25 : 32}
+          height={isMobile ? 24 : 31}
           quality={100}
         />
       </button>
