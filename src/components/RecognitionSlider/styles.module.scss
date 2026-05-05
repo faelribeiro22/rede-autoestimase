@@ -2,7 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
 
   .conquistasCardElement {
     display: flex;
@@ -11,6 +13,8 @@
     justify-content: space-between;
     color: var(--primary-neutral-color);
     width: 214.8px;
+    max-width: calc(100% - 112px);
+    min-width: 0;
     height: 300px;
     border: 1px solid var(--quaternary-neutral-color);
     border-radius: 8px;
@@ -29,6 +33,7 @@
   border: none;
   cursor: pointer;
   padding: 8px;
+  flex-shrink: 0;
 
   &:disabled {
     opacity: 0.5;
