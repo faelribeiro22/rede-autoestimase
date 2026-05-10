@@ -159,14 +159,14 @@
       gap: 28px;
 
       @include breakpoints.media("<tablet") {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 16px;
         box-sizing: border-box;
         
         .cardElement {
-          max-width: 100%;
           margin: 0 auto;
+        }
+
+        .cardImage {
+          width: 320px;
         }
       }
 
@@ -176,8 +176,18 @@
         height: 459px;
         z-index: 1;
 
+        @include breakpoints.media("<tablet") {
+          width: 320px;
+          height: 396px;
+        }
+
         .cardImage {
           z-index: 2;
+        }
+
+        @include breakpoints.media("<tablet") {
+          display: flex;
+          justify-content: center;
         }
 
         .cardElementContent {
@@ -190,6 +200,11 @@
           flex-direction: column;
           height: 169px;
           justify-content: space-between;
+
+          @include breakpoints.media("<tablet") {
+            bottom: 40px;
+            left: 15px;
+          }
 
           .cardDesc {
             display: flex;
@@ -204,6 +219,13 @@
             p {
               font-size: 16px;
               line-height: 24px;
+            }
+
+            @include breakpoints.media("<tablet") {
+              padding-right: 24px;
+              p {
+                text-align: left;
+              }
             }
           }
 
@@ -583,10 +605,6 @@
 
   .acolhimentoResultados {
     padding-top: 916px;
-  }
-
-  .cardContainer {
-    top: -225px !important;
   }
 
   .aboutHeader {
