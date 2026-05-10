@@ -3,7 +3,7 @@
 .slider {
   position: relative;
   width: 100%;
-  height: 520px;
+  height: clamp(360px, 38vw, 520px);
   overflow: hidden;
   background-color: black;
 
@@ -12,18 +12,19 @@
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 
-    padding: 1rem;
+    padding: clamp(1.5rem, 4vw, 3rem) clamp(3.25rem, 8vw, 6rem);
 
     p {
       margin: 0;
-      font-size: 48px;
-      line-height: 1.5;
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      line-height: 1.25;
       font-weight: 700;
       text-decoration: none;
       text-align: center;
@@ -36,49 +37,45 @@
   &__text {
     padding: 1rem 2rem;
     border-radius: 5px;
+    max-width: min(70%, 62rem);
+    margin: 0 auto;
+    text-align: center;
+    word-wrap: break-word;
 
     p {
       margin: 0;
     }
   }
-  .slider__text {
-    max-width: 70%;
-    margin: 0 auto;
-    text-align: center;
-    word-wrap: break-word;
-  }
+
   .slider__text--limit {
-    max-width: 70% !important;
-    margin: 0 auto;
-    text-align: center;
-    word-wrap: break-word;
-    margin-top: 10rem;
+    max-width: min(72%, 64rem) !important;
+    margin-top: clamp(4rem, 15vh, 10rem);
   }
+
   .Slider___text--button_1 {
-    position: absolute;
-    max-width: 50%;
+    max-width: min(58%, 46rem);
     color: white;
     text-align: center;
-    margin-top: 18rem;
+    margin-top: clamp(5rem, 18vh, 12rem);
   }
 
   .Slider___text--button_1 p {
-    font-size: 48px;
+    font-size: clamp(1.75rem, 4vw, 3rem);
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.2;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     font-family: var(--font-heading);
   }
 
   .Slider___text--button_1 a {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
+    margin-top: 0.75rem;
+    padding: 0.65rem 1rem;
     background-color: var(--primary-color);
     color: var(--primary-neutral-color);
     text-decoration: none;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: clamp(0.875rem, 2vw, 1rem);
     transition: background 0.3s;
   }
 
@@ -86,32 +83,31 @@
     background-color: var(--secondary-color);
   }
   .Slider___text--button_2 {
-    position: absolute;
-    left: 40%;
-    transform: translateX(-50%);
     text-align: center;
-    max-width: 70%;
+    max-width: min(62%, 50rem);
+    margin-right: auto;
+    margin-left: 8%;
   }
 
   .Slider___text--button_2 p {
-    font-size: 48px;
+    font-size: clamp(1.75rem, 4vw, 3rem);
     font-weight: 700;
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    line-height: 1.4;
-    width: 50rem;
+    line-height: 1.2;
+    max-width: 50rem;
     font-family: var(--font-heading);
   }
 
   .Slider___text--button_2 a {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 18px;
+    margin-top: 0.75rem;
+    padding: 0.65rem 1rem;
     background-color: var(--primary-color);
     color: var(--primary-neutral-color);
     text-decoration: none;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: clamp(0.875rem, 2vw, 1rem);
     transition: background 0.3s;
   }
 
@@ -121,19 +117,22 @@
 
   @include breakpoints.media("<tablet") {
     .slider__text--limit {
-      max-width: 90%;
+      max-width: 100% !important;
+      margin-top: 0;
     }
   }
 
   &__button {
     display: inline-block;
     margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.65rem 1rem;
     background: var(--primary-color);
     text-decoration: none;
     border-radius: 15px;
     transition: background 0.3s;
     color: var(--primary-text-color);
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.2;
 
     &:hover {
       background: var(--secondary-color);
@@ -191,43 +190,45 @@
     }
   }
   @include breakpoints.media("<tablet") {
+    height: clamp(320px, 92vw, 430px);
+
+    &__content {
+      background-size: cover;
+      background-position: center;
+      justify-content: flex-end;
+      padding: 1rem 3rem 2.25rem;
+
+      p {
+        font-size: clamp(1.25rem, 7vw, 1.75rem);
+        line-height: 1.2;
+      }
+    }
+
+    &__text {
+      max-width: 100%;
+      padding: 0.75rem;
+    }
+
     .Slider___text--button_1,
     .Slider___text--button_2 {
-      max-width: 90%;
-      left: 50%;
-      transform: translateX(-50%);
+      max-width: 100%;
+      margin: 0 auto;
       text-align: center;
-      width: 100%; // Ensure it takes available width up to max-width
+      width: 100%;
     }
 
     .Slider___text--button_1 p,
     .Slider___text--button_2 p {
-      font-size: 22px;
-      width: auto; // Reset fixed width
-      max-width: 100%; // Ensure it doesn't overflow
+      font-size: clamp(1.25rem, 7vw, 1.75rem);
+      width: auto;
+      max-width: 100%;
     }
 
     .Slider___text--button_1 a,
     .Slider___text--button_2 a {
-      font-size: 14px;
-      padding: 8px 14px;
-      // display: none; // Keep buttons visible if possible, or decide based on design. Original code hid them.
-      // If the intention is to hide them, keep display: none. 
-      // Assuming the user wants to fix overflow, not necessarily change visibility logic, but let's make them responsive if they were to be shown.
-      // The original code had display: none, so I will keep it for now to avoid changing behavior, but the overflow issue was likely the p tag width.
-      display: none; 
-    }
-  }
-  @include breakpoints.media("<tablet") {
-    height: 400px;
-
-    &__content {
-      padding: 0.5rem;
-
-      p {
-        font-size: 28px;
-        line-height: 35px;
-      }
+      display: inline-block;
+      font-size: 0.875rem;
+      padding: 0.55rem 0.9rem;
     }
 
     &__dots {
@@ -243,6 +244,28 @@
     &__arrow {
       width: 30px;
       height: 30px;
+      font-size: 2rem;
+
+      &--left {
+        left: 8px;
+      }
+
+      &--right {
+        right: 8px;
+      }
+    }
+  }
+
+  @include breakpoints.media("<mobile") {
+    height: clamp(300px, 96vw, 390px);
+
+    &__content {
+      padding: 0.75rem 2.5rem 2rem;
+    }
+
+    .slider__text--limit {
+      max-width: 100% !important;
+      margin-top: 0;
     }
   }
 }
